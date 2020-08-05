@@ -2,7 +2,7 @@ doctype html
 html
   head
     title= `${title} | ${h.siteName}`
-    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet' href='/dist/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
@@ -40,7 +40,7 @@ html
       if locals.flashes
         .inner
           .flash-messages
-            - const categories = Object.keys(locals.flashes)
+            - const categories = Object.keys(locals.flashes);
             each category in categories
               each message in flashes[category]
                 .flash(class=`flash--${category}`)
