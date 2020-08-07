@@ -1,13 +1,20 @@
 mixin storeForm(store = {})
-  form(action="/add" method="POST" class="card")
-    label(for=name) Name
-    input(type="text" name="name")
-    label(for=description) Description
-    textarea(name="description")
-    - const choices = ['Wifi', 'Open Late', 'Family Friendly', 'Vegetarian', 'Licensed'];
+  form(action=`/add/${store._id || ''}` method="POST" class="card" enctype="multipart/form-data")
+    label(for="name") name
+    input(type="text" name="name" value=store.name)
+    label(for="description") Description
+    textarea(name="description")= store.description
+    //- Image Upload
+    label(for="photo") Photo
+      input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg")
+      if store.photo
+        img(src=`/uploads/${store.photo}`, alt=store.name width=200)
+
+    - const choices = ['wifi', 'Open Late', 'Family Friendly', 'Vegetarian', 'Protection']
+    - const tags = store.tags || []
     ul.tags
       each choice in choices
         .tag.tag__choice
-          input(type="checkbox" id=choice value=choice name="tags")
+          input(type="checkbox" id=choice value=choice name="tags" checked=(tags.includes(choice)))
           label(for=choice) #{choice}
-    input(type="submit" value="Save ➡️" class="button")
+    input(type="submit" value="save" class="button")
