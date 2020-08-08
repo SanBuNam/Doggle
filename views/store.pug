@@ -6,9 +6,14 @@ extends layout
 block content
   .single
     .single__hero
-      img.single__image(src=`/uploads/${store.photo} || 'store.png'`)
+      img.single__image(src=`/uploads/${store.photo}`)
       h2.title.title--single
         a #{store.name}
+
+  .single__details.inner
+    //- img.single__map(src=h.staticMap(store.location.coordinates))  || 'store.png'
+    //- p.single__location= store.location.address
+    p= store.description
 
     if store.tags
       ul.tags
@@ -25,9 +30,3 @@ block content
     //-     each review in store.reviews
     //-       .review
     //-         +review(review)
-
-
-  //- .single__details.inner
-  //-   img.single__map(src=h.staticMap(store.location.coordinates))
-  //-   p.single__location= store.location.address
-  //-   p= store.description
