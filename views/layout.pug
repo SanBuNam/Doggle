@@ -40,7 +40,7 @@ html
       if locals.flashes
         .inner
           .flash-messages
-            - const categories = Object.keys(locals.flashes);
+            - const categories = Object.keys(locals.flashes)
             each category in categories
               each message in flashes[category]
                 .flash(class=`flash--${category}`)
@@ -50,5 +50,4 @@ html
       block content
 
     block scripts
-      script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src="/dist/App.bundle.js")

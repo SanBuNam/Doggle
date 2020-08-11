@@ -1,7 +1,7 @@
 extends layout
 
-//- include mixins/_reviewForm
-//- include mixins/_review
+include mixins/_reviewForm
+include mixins/_review
 
 block content
   .single
@@ -11,8 +11,6 @@ block content
         a #{store.name}
 
   .single__details.inner
-    //- img.single__map(src=h.staticMap(store.location.coordinates))  || 'store.png'
-    //- p.single__location= store.location.address
     p= store.description
 
     if store.tags
@@ -22,11 +20,11 @@ block content
             a.tag__link(href=`/tags/${tag}`)
               span.tag__text ##{tag}
 
-    //- if user
-    //-   +reviewForm(store)
+    if user
+      +reviewForm(store)
 
-    //- if store.reviews
-    //-   .reviews
-    //-     each review in store.reviews
-    //-       .review
-    //-         +review(review)
+    if store.reviews
+      .reviews
+        each review in store.reviews
+          .review
+            +review(review)

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Store = mongoose.model("Store");
+const User = mongoose.model("User");
 const multer = require("multer"); // image upload
 const jimp = require("jimp"); // file size control
 const uuid = require("uuid"); // unique id generator
@@ -53,9 +54,29 @@ exports.createStore = async (req, res) => {
 };
 
 exports.getStores = async (req, res) => {
-  // 1. Query the database for a list of all stores
-  const stores = await Store.find();
-  res.render("stores", { title: "Stores", stores });
+  const page = req.params.page || 1;
+  const limit = 6;
+  const skip = page * limit - limit;
+
+  const storesPromise = Store.find()
+    .skip(skip)
+    .limit(limit)
+    .sort({ created: "desc" });
+
+  const countPromise = Store.count();
+
+  const [stores, count] = await Promise.all([storesPromise, countPromise]);
+
+  const pages = Math.ceil(count / limit);
+  if (!stores.length && skip) {
+    req.flash(
+      "info",
+      `You asked for page ${page}. But that doesn't exist. So I put you on page ${pages}`
+    );
+    res.redirect(`/stores/page/${pages}`);
+    return;
+  }
+  res.render("stores", { title: "Stores", stores, page, pages, count });
 };
 
 const confirmOwner = (store, user) => {
@@ -89,7 +110,7 @@ exports.updateStore = async (req, res) => {
 
 exports.getStoreBySlug = async (req, res, next) => {
   const store = await Store.findOne({ slug: req.params.slug }).populate(
-    "author"
+    "author reviews"
   ); // populate will go find
 
   if (!store) return next();
@@ -122,4 +143,29 @@ exports.searchStores = async (req, res) => {
   });
   // .limit(5);
   res.json(stores);
+};
+
+exports.heartStore = async (req, res) => {
+  const hearts = req.user.hearts.map((obj) => obj.toString());
+  const operator = hearts.includes(req.params.id) ? "$pull" : "$addToSet";
+
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    { [operator]: { hearts: req.params.id } },
+    { new: true }
+  );
+
+  res.json(user);
+};
+
+exports.getHearts = async (req, res) => {
+  const stores = await Store.find({
+    _id: { $in: req.user.hearts },
+  });
+  res.render("stores", { title: "Hearted Stores", stores });
+};
+
+exports.getTopStores = async (req, res) => {
+  const stores = await Store.getTopStores();
+  res.render("topStores", { stores, title: `⭐ Top Stores` });
 };
