@@ -4,11 +4,12 @@ html {
 
 body {
   background: #262161;
-  background: #efefef; }
+  background: #efefef;
+  padding: 10px; }
   body:before {
     content: "";
     display: block;
-    background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffc40e 85%, #48ded4 95%);
+    background: #ffc40e;
     height: 10px;
     width: 100%; }
 
@@ -701,7 +702,7 @@ label {
     .nav__link--logo svg {
       width: 100%; }
   .heart-count:before {
-    content: '\2665\FE0F';
+    content: "\2665\FE0F";
     margin-right: 1rem; } }
 
 .table {
@@ -772,7 +773,7 @@ label {
   text-align: right; }
   .store__hero:before {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -1130,5 +1131,12 @@ pre.error {
   background: white;
   line-height: 3;
   white-space: pre-line; }
+
+.home {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -1.25em 0 0 -1.25em; }
 
 /*# sourceMappingURL=style.css.map*/
