@@ -19,7 +19,7 @@ const multerOptions = {
 };
 
 exports.homePage = (req, res) => {
-  res.render("index");
+  res.render("home", { title: "Home" });
 };
 
 exports.addStore = (req, res) => {

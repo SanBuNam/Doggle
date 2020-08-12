@@ -20,7 +20,7 @@ html
                   span #{item.title}
           .nav__section.nav__section--search
             .search
-              input.search__input(type="text" placeholder="Coffee, beer..." name="search")
+              input.search__input(type="text" placeholder="Search by keyword" name="search")
               .search__results
           .nav__section.nav__section--user
             if user
@@ -48,6 +48,9 @@ html
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
       block content
+    
+    .footer
+      block footer
 
     block scripts
       script(src="/dist/App.bundle.js")

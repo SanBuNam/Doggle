@@ -5,10 +5,11 @@ html {
 body {
   background: $purple;
   background: #efefef;
+  padding: 10px;
   &:before {
     content: "";
     display: block;
-    background: $grad;
+    background: $yellow;
     height: 10px;
     width: 100%;
   }
