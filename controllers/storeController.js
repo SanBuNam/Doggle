@@ -19,7 +19,7 @@ const multerOptions = {
 };
 
 exports.homePage = (req, res) => {
-  res.render("home", { title: "Home" });
+  res.render("home", { title: "코딩을 배우고 싶으세요?" });
 };
 
 exports.addStore = (req, res) => {
