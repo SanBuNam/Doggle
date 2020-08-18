@@ -1,9 +1,43 @@
+@keyframes gritty {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -600px;
+  }
+}
+
 .home {
   display: flex;
   flex-wrap: wrap;
   margin: -1.25em 0 0 -1.25em;
-}
 
-.greeting {
-  font-size: 27px;
+  h2.greet {
+    font-size: 4rem;
+    position: relative;
+
+    &::before {
+      background-color: $yellow;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 0deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+    span.grit {
+      background: url("/images/icons/blackgrit.png");
+      background-size: 600px;
+      padding: 2rem 2rem 2rem 0;
+      position: relative;
+      &:hover {
+        animation: gritty 2s steps(10) infinite;
+      }
+    }
+  }
 }

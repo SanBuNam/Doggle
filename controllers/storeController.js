@@ -19,7 +19,7 @@ const multerOptions = {
 };
 
 exports.homePage = (req, res) => {
-  res.render("home", { title: "코딩을 배우고 싶으세요?" });
+  res.render("index", { title: "독학 프로그래머 양성 코스" });
 };
 
 exports.addStore = (req, res) => {
