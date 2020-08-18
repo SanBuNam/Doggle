@@ -6,6 +6,38 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "OperatorMono-Bold";
+  src: url("/fonts/Operator/OperatorMono-Bold_Web.woff2") format("woff2"),
+    url("/fonts/Operator/OperatorMono-Bold_Web.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OperatorMono-Medium";
+  src: url("/fonts/Operator/OperatorMono-Medium_Web.woff2") format("woff2"),
+    url("/fonts/Operator/OperatorMono-Medium_Web.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RadnikNext-Medium";
+  src: url("/fonts/RadnikNext/RadnikNext-Medium.woff2") format("woff2"),
+    url("/fonts/RadnikNext/RadnikNext-Medium.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RadnikNext-Regular";
+  src: url("/fonts/RadnikNext/RadnikNext-Regular.woff2") format("woff2"),
+    url("/fonts/RadnikNext/RadnikNext-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 10px;
 }
@@ -15,16 +47,43 @@ body {
   color: $black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-size: 5rem;
   font-family: "Panama";
   font-weight: 600;
   letter-spacing: -1px;
+}
+h2 {
+  font-size: 4rem;
+  font-family: "Panama";
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 3rem;
+  font-family: "OperatorMono-Bold";
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 2.5rem;
+  font-family: "OperatorMono-Medium";
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+h5 {
+  font-size: 2rem;
+  font-family: "RadnikNext-Medium";
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1.8rem;
+  font-family: "RadnikNext-Regular";
+  font-weight: 300;
 }
 
 a {
