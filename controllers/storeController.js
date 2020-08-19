@@ -19,7 +19,7 @@ const multerOptions = {
 };
 
 exports.homePage = (req, res) => {
-  res.render("index", { title: "독학 프로그래머 양성 코스" });
+  res.render("index", { title: "단기간 프로그래머 양성 코스" });
 };
 
 exports.addStore = (req, res) => {

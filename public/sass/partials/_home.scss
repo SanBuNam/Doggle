@@ -12,11 +12,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: -1.25em 0 0 -1.25em;
+}
 
-  h2.greet {
-    font-size: 4rem;
-    position: relative;
-
+.intro {
+  margin-top: 2rem;
+  h1 {
+    padding: 2rem 0;
     &::before {
       background-color: $yellow;
       width: 0.75em;
@@ -26,11 +27,28 @@
       position: absolute;
       z-index: -1;
       --translate: -0.5rem;
-      --rotate: 0deg;
+      --rotate: 3deg;
       transform: translateX(var(--translate)) translateY(var(--translate))
         rotate(var(--rotate));
     }
-    span.grit {
+  }
+  h2 {
+    font-size: 4rem;
+    position: relative;
+    &::before {
+      background-color: $yellow;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+    .grit {
       background: url("/images/icons/blackgrit.png");
       background-size: 600px;
       padding: 2rem 2rem 2rem 0;
@@ -39,5 +57,20 @@
         animation: gritty 2s steps(10) infinite;
       }
     }
+    .highlight {
+      font-size: 5rem;
+      background: url("/images/icons/blackgrit.png");
+      background-color: #ffc600;
+      background-size: 500px;
+      padding: 5px;
+      &:hover {
+        animation: gritty 2s steps(10) infinite;
+      }
+    }
   }
+}
+
+.cause {
+  margin: 2rem 0;
+  background: skyblue;
 }
