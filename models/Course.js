@@ -13,6 +13,7 @@ const courseSchema = new Schema({
     type: String,
     trim: true,
   },
+  photo: String,
   streamCourse: String,
   downloadCourse1: String,
   downloadCourse2: String,
