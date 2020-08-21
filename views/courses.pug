@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/_courseCard
+
+block content
+  .inner
+    h2= title
+    .stores
+      each course in courses
+        +courseCard(course)

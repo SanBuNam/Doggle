@@ -3,8 +3,12 @@ const router = express.Router();
 const storeController = require("../controllers/storeController");
 const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
+const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
 const { catchErrors } = require("../handlers/errorHandlers");
+
+router.get("/courses", catchErrors(courseController.getCourses));
+router.get("/course/:slug", catchErrors(courseController.getCourseBySlug));
 
 router.get("/", storeController.homePage);
 router.get("/stores", catchErrors(storeController.getStores));
