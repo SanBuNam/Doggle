@@ -1,10 +1,9 @@
 mixin courseCard(course = {})
-  .store
-    .store__hero
-      .store__actions
-        button learn
+  .course
+    .course__img
       img(src=`/uploads/${course.photo || 'store.png'}`)
+      p testss
+    .course_details
       h2.title
-        a(href=`/course/${course.slug}`) #{course.name}
-    .store_details
+      a(href=`/course/${course.slug}`) #{course.name}
       p= course.description.split(' ').slice(0, 25).join(' ')
