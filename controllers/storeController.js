@@ -18,10 +18,6 @@ const multerOptions = {
   },
 };
 
-exports.homePage = (req, res) => {
-  res.render("index", { title: "단기간 프로그래머 양성 코스" });
-};
-
 exports.addStore = (req, res) => {
   res.render("editStore", { title: "Add Store" });
 };

@@ -7,10 +7,10 @@ const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
+router.get("/", courseController.homePage);
 router.get("/courses", catchErrors(courseController.getCourses));
 router.get("/course/:slug", catchErrors(courseController.getCourseBySlug));
 
-router.get("/", storeController.homePage);
 router.get("/stores", catchErrors(storeController.getStores));
 router.get("/stores/page/:page", catchErrors(storeController.getStores));
 router.get("/add", authController.isLoggedIn, storeController.addStore);

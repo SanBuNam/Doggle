@@ -2,7 +2,6 @@
   from {
     background-position: 0;
   }
-
   to {
     background-position: -600px;
   }
@@ -11,11 +10,6 @@
 .home {
   display: flex;
   flex-wrap: wrap;
-  margin: -1.25em 0 0 -1.25em;
-}
-
-.intro {
-  margin-top: 2rem;
   h1 {
     padding: 2rem 0;
     &::before {
@@ -32,8 +26,9 @@
         rotate(var(--rotate));
     }
   }
-  h2 {
-    font-size: 4rem;
+
+  h2,
+  h3 {
     position: relative;
     &::before {
       background-color: $yellow;
@@ -48,29 +43,67 @@
       transform: translateX(var(--translate)) translateY(var(--translate))
         rotate(var(--rotate));
     }
-    .grit {
-      background: url("/images/icons/blackgrit.png");
-      background-size: 600px;
-      padding: 2rem 2rem 2rem 0;
-      position: relative;
-      &:hover {
-        animation: gritty 2s steps(10) infinite;
-      }
-    }
-    .highlight {
-      font-size: 5rem;
-      background: url("/images/icons/blackgrit.png");
-      background-color: #ffc600;
-      background-size: 500px;
-      padding: 5px;
-      &:hover {
-        animation: gritty 2s steps(10) infinite;
-      }
+  }
+
+  .grit {
+    background: url("/images/icons/blackgrit.png");
+    background-size: 600px;
+    padding: 2rem 2rem 2rem 0;
+    position: relative;
+    &:hover {
+      animation: gritty 2s steps(10) infinite;
     }
   }
-}
 
-.cause {
-  margin: 2rem 0;
-  background: skyblue;
+  .highlight {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    background: url("/images/icons/blackgrit.png");
+    background-color: #ffc600;
+    &:hover {
+      animation: gritty 2s steps(10) infinite;
+    }
+  }
+
+  .background {
+    margin-top: 20px;
+    z-index: -1;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: #9658fa;
+    grid-gap: 3px;
+    color: white;
+    .imgHeight {
+      max-height: 350px;
+      width: 100%;
+    }
+    @media all and (max-width: 1060px) {
+    }
+  }
+
+  .whoAmI {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #2bdeff;
+  }
+
+  .codingIs {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #0cf090;
+  }
+
+  .whatToDo {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #f25460;
+  }
+
+  .whatToKnow {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #ffde2b;
+  }
 }
