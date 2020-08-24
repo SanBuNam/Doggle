@@ -5,7 +5,7 @@ html {
 
 body {
   background: #ffffff;
-  background: url("/images/photos/handsome.jpg") center top no-repeat; }
+  background: url("/images/photos/bg9.png") repeat; }
   body:before {
     content: "";
     display: block;
@@ -14,9 +14,9 @@ body {
     width: 100%; }
 
 .inner {
-  max-width: 900px;
+  max-width: 1060px;
   margin: 0 auto; }
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 1060px) {
     .inner {
       padding: 2rem; } }
 
@@ -434,14 +434,14 @@ template {
   display: none; }
 
 @font-face {
-  font-family: "panama";
-  src: url("/fonts/panama-bold-webfont.woff2") format("woff2"), url("/fonts/panama-bold-webfont.woff") format("woff");
+  font-family: "OperatorMono-Book";
+  src: url("/fonts/Operator/OperatorMono-Book_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-Book_Web.woff2") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "OperatorMono-Book";
-  src: url("/fonts/Operator/OperatorMono-Book_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-Book_Web.woff2") format("woff");
+  font-family: "OperatorMono-BookItalic";
+  src: url("/fonts/Operator/OperatorMono-BookItalic_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-BookItalic_Web.woff2") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -452,26 +452,8 @@ template {
   font-style: normal; }
 
 @font-face {
-  font-family: "OperatorMono-Medium";
-  src: url("/fonts/Operator/OperatorMono-Medium_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-Medium_Web.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "OperatorMono-Light";
-  src: url("/fonts/Operator/OperatorMono-Light_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-Light_Web.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "RadnikNext-Medium";
-  src: url("/fonts/RadnikNext/RadnikNext-Medium.woff2") format("woff2"), url("/fonts/RadnikNext/RadnikNext-Medium.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "RadnikNext-Regular";
-  src: url("/fonts/RadnikNext/RadnikNext-Regular.woff2") format("woff2"), url("/fonts/RadnikNext/RadnikNext-Regular.woff2") format("woff");
+  font-family: "OperatorMono-BoldItalic";
+  src: url("/fonts/Operator/OperatorMono-BoldItalic_Web.woff2") format("woff2"), url("/fonts/Operator/OperatorMono-BoldItalic_Web.woff2") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -479,55 +461,47 @@ html {
   font-size: 10px; }
 
 body {
+  font-family: "OperatorMono-Book", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
-  color: #303030;
-  padding: 1rem; }
+  color: #000000;
+  font-weight: 400; }
 
 h1 {
   font-size: 5rem;
-  font-family: "Panama";
+  font-family: "OperatorMono-Bold";
   font-weight: 600;
   letter-spacing: -1px; }
 
 h2 {
   font-size: 4rem;
-  font-family: "Panama";
+  font-family: "OperatorMono-Bold";
   font-weight: 500;
   letter-spacing: -1px; }
 
 h3 {
   font-size: 3rem;
   font-family: "OperatorMono-Bold";
-  font-weight: 400;
   letter-spacing: -1px; }
 
 h4 {
   font-size: 2.5rem;
-  font-family: "OperatorMono-Medium";
-  font-weight: 400;
   letter-spacing: -1px; }
 
 h5 {
-  font-size: 2rem;
-  font-family: "RadnikNext-Medium";
-  font-weight: 300; }
+  font-size: 2rem; }
 
 h6 {
-  font-size: 1.8rem;
-  font-family: "RadnikNext-Regular";
-  font-weight: 300; }
+  font-size: 1.8rem; }
 
 a {
   text-decoration: none;
-  color: #303030; }
+  color: #000000; }
 
 p a {
   border-bottom: 2px solid #ffc40e; }
 
 p {
-  line-height: 2;
-  font-size: 1.6rem;
-  font-family: "OperatorMono-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+  line-height: 2; }
 
 .title {
   word-wrap: break-word;
@@ -559,8 +533,7 @@ p {
 
 .title--single {
   max-width: 600px;
-  margin-top: -9rem;
-  font-size: 10rem;
+  font-size: 8rem;
   text-align: center; }
 
 input, textarea {
@@ -674,7 +647,7 @@ label {
   padding: 0;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  background: #303030; }
+  background: #000000; }
   .nav__section {
     display: -ms-flexbox;
     display: flex; }
@@ -685,7 +658,7 @@ label {
     display: -ms-flexbox;
     display: flex; }
   .nav__link {
-    background: #303030;
+    background: #000000;
     color: white;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
@@ -775,7 +748,7 @@ label {
   .table tr:nth-child(odd):not(:first-child) {
     background: #f7f7f7; }
   .table thead tr {
-    background: #303030;
+    background: #000000;
     color: white; }
 
 .stores {
@@ -971,7 +944,7 @@ label {
         background: #ffc40e; }
   .tag__link {
     background: #ffc40e;
-    color: #303030;
+    color: #000000;
     display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
@@ -1043,7 +1016,7 @@ label {
   margin: 0;
   margin-top: -3rem;
   margin-right: -5rem;
-  background: #303030;
+  background: #000000;
   color: white;
   display: inline-block;
   float: right;
@@ -1252,7 +1225,7 @@ label {
 .button {
   border: 0;
   background: #ffc40e;
-  color: #303030;
+  color: #000000;
   font-family: 'Panama';
   font-weight: 600; }
 
@@ -1285,14 +1258,10 @@ pre.error {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -1.25em 0 0 -1.25em; }
-
-.intro {
-  margin-top: 2rem; }
-  .intro h1 {
+      flex-wrap: wrap; }
+  .home h1 {
     padding: 2rem 0; }
-    .intro h1::before {
+    .home h1::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1304,10 +1273,11 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .intro h2 {
-    font-size: 4rem;
+  .home h2,
+  .home h3 {
     position: relative; }
-    .intro h2::before {
+    .home h2::before,
+    .home h3::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1319,24 +1289,50 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-    .intro h2 .grit {
-      background: url("/images/icons/blackgrit.png");
-      background-size: 600px;
-      padding: 2rem 2rem 2rem 0;
-      position: relative; }
-      .intro h2 .grit:hover {
-        animation: gritty 2s steps(10) infinite; }
-    .intro h2 .highlight {
-      font-size: 5rem;
-      background: url("/images/icons/blackgrit.png");
-      background-color: #ffc600;
-      background-size: 500px;
-      padding: 5px; }
-      .intro h2 .highlight:hover {
-        animation: gritty 2s steps(10) infinite; }
-
-.cause {
-  margin: 2rem 0;
-  background: skyblue; }
+  .home .grit {
+    background: url("/images/icons/blackgrit.png");
+    background-size: 600px;
+    padding: 2rem 2rem 2rem 0;
+    position: relative; }
+    .home .grit:hover {
+      animation: gritty 2s steps(10) infinite; }
+  .home .highlight {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    background: url("/images/icons/blackgrit.png");
+    background-color: #ffc600; }
+    .home .highlight:hover {
+      animation: gritty 2s steps(10) infinite; }
+  .home .background {
+    margin-top: 20px;
+    z-index: -1;
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
+    background-color: #9658fa;
+    grid-gap: 3px;
+    color: white; }
+    .home .background .imgHeight {
+      max-height: 350px;
+      width: 100%; }
+  .home .whoAmI {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #2bdeff; }
+  .home .codingIs {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #0cf090; }
+  .home .whatToDo {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #f25460; }
+  .home .whatToKnow {
+    z-index: -1;
+    padding: 1rem;
+    background-color: #ffde2b; }
 
 /*# sourceMappingURL=style.css.map*/
