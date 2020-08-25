@@ -20,6 +20,11 @@ body {
     .inner {
       padding: 2rem; } }
 
+.footer {
+  margin-top: 5rem;
+  min-height: 30rem;
+  background-color: #000000; }
+
 html {
   box-sizing: border-box; }
 
@@ -536,11 +541,13 @@ p {
   font-size: 8rem;
   text-align: center; }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #e6e6e6; }
-  input.input--error, textarea.input--error {
+  input.input--error,
+  textarea.input--error {
     border-color: red; }
 
 label {
@@ -1273,10 +1280,8 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .home h2,
   .home h3 {
     position: relative; }
-    .home h2::before,
     .home h3::before {
       background-color: #ffc40e;
       width: 0.75em;
@@ -1289,6 +1294,9 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+  .home .title {
+    margin-top: 2rem;
+    padding-bottom: 2rem; }
   .home .grit {
     background: url("/images/icons/blackgrit.png");
     background-size: 600px;
@@ -1304,7 +1312,7 @@ pre.error {
     background-color: #ffc600; }
     .home .highlight:hover {
       animation: gritty 2s steps(10) infinite; }
-  .home .background {
+  .home .cause {
     margin-top: 20px;
     z-index: -1;
     padding: 1rem;
@@ -1312,27 +1320,23 @@ pre.error {
     display: grid;
     -ms-grid-columns: 1.5fr 1fr;
         grid-template-columns: 1.5fr 1fr;
-    background-color: #9658fa;
-    grid-gap: 3px;
-    color: white; }
-    .home .background .imgHeight {
+    background-color: #0cf090;
+    grid-gap: 3px; }
+    .home .cause .desc {
+      padding: 1rem 2rem; }
+    .home .cause .imgHeight {
       max-height: 350px;
       width: 100%; }
-  .home .whoAmI {
+  .home .intro {
     z-index: -1;
-    padding: 1rem;
-    background-color: #2bdeff; }
-  .home .codingIs {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #0cf090; }
-  .home .whatToDo {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #f25460; }
-  .home .whatToKnow {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #ffde2b; }
+    padding: 1rem 2rem; }
+    .home .intro--whoAmI {
+      background-color: #2bdeff; }
+    .home .intro--codingIs {
+      background-color: #9658fa; }
+    .home .intro--whatToKnow {
+      background-color: #f25460; }
+    .home .intro--whatToDo {
+      background-color: #ffde2b; }
 
 /*# sourceMappingURL=style.css.map*/
