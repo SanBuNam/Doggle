@@ -27,7 +27,6 @@
     }
   }
 
-  h2,
   h3 {
     position: relative;
     &::before {
@@ -43,6 +42,11 @@
       transform: translateX(var(--translate)) translateY(var(--translate))
         rotate(var(--rotate));
     }
+  }
+
+  .title {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .grit {
@@ -66,15 +70,17 @@
     }
   }
 
-  .background {
+  .cause {
     margin-top: 20px;
     z-index: -1;
     padding: 1rem;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    background-color: #9658fa;
+    background-color: #0cf090;
     grid-gap: 3px;
-    color: white;
+    .desc {
+      padding: 1rem 2rem;
+    }
     .imgHeight {
       max-height: 350px;
       width: 100%;
@@ -83,27 +89,20 @@
     }
   }
 
-  .whoAmI {
+  .intro {
     z-index: -1;
-    padding: 1rem;
-    background-color: #2bdeff;
-  }
-
-  .codingIs {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #0cf090;
-  }
-
-  .whatToDo {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #f25460;
-  }
-
-  .whatToKnow {
-    z-index: -1;
-    padding: 1rem;
-    background-color: #ffde2b;
+    padding: 1rem 2rem;
+    &--whoAmI {
+      background-color: #2bdeff;
+    }
+    &--codingIs {
+      background-color: #9658fa;
+    }
+    &--whatToKnow {
+      background-color: #f25460;
+    }
+    &--whatToDo {
+      background-color: #ffde2b;
+    }
   }
 }

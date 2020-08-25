@@ -25,6 +25,6 @@ exports.menu = [
   { slug: "/courses", title: "Courses", icon: "store" },
   { slug: "/stores", title: "Stores", icon: "store" },
   { slug: "/tags", title: "Tags", icon: "tag" },
-  { slug: "/top", title: "Top", icon: "top" },
-  { slug: "/add", title: "Add", icon: "add" },
+  { slug: "/인기 나눔", title: "인기 나눔터", icon: "top" },
+  { slug: "/나눔터", title: "배움 나눔터", icon: "add" },
 ];
