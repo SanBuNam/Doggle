@@ -21,7 +21,6 @@ router.post(
   catchErrors(storeController.resize),
   catchErrors(storeController.createStore)
 );
-
 router.post(
   "/add/:id",
   storeController.upload,
@@ -35,9 +34,6 @@ router.get("/store/:slug", catchErrors(storeController.getStoreBySlug));
 router.get("/tags", catchErrors(storeController.getStoresByTag));
 router.get("/tags/:tag", catchErrors(storeController.getStoresByTag));
 
-router.get("/login", userController.loginForm);
-router.post("/login", authController.login);
-
 router.get("/register", userController.registerForm);
 router.post(
   "/register",
@@ -46,6 +42,8 @@ router.post(
   authController.login
 );
 
+router.get("/login", userController.loginForm);
+router.post("/login", authController.login);
 router.get("/logout", authController.logout);
 
 router.get("/account", authController.isLoggedIn, userController.account);

@@ -1298,7 +1298,7 @@ pre.error {
     margin-top: 2rem;
     padding-bottom: 2rem; }
   .home .grit {
-    background: url("/images/icons/blackgrit.png");
+    background: url("/images/photos/blackgrit.png");
     background-size: 600px;
     padding: 2rem 2rem 2rem 0;
     position: relative; }
@@ -1308,7 +1308,7 @@ pre.error {
     font-size: 4rem;
     font-weight: 500;
     letter-spacing: -1px;
-    background: url("/images/icons/blackgrit.png");
+    background: url("/images/photos/blackgrit.png");
     background-color: #ffc600; }
     .home .highlight:hover {
       animation: gritty 2s steps(10) infinite; }
