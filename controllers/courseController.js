@@ -3,7 +3,7 @@ const Course = mongoose.model("Course");
 const User = mongoose.model("User");
 
 exports.homePage = (req, res) => {
-  res.render("index", { title: "단기간 프로그래머 양성 코스" });
+  res.render("index", { title: "코딩 교실" });
 };
 
 exports.getCourses = async (req, res) => {

@@ -17,14 +17,16 @@ exports.staticMap = ([lng, lat]) =>
 
 // inserting an SVG
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
+exports.iconPng = (name) =>
+  fs.readFileSync(`./public/images/icons/${name}.png`);
 
 // Some details about the site
 exports.siteName = `Coding Dokhak`;
 
 exports.menu = [
-  { slug: "/courses", title: "Courses", icon: "store" },
-  { slug: "/stores", title: "Stores", icon: "store" },
-  { slug: "/tags", title: "Tags", icon: "tag" },
-  { slug: "/인기 나눔", title: "인기 나눔터", icon: "top" },
-  { slug: "/나눔터", title: "배움 나눔터", icon: "add" },
+  { slug: "/courses", title: "강의실", icon: "store" },
+  { slug: "/stores", title: "자율학습", icon: "store" },
+  { slug: "/tags", title: "투표실", icon: "tag" },
+  { slug: "/top", title: "인기순", icon: "top" },
+  { slug: "/add", title: "나눔실", icon: "add" },
 ];
