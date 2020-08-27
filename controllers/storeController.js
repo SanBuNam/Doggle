@@ -82,7 +82,6 @@ const confirmOwner = (store, user) => {
 };
 
 exports.editStore = async (req, res) => {
-  // 1. Find the store given the ID
   const store = await Store.findOne({ _id: req.params.id });
   // 2. confirm they are the owner of the store
   confirmOwner(store, req.user);
@@ -91,7 +90,6 @@ exports.editStore = async (req, res) => {
 };
 
 exports.updateStore = async (req, res) => {
-  // find and update the store
   const store = await Store.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true, // return the new store instead of the old one
     runValidators: true,
@@ -101,7 +99,6 @@ exports.updateStore = async (req, res) => {
     `Successfully updated <strong>${store.name}</strong>. <a href="/stores/${store.slug}">View Store ➡️</a>`
   );
   res.redirect(`/stores/${store._id}/edit`);
-  // redirect them the store and tell them it worked
 };
 
 exports.getStoreBySlug = async (req, res, next) => {
