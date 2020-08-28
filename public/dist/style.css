@@ -1261,14 +1261,14 @@ pre.error {
   to {
     background-position: -600px; } }
 
-.home {
+.intro {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .home h1 {
+  .intro h1 {
     padding: 2rem 0; }
-    .home h1::before {
+    .intro h1::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1280,9 +1280,9 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .home h3 {
+  .intro h3 {
     position: relative; }
-    .home h3::before {
+    .intro h3::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1294,49 +1294,55 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .home .title {
+  .intro .title {
     margin-top: 2rem;
     padding-bottom: 2rem; }
-  .home .grit {
+  .intro .grit {
     background: url("/images/photos/blackgrit.png");
     background-size: 600px;
     padding: 2rem 2rem 2rem 0;
     position: relative; }
-    .home .grit:hover {
+    .intro .grit:hover {
       animation: gritty 2s steps(10) infinite; }
-  .home .highlight {
+  .intro .highlight {
     font-size: 4rem;
     font-weight: 500;
     letter-spacing: -1px;
     background: url("/images/photos/blackgrit.png");
     background-color: #ffc600; }
-    .home .highlight:hover {
+    .intro .highlight:hover {
       animation: gritty 2s steps(10) infinite; }
-  .home .cause {
-    margin-top: 20px;
-    z-index: -1;
-    padding: 1rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1.5fr 1fr;
-        grid-template-columns: 1.5fr 1fr;
-    background-color: #0cf090;
-    grid-gap: 3px; }
-    .home .cause .desc {
-      padding: 1rem 2rem; }
-    .home .cause .imgHeight {
-      max-height: 350px;
-      width: 100%; }
-  .home .intro {
-    z-index: -1;
-    padding: 1rem 2rem; }
-    .home .intro--whoAmI {
+
+.subjects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 3rem; }
+  .subjects .subject {
+    min-height: 40rem;
+    min-width: 20rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; }
+    .subjects .subject .highlight {
+      position: relative;
+      margin-top: -1rem;
+      font-size: 3.5rem;
+      font-weight: 500;
+      letter-spacing: -1px;
+      background: url("/images/photos/blackgrit.png");
+      background-color: #ffc600; }
+      .subjects .subject .highlight:hover {
+        animation: gritty 2s steps(10) infinite; }
+    .subjects .subject p {
+      padding: 0.5rem; }
+    .subjects .subject--one {
       background-color: #2bdeff; }
-    .home .intro--codingIs {
+    .subjects .subject--two {
       background-color: #9658fa; }
-    .home .intro--whatToKnow {
+    .subjects .subject--three {
       background-color: #f25460; }
-    .home .intro--whatToDo {
+    .subjects .subject--four {
       background-color: #ffde2b; }
 
 /*# sourceMappingURL=style.css.map*/
