@@ -20,8 +20,7 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.iconPng = (name) =>
   fs.readFileSync(`./public/images/icons/${name}.png`);
 
-// Some details about the site
-exports.siteName = `Coding Dokhak`;
+exports.siteName = `Coding Korea`;
 
 exports.menu = [
   { slug: "/courses", title: "강의실", icon: "store" },
