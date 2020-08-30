@@ -1,15 +1,11 @@
-@keyframes gritty {
-  from {
-    background-position: 0;
-  }
-  to {
-    background-position: -600px;
-  }
-}
-
-.intro {
+.introduction {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5rem;
+  .heading {
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+  }
   h1 {
     padding: 2rem 0;
     &::before {
@@ -26,7 +22,6 @@
         rotate(var(--rotate));
     }
   }
-
   h3 {
     position: relative;
     &::before {
@@ -48,60 +43,37 @@
     margin-top: 2rem;
     padding-bottom: 2rem;
   }
-  .grit {
-    background: url("/images/photos/blackgrit.png");
-    background-size: 600px;
-    padding: 2rem 2rem 2rem 0;
-    position: relative;
-    &:hover {
-      animation: gritty 2s steps(10) infinite;
-    }
-  }
-  .highlight {
-    font-size: 4rem;
-    font-weight: 500;
-    letter-spacing: -1px;
-    background: url("/images/photos/blackgrit.png");
-    background-color: #ffc600;
-    &:hover {
-      animation: gritty 2s steps(10) infinite;
-    }
-  }
-  // .cause {
-  //   margin-top: 20px;
-  //   z-index: -1;
-  //   padding: 1rem;
-  //   display: grid;
-  //   grid-template-columns: 1.5fr 1fr;
-  //   background-color: #0cf090;
-  //   grid-gap: 3px;
-  //   .desc {
-  //     padding: 1rem 2rem;
-  //   }
-  //   .imgHeight {
-  //     max-height: 350px;
-  //     width: 100%;
-  //   }
-  //   @media all and (max-width: 1060px) {
-  //   }
-  // }
 
-  // .intro {
-  //   z-index: -1;
-  //   padding: 1rem 2rem;
-  //   &--whoAmI {
-  //     background-color: #2bdeff;
-  //   }
-  //   &--codingIs {
-  //     background-color: #9658fa;
-  //   }
-  //   &--whatToKnow {
-  //     background-color: #f25460;
-  //   }
-  //   &--whatToDo {
-  //     background-color: #ffde2b;
-  //   }
-  // }
+  .cause {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f25460;
+    .desc {
+      padding: 1rem 2rem;
+    }
+    .imgHeight {
+      max-height: 340px;
+      width: 100%;
+    }
+  }
+
+  .intro {
+    z-index: -1;
+    padding: 1rem 2rem;
+    &--whoAmI {
+      background-color: #ffde2b;
+    }
+    &--codingIs {
+      background-color: #9658fa;
+    }
+    // &--whatToKnow {
+    //   background-color: #f25460;
+    // }
+    &--whatToDo {
+      background-color: #2bdeff; //0cf090
+    }
+  }
 }
 
 .subjects {
@@ -121,12 +93,10 @@
       letter-spacing: -1px;
       background: url("/images/photos/blackgrit.png");
       background-color: #ffc600;
+      padding: 0.5rem 0.5rem 0.5rem 1.5rem;
       &:hover {
         animation: gritty 2s steps(10) infinite;
       }
-    }
-    p {
-      padding: 0.5rem;
     }
     &--one {
       background-color: #2bdeff;
@@ -135,10 +105,10 @@
       background-color: #9658fa;
     }
     &--three {
-      background-color: #f25460;
+      background-color: #ffde2b;
     }
     &--four {
-      background-color: #ffde2b;
+      background-color: #f25460;
     }
   }
 }

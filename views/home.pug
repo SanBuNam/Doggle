@@ -1,0 +1,137 @@
+extends layout
+
+block content
+  .inner
+    .introduction
+      .heading
+        h1.title--single.grit 독학 코딩 커뮤니티
+        h3
+          span 프로그래밍을 배우고 싶으신데 🧐어떻게 시작해야할지 모르시겠습니까?
+          br
+          span.highlight 훌륭한 💻프로그래머가 될수있도록 도와드리겠습니다.
+      
+      .cause
+        .desc
+          h3.title 단기 교육 과정의 배경:
+          h4 전 세계적으로 급증하는 프로그래머의 수요를 감당하기 위해 많은 코딩 붓캠프들과 같은 사설 기관들이 분주히 개발자들을 양성하고 있습니다. 그런 프로그래머 양성 코스들을 연구하여 Case Study 들을 통해 개발자로 변신이 가능한 효과적인 온라인 교육 과정을 준비했습니다. 
+        .picture
+          img.imgHeight(src='/images/photos/tech-demand.png')
+
+      //- .cause
+      //-   .picture
+      //-     img.imgHeight(src='/images/photos/degree-not-required.jpg')
+      //-   .desc
+      //-     h3.title 운영자 소개:
+      //-     //- h4 전 세계적으로 급증하는 프로그래머의 수요를 감당하기 위해 많은 코딩 붓캠프들과 같은 사설 기관들이 분주히 개발자들을 양성하고 있습니다. 그런 프로그래머 양성 코스들을 연구하여 Case Study 들을 통해 개발자로 변신이 가능한 효과적인 온라인 교육 과정을 준비했습니다. 
+      //-     h5 코딩(Coding)한줄 몰랐던 제가 비전공자로 처음 코딩을 배울때 어디서부터 시작해야할지도 몰라서 눈물겹게 고생스러웠던 시간을 생각하며 제가 그랬던거처럼 장기간의 정규 교육 과정을 통하지 안고 코딩을 배우자고 하시는 분들께 최대한 시간 낭비, 심리적 부담과 고통을 덜어드리고자 본 프로그램을 만들게 되었습니다.  코딩을 기초부터 단계별로 공부하는 순서와 방법을 알려드리고 포토폴리오를 만들어서 국내 또는 저처럼 해외로 취직하는 방법까지 순서별로 가르쳐 드리겠습니다.
+
+      .intro.intro--whoAmI
+        h3.title 운영자 소개:
+        h5 코딩(Coding)한줄 몰랐던 제가 비전공자로 처음 코딩을 배울때 어디서부터 시작해야할지도 몰라서 눈물겹게 고생스러웠던 시간을 생각하며 제가 그랬던거처럼 장기간의 정규 교육 과정을 통하지 안고 코딩을 배우자고 하시는 분들께 최대한 시간 낭비, 심리적 부담과 고통을 덜어드리고자 본 프로그램을 만들게 되었습니다.  코딩을 기초부터 단계별로 공부하는 순서와 방법을 알려드리고 포토폴리오를 만들어서 국내 또는 저처럼 해외로 취직하는 방법까지 순서별로 가르쳐 드리겠습니다.
+  
+      .intro.intro--codingIs
+        h3.title 코딩은 어떻게 배워야 하나요?
+        h5 구글에 따르면 Coding is the process of using a programming language to get a computer to behave how you want it to. 즉, 컴퓨터가 알아듣는 언어들(C, C++, Java, C#, JavaScript 등)을 통하여 사용자가 원하는 특정한 일을 컴퓨터가 하도록 하는 방법임. 컴퓨터가 알아들을수 있는 문자들을 사용하여 컴퓨터와 소통하는것이죠. 사람이 나라별 다른 언어를 사용하여 소통할수 있듯이 컴퓨터도 알아들을수 있는 언어들이 많습니다. 언어별로 특성과 장단점 등 기술적인면들을 알고자하면 무한정 파고들수 있지만 본 단기 프로그래머 양성 코스는 여러분들로 하여금 최대한 빨리 프로그래머가 될수 있도록 하는게 목적이기에 앞으로도 가능한 중요한 요점을 이해할수 있는 방법으로 설명하겠습니다.
+      
+      //- .intro.intro--whatToKnow
+      //-   h3.title 무엇을 알아야 하나?
+      //-   h5 훌륭한 Web Application을 개발할려면 많은 인력과 기술이 투입되야겠지만 비지니스적 관점과 디자인 부분은 제외하고 순수하게 소프트웨어 개발 부분만 Frontend와 Backend로 구분하겠습니다. Frontend 즉, 클라이언스 사이드(Client side)는 사용자가 웹브라우져(Web Browser)를 통해 웹앱을 사용할수 있도록하는 테크놀로지들이며 주로 시각적인 효과를 내는 기술들입니다. HTML, CSS, JavaScript 등의 기술들로 웹사이트, 웹앱의 구조, 색상, 이미지, 애니메이션 등을 통해 사용자와 직접적인 소통을 담당한다고 보시면 됩니다. 
+      //-   h5 반면, Backend 즉, 서버 사이드(Server side) 테크놀로지는 사용자들이 볼수는 없지만 PHP, Ruby, Phthon, Java, .Net and Node.js등의 서버 사이드 언어들과 MySQL, Oracle 등의 테이블에 근거한 SQL 데이타 베이스 또는 MongoDB와 같은 document형식의 NoSQL 데이타 베이스들을 사용하여 사용자들의 정보를 저장과 보안 및 시스템의 성능과 비지니스의 운영적인 측면의 논리를 구성하는 등의 목적을 위한 기술들로 보시면 됩니다. 기술적인 측면의 차이점과 각각의 특성을 이해하려들면 시작하기가 어려울만큼 많은 내용이라 무슨 말인지 이해가 되지 안으시더라도 걱정마십시요. 결국은 다 같은 일을 하기 위한 각각의 특성이 다른 기술들과 방법들이라 생각하시면 됩니다. 내가 선택한 기술과 언어를 바탕으로 하나씩 배워가시다 보면 추후에는 전반적으로 어떻게 돌아가는지 이해가되실것이고 그때그때 필요한 기술을 배워가시면 됩니다.
+      
+      .intro.intro--whatToDo
+        h3.title 배우게될 프로그래밍 언어와 스택:
+        h5 여러분께 가르쳐드릴 테크스텍 조합 역시 JavaScript 베이스의 기술들입니다. 많은 이유를 될수 있겠지만 그 중 최대 강점들은 JavaScript base의 기술 조합은 하나의 언어로 Frontend와 Backend 기술을 모두 구사할수 있어서 새로운 분야를 공부하시는 입장에서 하나의 언어에 집중할수 있다는것이고 또 하나의 큰 이유는 현재 JavaScript 테크스택 조합이 각광받고 있고 그를 필요로하는 조직들이 많으며 그 추세가 강해지고 있다는것입니다. 아래 도표는 2019년 설문 조사의 결과이니 참고 하십시요.
+        h4 그럼 이제 저와 함께 본격적으로 코딩을 배우는 여행을 시작해볼까요?
+      
+    .subjects
+      .subject.subject--one
+        h3.title.highlight
+          a(href=`/stores/}`) 코딩 커뮤니티
+        ul.verticalTags
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text 코딩을 트렌드
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text FrontEnd
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text BackEnd
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text Code Editor
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text 포토폴리오 만들기
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text 취직 하는 방법
+
+      .subject.subject--two
+        h3.title.highlight 
+          a(href=`/stores/}`) 코딩 배울 순서
+        ul.verticalTags
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text 컴싸 핵심 정리
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text 코딩 기본기 정리
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text 자바스크립트 쏘스
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text FrontEnd-클라이언트
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text BackEnd-서버
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text Etc
+
+      .subject.subject--three
+        h3.title.highlight
+          a(href=`/stores/}`) 풀 스택 강의
+        ul.verticalTags
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text HTML
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text CSS & SASS
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text JavaSCript
+          li.tag
+            a.tag__link2(href="React.js")
+              span.tag__text React.js
+          li.tag
+            a.tag__link2(href="Node.js")
+              span.tag__text Node.js
+          li.tag
+            a.tag__link2(href="MongoDB")
+              span.tag__text MongoDB
+        
+      .subject.subject--four
+        h3.title.highlight
+          a(href=`/stores/}`) 코딩 툴 & 팁
+        ul.verticalTags
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text 코드 에디터
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text JavaScript Source
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text Etc
+          li.tag
+            a.tag__link2(href="HTML")
+              span.tag__text Code Editor
+          li.tag
+            a.tag__link2(href="CSS & SASS")
+              span.tag__text JavaScript Source
+          li.tag
+            a.tag__link2(href="JavaSCript")
+              span.tag__text Etc

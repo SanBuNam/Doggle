@@ -537,9 +537,32 @@ p {
     background-image: linear-gradient(to right, rgba(255, 196, 14, 0.8) 100%, rgba(255, 196, 14, 0.8) 50%); }
 
 .title--single {
-  max-width: 600px;
+  max-width: 900px;
   font-size: 8rem;
   text-align: center; }
+
+@keyframes gritty {
+  from {
+    background-position: 0; }
+  to {
+    background-position: -600px; } }
+
+.grit {
+  background: url("/images/photos/blackgrit.png");
+  background-size: 600px;
+  padding: 2rem 2rem 2rem 0;
+  position: relative; }
+  .grit:hover {
+    animation: gritty 2s steps(10) infinite; }
+
+.highlight {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  background: url("/images/photos/blackgrit.png");
+  background-color: #ffc600; }
+  .highlight:hover {
+    animation: gritty 2s steps(10) infinite; }
 
 input,
 textarea {
@@ -928,6 +951,11 @@ label {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.verticalTags {
+  margin: 1rem;
+  padding: 1rem;
+  list-style: none; }
+
 .tag {
   display: block;
   margin-right: 1rem; }
@@ -961,6 +989,21 @@ label {
       background: #827cd2; }
       .tag__link--active .tag__text {
         color: white; }
+  .tag__link2 {
+    background: url("/images/photos/bg4.png") repeat;
+    color: #000000;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    margin: 1.3rem 0;
+    -webkit-clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
+            clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%); }
+    .tag__link2--active {
+      background: #827cd2; }
+      .tag__link2--active .tag__text {
+        color: white; }
+    .tag__link2:hover {
+      animation: gritty 2s steps(10) infinite; }
   .tag__text {
     padding: 1rem 1rem;
     display: block; }
@@ -1255,20 +1298,18 @@ pre.error {
   line-height: 3;
   white-space: pre-line; }
 
-@keyframes gritty {
-  from {
-    background-position: 0; }
-  to {
-    background-position: -600px; } }
-
-.intro {
+.introduction {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .intro h1 {
+      flex-wrap: wrap;
+  margin-bottom: 5rem; }
+  .introduction .heading {
+    margin-left: 2rem;
+    margin-bottom: 3rem; }
+  .introduction h1 {
     padding: 2rem 0; }
-    .intro h1::before {
+    .introduction h1::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1280,9 +1321,9 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .intro h3 {
+  .introduction h3 {
     position: relative; }
-    .intro h3::before {
+    .introduction h3::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -1294,24 +1335,30 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .intro .title {
+  .introduction .title {
     margin-top: 2rem;
     padding-bottom: 2rem; }
-  .intro .grit {
-    background: url("/images/photos/blackgrit.png");
-    background-size: 600px;
-    padding: 2rem 2rem 2rem 0;
-    position: relative; }
-    .intro .grit:hover {
-      animation: gritty 2s steps(10) infinite; }
-  .intro .highlight {
-    font-size: 4rem;
-    font-weight: 500;
-    letter-spacing: -1px;
-    background: url("/images/photos/blackgrit.png");
-    background-color: #ffc600; }
-    .intro .highlight:hover {
-      animation: gritty 2s steps(10) infinite; }
+  .introduction .cause {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    background-color: #f25460; }
+    .introduction .cause .desc {
+      padding: 1rem 2rem; }
+    .introduction .cause .imgHeight {
+      max-height: 340px;
+      width: 100%; }
+  .introduction .intro {
+    z-index: -1;
+    padding: 1rem 2rem; }
+    .introduction .intro--whoAmI {
+      background-color: #ffde2b; }
+    .introduction .intro--codingIs {
+      background-color: #9658fa; }
+    .introduction .intro--whatToDo {
+      background-color: #2bdeff; }
 
 .subjects {
   display: -ms-grid;
@@ -1331,18 +1378,17 @@ pre.error {
       font-weight: 500;
       letter-spacing: -1px;
       background: url("/images/photos/blackgrit.png");
-      background-color: #ffc600; }
+      background-color: #ffc600;
+      padding: 0.5rem 0.5rem 0.5rem 1.5rem; }
       .subjects .subject .highlight:hover {
         animation: gritty 2s steps(10) infinite; }
-    .subjects .subject p {
-      padding: 0.5rem; }
     .subjects .subject--one {
       background-color: #2bdeff; }
     .subjects .subject--two {
       background-color: #9658fa; }
     .subjects .subject--three {
-      background-color: #f25460; }
-    .subjects .subject--four {
       background-color: #ffde2b; }
+    .subjects .subject--four {
+      background-color: #f25460; }
 
 /*# sourceMappingURL=style.css.map*/

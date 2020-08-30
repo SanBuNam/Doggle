@@ -32,7 +32,6 @@ const storeSchema = new mongoose.Schema(
   }
 );
 
-// Define indexes
 storeSchema.index({
   name: "text",
   description: "text",
@@ -40,8 +39,8 @@ storeSchema.index({
 
 storeSchema.pre("save", async function (next) {
   if (!this.isModified("name")) {
-    next(); // skip it
-    return; // stop this function from running
+    next();
+    return;
   }
   this.slug = slug(this.name);
   // find other stores that have a slug of same, same-1, same-2

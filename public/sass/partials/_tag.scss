@@ -7,6 +7,12 @@
   flex-wrap: wrap;
 }
 
+.verticalTags {
+  margin: 1rem;
+  padding: 1rem;
+  list-style: none;
+}
+
 .tag {
   display: block;
   margin-right: 1rem;
@@ -30,8 +36,8 @@
     }
   }
   &__link {
-    background:$yellow;
-    color:$black;
+    background: $yellow;
+    color: $black;
     display: flex;
     padding-left: 10px;
     clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
@@ -42,6 +48,23 @@
       }
     }
   }
+  &__link2 {
+    background: url("/images/photos/bg4.png") repeat;
+    color: $black;
+    display: flex;
+    padding-left: 10px;
+    margin: 1.3rem 0;
+    clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
+    &--active {
+      background: lighten($purple, 40%);
+      .tag__text {
+        color: white;
+      }
+    }
+    &:hover {
+      animation: gritty 2s steps(10) infinite;
+    }
+  }
   &__text {
     padding: 1rem 1rem;
     display: block;
@@ -49,7 +72,7 @@
   &__count {
     padding: 1rem 1rem;
     background: white;
-    border-left: 3px solid rgba(0,0,0,0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
     margin-right: -1px; /* ugh */
     background-clip: padding-box;
   }
