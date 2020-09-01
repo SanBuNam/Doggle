@@ -78,7 +78,7 @@
 
 .subjects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   .subject {
     // min-width: 20rem;
@@ -86,7 +86,7 @@
     border-radius: 10px;
     .highlight {
       position: relative;
-      margin-top: -1rem;
+      margin-top: -2rem;
       font-size: 3.5rem;
       font-weight: 500;
       letter-spacing: -1px;
@@ -98,16 +98,16 @@
       }
     }
     &--one {
-      background-color: #2bdeff;
-    }
-    &--two {
-      background-color: #9658fa;
-    }
-    &--three {
-      background-color: #ffde2b;
-    }
-    &--four {
       background-color: #f25460;
     }
+    &--two {
+      background-color: #ffde2b;
+    }
+    // &--three {
+    //   background-color: #9658fa;
+    // }
+    // &--four {
+    //   background-color: #2bdeff;
+    // }
   }
 }

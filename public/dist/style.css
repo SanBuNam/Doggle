@@ -1363,15 +1363,15 @@ pre.error {
 .subjects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem; }
   .subjects .subject {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
     border-radius: 10px; }
     .subjects .subject .highlight {
       position: relative;
-      margin-top: -1rem;
+      margin-top: -2rem;
       font-size: 3.5rem;
       font-weight: 500;
       letter-spacing: -1px;
@@ -1381,12 +1381,8 @@ pre.error {
       .subjects .subject .highlight:hover {
         animation: gritty 2s steps(10) infinite; }
     .subjects .subject--one {
-      background-color: #2bdeff; }
-    .subjects .subject--two {
-      background-color: #9658fa; }
-    .subjects .subject--three {
-      background-color: #ffde2b; }
-    .subjects .subject--four {
       background-color: #f25460; }
+    .subjects .subject--two {
+      background-color: #ffde2b; }
 
 /*# sourceMappingURL=style.css.map*/
