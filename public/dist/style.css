@@ -472,31 +472,31 @@ body {
   font-weight: 400; }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: "OperatorMono-Bold";
   font-weight: 600;
   letter-spacing: -1px; }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "OperatorMono-Bold";
   font-weight: 500;
   letter-spacing: -1px; }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "OperatorMono-Bold";
   letter-spacing: -1px; }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: -1px; }
 
 h5 {
-  font-size: 2rem; }
+  font-size: 1.8rem; }
 
 h6 {
-  font-size: 1.8rem; }
+  font-size: 1.6rem; }
 
 a {
   text-decoration: none;
@@ -513,7 +513,6 @@ p {
   position: relative;
   z-index: 2;
   margin: 0;
-  font-size: 40px;
   z-index: 2;
   line-height: 1.1;
   -ms-transform: skew(0, -3deg);
@@ -527,6 +526,7 @@ p {
     left: 0;
     top: 0;
     height: 100%;
+    top: 10%;
     display: block;
     position: absolute;
     z-index: -1;
@@ -556,8 +556,7 @@ p {
     animation: gritty 2s steps(10) infinite; }
 
 .highlight {
-  font-size: 4rem;
-  font-weight: 500;
+  padding: 1rem;
   letter-spacing: -1px;
   background: url("/images/photos/blackgrit.png");
   background-color: #ffc600; }
@@ -1335,30 +1334,22 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .introduction .title {
-    margin-top: 2rem;
-    padding-bottom: 2rem; }
   .introduction .cause {
-    padding: 1rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    background-color: #f25460; }
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr; }
     .introduction .cause .desc {
       padding: 1rem 2rem; }
-    .introduction .cause .imgHeight {
-      max-height: 340px;
-      width: 100%; }
   .introduction .intro {
-    z-index: -1;
     padding: 1rem 2rem; }
-    .introduction .intro--whoAmI {
-      background-color: #ffde2b; }
-    .introduction .intro--codingIs {
-      background-color: #9658fa; }
-    .introduction .intro--whatToDo {
-      background-color: #2bdeff; }
+    .introduction .intro .picture {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr; }
+      .introduction .intro .picture img {
+        height: 3rem; }
 
 .subjects {
   display: -ms-grid;
