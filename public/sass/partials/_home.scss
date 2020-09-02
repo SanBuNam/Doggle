@@ -39,39 +39,22 @@
     }
   }
 
-  .title {
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .cause {
-    padding: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #f25460;
+    grid-template-columns: 2fr 1fr;
     .desc {
       padding: 1rem 2rem;
-    }
-    .imgHeight {
-      max-height: 340px;
-      width: 100%;
     }
   }
 
   .intro {
-    z-index: -1;
     padding: 1rem 2rem;
-    &--whoAmI {
-      background-color: #ffde2b;
-    }
-    &--codingIs {
-      background-color: #9658fa;
-    }
-    // &--whatToKnow {
-    //   background-color: #f25460;
-    // }
-    &--whatToDo {
-      background-color: #2bdeff; //0cf090
+    .picture {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      img {
+        height: 3rem;
+      }
     }
   }
 }
@@ -81,7 +64,6 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   .subject {
-    // min-width: 20rem;
     box-shadow: $shad;
     border-radius: 10px;
     .highlight {
@@ -103,11 +85,5 @@
     &--two {
       background-color: #ffde2b;
     }
-    // &--three {
-    //   background-color: #9658fa;
-    // }
-    // &--four {
-    //   background-color: #2bdeff;
-    // }
   }
 }
