@@ -14,7 +14,7 @@ const javascript = {
 };
 
 /*
-  This is our postCSS loader which gets fed into the next loader. I'm setting it up in it's own variable because its a didgeridog
+  This is our postCSS loader which gets fed into the next loader.
 */
 const postcss = {
   loader: "postcss-loader",
@@ -27,7 +27,7 @@ const postcss = {
 
 const styles = {
   test: /\.(scss)$/,
-  // We don't just pass an array of loaders, we run them through the extract plugin so they can be outputted to their own .css file
+  // Don't just pass an array of loaders, run them through the extract plugin so they can be outputted to their own .css file
   use: ExtractTextPlugin.extract([
     "css-loader?sourceMap",
     postcss,
@@ -35,17 +35,17 @@ const styles = {
   ]),
 };
 
-// We can also use plugins - this one will compress the crap out of our JS
+// Use plugins - this one will compress the JS
 const uglify = new webpack.optimize.UglifyJsPlugin({
   // eslint-disable-line
   compress: { warnings: false },
 });
 
-// OK - now it's time to put it all together
+// Now put it all together
 const config = {
   entry: {
     // we only have 1 entry, but I've set it up for multiple in the future
-    App: "./public/javascripts/doggle-app.js",
+    App: "./public/javascripts/course-app.js",
   },
   // we're using sourcemaps and here is where we specify which kind of sourcemap to use
   devtool: "source-map",
@@ -66,11 +66,11 @@ const config = {
   // finally we pass it an array of our plugins - uncomment if you want to uglify
   // plugins: [uglify]
   plugins: [
-    // here is where we tell it to output our css to a separate file
+    // Output our css to a separate file
     new ExtractTextPlugin("style.css"),
   ],
 };
-// webpack is cranky about some packages using a soon to be deprecated API. shhhhhhh
+// webpack is cranky about some packages using a soon to be deprecated API.
 process.noDeprecation = true;
 
 module.exports = config;
