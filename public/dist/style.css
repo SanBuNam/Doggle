@@ -1337,10 +1337,8 @@ pre.error {
   .introduction .cause {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr; }
-    .introduction .cause .desc {
-      padding: 1rem 2rem; }
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr; }
   .introduction .intro {
     padding: 1rem 2rem; }
     .introduction .intro .picture {
