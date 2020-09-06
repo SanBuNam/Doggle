@@ -1,0 +1,28 @@
+extends layout
+
+include mixins/_one
+
+block content
+  .journey
+    .journey__menu
+      ul.verticalTags
+          li.tag
+            a.tag__link(href=`/community`)
+              span.tag__text 로드 투 코드
+          li.tag
+            a.tag__link(href="JavaSCript")
+              span.tag__text 프로그래밍 관련 소통
+          li.tag
+            a.tag__link(href="HTML")
+              span.tag__text 자바스크립트의 모든것
+          li.tag
+            a.tag__link(href="HTML")
+              span.tag__text 풀 스택 앱 만들기
+          li.tag
+            a.tag__link(href="CSS & SASS")
+              span.tag__text 포토폴리오 잘 만들기
+          li.tag
+            a.tag__link(href="JavaSCript")
+              span.tag__text 프로그래머로 취직 잘하는 법
+    .div
+      +one()

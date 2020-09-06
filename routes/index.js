@@ -5,7 +5,10 @@ const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
+const communityController = require("../controllers/communityController");
 const { catchErrors } = require("../handlers/errorHandlers");
+
+router.get("/community", communityController.communityPage);
 
 router.get("/", courseController.homePage);
 router.get("/courses", catchErrors(courseController.getCourses));

@@ -16,12 +16,8 @@ body {
 .inner {
   max-width: 1060px;
   margin: 0 auto; }
-  @media all and (max-width: 1060px) {
-    .inner {
-      padding: 2rem; } }
 
 .footer {
-  margin-top: 5rem;
   min-height: 30rem;
   background-color: #000000; }
 
@@ -1373,5 +1369,20 @@ pre.error {
       background-color: #f25460; }
     .subjects .subject--two {
       background-color: #ffde2b; }
+
+.journey {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30rem 1fr;
+      grid-template-columns: 30rem 1fr; }
+  .journey__menu {
+    position: relative;
+    height: 100%;
+    background: #000000;
+    height: 50vh; }
+    .journey__menu ul {
+      color: white; }
+      .journey__menu ul li {
+        color: white; }
 
 /*# sourceMappingURL=style.css.map*/
