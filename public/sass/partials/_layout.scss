@@ -18,13 +18,12 @@ body {
 .inner {
   max-width: 1060px;
   margin: 0 auto;
-  @media all and (max-width: 1060px) {
-    padding: 2rem;
-  }
+  // @media all and (max-width: 1060px) {
+  //   padding: 2rem;
+  // }
 }
 
 .footer {
-  margin-top: 5rem;
   min-height: 30rem;
   background-color: $black;
 }
