@@ -18,7 +18,7 @@ body {
   margin: 0 auto; }
 
 .footer {
-  min-height: 30rem;
+  min-height: 25rem;
   background-color: #000000; }
 
 html {
@@ -1370,19 +1370,10 @@ pre.error {
     .subjects .subject--two {
       background-color: #ffde2b; }
 
-.journey {
+.community {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30rem 1fr;
       grid-template-columns: 30rem 1fr; }
-  .journey__menu {
-    position: relative;
-    height: 100%;
-    background: #000000;
-    height: 50vh; }
-    .journey__menu ul {
-      color: white; }
-      .journey__menu ul li {
-        color: white; }
 
 /*# sourceMappingURL=style.css.map*/

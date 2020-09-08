@@ -47,6 +47,10 @@ html
                 .flash(class=`flash--${category}`)
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
+    
+    .sideMenu
+      block withMenu
+    
     .content
       block content
     
