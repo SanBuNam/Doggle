@@ -1,7 +1,7 @@
-mixin sideMenu()
+mixin sideMenu(menu ={})
   .sideMenu
     nav.verticalTags
-      each item in h.sideMenu
+      each item in menu
         li.tag
           a.tag__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'tag__link--active' : ''))
             span.tag__text #{item.icon} #{item.title}

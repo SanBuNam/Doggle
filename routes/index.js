@@ -11,8 +11,8 @@ const { catchErrors } = require("../handlers/errorHandlers");
 router.get("/communities", communityController.communityPage);
 router.get("/community/communityOne", communityController.communityOne);
 router.get("/community/communityTwo", communityController.communityTwo);
-router.get("/community/communityThree", communityController.communityThree);
-router.get("/community/communityFour", communityController.communityFour);
+
+router.get("/javascript", courseController.javaScript);
 
 router.get("/", courseController.homePage);
 router.get("/courses", catchErrors(courseController.getCourses));
