@@ -30,7 +30,7 @@ exports.menu = [
   { slug: "/add", title: "나눔실", icon: "add" },
 ];
 
-exports.sideMenu = [
+exports.communityMenu = [
   { slug: "/communities", title: "Main", icon: "🚣‍♂️" },
   { slug: "/community/communityOne", title: "로드 투 코드", icon: "🚣‍♂️" },
   {
@@ -38,10 +38,9 @@ exports.sideMenu = [
     title: "프로그래밍 관련 소통",
     icon: "store",
   },
-  {
-    slug: "/community/communityThree",
-    title: "자바스크립트의 모든것",
-    icon: "tag",
-  },
-  { slug: "/community/communityFour", title: "four", icon: "top" },
+];
+
+exports.javaScriptMenu = [
+  { slug: "/javascript", title: "JavaScript", icon: "JS" },
+  { slug: "/javascript/courseOne", title: "JavaScript course one", icon: "🚣‍♂️" },
 ];

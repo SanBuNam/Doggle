@@ -25,6 +25,10 @@ const reviewSchema = new mongoose.Schema({
     min: 1,
     max: 5,
   },
+  category: {
+    type: String,
+    required: "Review category is needed.",
+  },
 });
 
 function autopopulate(next) {

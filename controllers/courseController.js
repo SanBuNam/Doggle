@@ -16,3 +16,7 @@ exports.getCourseBySlug = async (req, res, next) => {
   if (!course) return next();
   res.render("course", { course, title: course.name });
 };
+
+exports.javaScript = (req, res) => {
+  res.render("javaScript", { title: "JavaScript" });
+};

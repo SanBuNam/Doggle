@@ -1,0 +1,8 @@
+extends layout
+
+include mixins/_sideMenu
+
+block withMenu
+  .community
+    +sideMenu(h.javaScriptMenu)
+    p javascript
