@@ -8,11 +8,17 @@ const reviewController = require("../controllers/reviewController");
 const communityController = require("../controllers/communityController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
-router.get("/communities", communityController.communityPage);
+router.get("/community", communityController.communityPage);
 router.get("/community/communityOne", communityController.communityOne);
 router.get("/community/communityTwo", communityController.communityTwo);
+router.get("/community/communityThree", communityController.communityThree);
+router.get("/community/communityFour", communityController.communityFour);
 
 router.get("/javascript", courseController.javaScript);
+router.get("/javascript/javaScriptOne", courseController.javaScriptOne);
+router.get("/javascript/javaScriptTwo", courseController.javaScriptTwo);
+router.get("/javascript/javaScriptThree", courseController.javaScriptThree);
+router.get("/javascript/javaScriptFour", courseController.javaScriptFour);
 
 router.get("/", courseController.homePage);
 router.get("/courses", catchErrors(courseController.getCourses));

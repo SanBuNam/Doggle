@@ -25,9 +25,10 @@ const reviewSchema = new mongoose.Schema({
     min: 1,
     max: 5,
   },
-  category: {
-    type: String,
-    required: "Review category is needed.",
+  course: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Course",
+    required: "You must supply a course!",
   },
 });
 
