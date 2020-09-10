@@ -20,3 +20,19 @@ exports.getCourseBySlug = async (req, res, next) => {
 exports.javaScript = (req, res) => {
   res.render("javaScript", { title: "JavaScript" });
 };
+
+exports.javaScriptOne = (req, res) => {
+  res.render("javaScriptOne", { title: "javaScriptOne" });
+};
+
+exports.javaScriptTwo = (req, res) => {
+  res.render("javaScriptTwo", { title: "javaScriptTwo" });
+};
+
+exports.javaScriptThree = (req, res) => {
+  res.render("javaScriptThree", { title: "javaScriptThree" });
+};
+
+exports.javaScriptFour = (req, res) => {
+  res.render("javaScriptFour", { title: "javaScriptFour" });
+};

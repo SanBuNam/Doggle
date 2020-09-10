@@ -9,3 +9,11 @@ exports.communityOne = (req, res) => {
 exports.communityTwo = (req, res) => {
   res.render("communityTwo", { title: "communityTwo" });
 };
+
+exports.communityThree = (req, res) => {
+  res.render("communityThree", { title: "communityThree" });
+};
+
+exports.communityFour = (req, res) => {
+  res.render("communityFour", { title: "communityFour" });
+};

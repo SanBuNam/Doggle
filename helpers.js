@@ -23,24 +23,40 @@ exports.iconPng = (name) =>
 exports.siteName = `Coding Korea`;
 
 exports.menu = [
-  { slug: "/courses", title: "강의실", icon: "store" },
-  { slug: "/stores", title: "자율학습", icon: "store" },
-  { slug: "/tags", title: "투표실", icon: "tag" },
-  { slug: "/top", title: "인기순", icon: "top" },
-  { slug: "/add", title: "나눔실", icon: "add" },
+  { slug: "/courses", title: "courses", icon: "store" },
+  { slug: "/stores", title: "stores", icon: "store" },
+  { slug: "/community", title: "community", icon: "tag" },
+  { slug: "/javascript", title: "javascript", icon: "store" },
+  { slug: "/topPost", title: "topPost", icon: "top" },
+  { slug: "/tags", title: "tags", icon: "tag" },
+  { slug: "/top", title: "top", icon: "top" },
+  { slug: "/add", title: "add", icon: "add" },
 ];
 
 exports.communityMenu = [
-  { slug: "/communities", title: "Main", icon: "🚣‍♂️" },
+  { slug: "/community", title: "Main", icon: "🚣‍♂️" },
   { slug: "/community/communityOne", title: "로드 투 코드", icon: "🚣‍♂️" },
   {
     slug: "/community/communityTwo",
     title: "프로그래밍 관련 소통",
     icon: "store",
   },
+  { slug: "/community/communityThree", title: "three", icon: "🚣‍♂️" },
+  {
+    slug: "/community/communityFour",
+    title: "Four",
+    icon: "store",
+  },
 ];
 
 exports.javaScriptMenu = [
   { slug: "/javascript", title: "JavaScript", icon: "JS" },
-  { slug: "/javascript/courseOne", title: "JavaScript course one", icon: "🚣‍♂️" },
+  {
+    slug: "/javascript/javascriptOne",
+    title: "JavaScript course one",
+    icon: "🚣‍♂️",
+  },
+  { slug: "/javascript/javascriptTwo", title: "courseTwo", icon: "🚣‍♂️" },
+  { slug: "/javascript/javascriptThree", title: "courseThree", icon: "🚣‍♂️" },
+  { slug: "/javascript/javascriptFour", title: "courseFour", icon: "🚣‍♂️" },
 ];
