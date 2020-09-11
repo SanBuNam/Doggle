@@ -5,14 +5,20 @@ const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
-const communityController = require("../controllers/communityController");
+const preparationController = require("../controllers/preparationController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
-router.get("/community", communityController.communityPage);
-router.get("/community/communityOne", communityController.communityOne);
-router.get("/community/communityTwo", communityController.communityTwo);
-router.get("/community/communityThree", communityController.communityThree);
-router.get("/community/communityFour", communityController.communityFour);
+router.get("/preparation", preparationController.preparationPage);
+router.get("/preparation/preparationOne", preparationController.preparationOne);
+router.get("/preparation/preparationTwo", preparationController.preparationTwo);
+router.get(
+  "/preparation/preparationThree",
+  preparationController.preparationThree
+);
+router.get(
+  "/preparation/preparationFour",
+  preparationController.preparationFour
+);
 
 router.get("/javascript", courseController.javaScript);
 router.get("/javascript/javaScriptOne", courseController.javaScriptOne);

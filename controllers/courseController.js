@@ -18,7 +18,7 @@ exports.getCourseBySlug = async (req, res, next) => {
 };
 
 exports.javaScript = (req, res) => {
-  res.render("javaScript", { title: "JavaScript" });
+  res.render("javaScript", { title: "JavaScript 설명" });
 };
 
 exports.javaScriptOne = (req, res) => {
