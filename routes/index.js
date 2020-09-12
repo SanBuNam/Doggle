@@ -21,7 +21,7 @@ router.get(
 );
 
 router.get("/javascript", courseController.javaScript);
-router.get("/javascript/javaScriptOne", courseController.javaScriptOne);
+router.get("/javascript/types", courseController.javaScriptOne);
 router.get("/javascript/javaScriptTwo", courseController.javaScriptTwo);
 router.get("/javascript/javaScriptThree", courseController.javaScriptThree);
 router.get("/javascript/javaScriptFour", courseController.javaScriptFour);

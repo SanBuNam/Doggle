@@ -491,17 +491,16 @@ h4 {
 h5 {
   font-size: 1.8rem; }
 
-h6 {
-  font-size: 1.6rem; }
-
 a {
   text-decoration: none;
   color: #000000; }
 
 p a {
+  font-size: 1.8rem;
   border-bottom: 2px solid #ffc40e; }
 
 p {
+  font-size: 1.8rem;
   line-height: 2; }
 
 .title {
@@ -1382,7 +1381,7 @@ pre.error {
   -ms-grid-columns: 30rem 1fr;
       grid-template-columns: 30rem 1fr; }
   .javascript .introduction {
-    max-width: 1060px; }
+    max-width: 900px; }
     .javascript .introduction h5 {
       line-height: 1.4; }
       .javascript .introduction h5 span {
