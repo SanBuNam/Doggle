@@ -22,7 +22,7 @@ exports.javaScript = (req, res) => {
 };
 
 exports.javaScriptOne = (req, res) => {
-  res.render("javaScriptOne", { title: "javaScriptOne" });
+  res.render("javaScriptType", { title: "타입과 연산자" });
 };
 
 exports.javaScriptTwo = (req, res) => {

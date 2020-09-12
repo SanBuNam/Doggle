@@ -50,7 +50,7 @@ exports.preparationMenu = [
 ];
 
 exports.javaScriptMenu = [
-  { slug: "/javascript", title: "바닐라 자바스크립트", icon: "" },
+  { slug: "/javascript", title: "자바스크립트란?", icon: "" },
   {
     slug: "/javascript/types",
     title: "타입과 연산자",
