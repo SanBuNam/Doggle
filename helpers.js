@@ -53,10 +53,14 @@ exports.javaScriptMenu = [
   { slug: "/javascript", title: "자바스크립트란?", icon: "" },
   {
     slug: "/javascript/types",
-    title: "타입과 연산자",
+    title: "JavaScript 데이타 타입",
     icon: "",
   },
-  { slug: "/javascript/javascriptTwo", title: "courseTwo", icon: "🚣‍♂️" },
+  {
+    slug: "/javascript/declarations",
+    title: "javaScript 변수의 선언",
+    icon: "",
+  },
   { slug: "/javascript/javascriptThree", title: "courseThree", icon: "🚣‍♂️" },
   { slug: "/javascript/javascriptFour", title: "courseFour", icon: "🚣‍♂️" },
 ];

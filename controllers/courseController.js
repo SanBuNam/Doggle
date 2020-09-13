@@ -21,12 +21,12 @@ exports.javaScript = (req, res) => {
   res.render("javaScript", { title: "JavaScript 설명" });
 };
 
-exports.javaScriptOne = (req, res) => {
-  res.render("javaScriptType", { title: "타입과 연산자" });
+exports.javaScriptType = (req, res) => {
+  res.render("javaScriptType", { title: "JavaScript 데이타 타입" });
 };
 
-exports.javaScriptTwo = (req, res) => {
-  res.render("javaScriptTwo", { title: "javaScriptTwo" });
+exports.javaScriptDeclarations = (req, res) => {
+  res.render("javaScriptDeclarations", { title: "var let const" });
 };
 
 exports.javaScriptThree = (req, res) => {

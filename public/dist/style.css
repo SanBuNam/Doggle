@@ -495,10 +495,6 @@ a {
   text-decoration: none;
   color: #000000; }
 
-p a {
-  font-size: 1.8rem;
-  border-bottom: 2px solid #ffc40e; }
-
 p {
   font-size: 1.8rem;
   line-height: 2; }
@@ -1381,15 +1377,27 @@ pre.error {
   -ms-grid-columns: 30rem 1fr;
       grid-template-columns: 30rem 1fr; }
   .javascript .introduction {
-    max-width: 900px; }
+    max-width: 960px; }
     .javascript .introduction h5 {
       line-height: 1.4; }
-      .javascript .introduction h5 span {
-        -webkit-text-decoration-line: underline;
-                text-decoration-line: underline;
-        -webkit-text-decoration-style: solid;
-                text-decoration-style: solid; }
     .javascript .introduction a {
-      background: #ffc40e; }
+      background-color: #48ded4; }
+  .javascript .codeExample {
+    list-style: none;
+    font-size: 1.8rem;
+    background-color: #ffc40e;
+    line-height: 1.5; }
+  .javascript .comment {
+    background-color: #93ff00;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none; }
+  .javascript .quotes {
+    width: 60rem;
+    margin: 0 auto; }
+  .javascript .underline {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+            text-decoration-style: solid; }
 
 /*# sourceMappingURL=style.css.map*/

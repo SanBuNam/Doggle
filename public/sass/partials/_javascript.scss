@@ -2,16 +2,30 @@
   display: grid;
   grid-template-columns: 30rem 1fr;
   .introduction {
-    max-width: 900px;
+    max-width: 960px;
     h5 {
       line-height: 1.4;
-      span {
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-      }
     }
     a {
-      background: $yellow;
+      background-color: $blue;
     }
+  }
+  .codeExample {
+    list-style: none;
+    font-size: 1.8rem;
+    background-color: $yellow;
+    line-height: 1.5;
+  }
+  .comment {
+    background-color: $green;
+    text-decoration-line: none;
+  }
+  .quotes {
+    width: 60rem;
+    margin: 0 auto;
+  }
+  .underline {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
   }
 }
