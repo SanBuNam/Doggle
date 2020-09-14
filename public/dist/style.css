@@ -491,12 +491,17 @@ h4 {
 h5 {
   font-size: 1.8rem; }
 
+h6 {
+  font-size: 1.6rem; }
+
 a {
   text-decoration: none;
   color: #000000; }
 
+p a {
+  border-bottom: 2px solid #ffc40e; }
+
 p {
-  font-size: 1.8rem;
   line-height: 2; }
 
 .title {
@@ -531,6 +536,28 @@ p {
   max-width: 900px;
   font-size: 8rem;
   text-align: center; }
+
+.codeExample {
+  list-style: none;
+  font-size: 1.8rem;
+  background-color: #ffc40e;
+  line-height: 1.3;
+  font-family: "Courier New", Courier, monospace; }
+
+.comment {
+  background-color: #93ff00;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none; }
+
+.quotes {
+  width: 60rem;
+  margin: 0 auto; }
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid; }
 
 @keyframes gritty {
   from {
@@ -770,6 +797,21 @@ label {
   .table thead tr {
     background: #000000;
     color: white; }
+
+.operatorsTable {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: separate;
+  text-align: center; }
+  .operatorsTable td {
+    padding: 5px;
+    font-size: 1.6rem;
+    border: 1px solid black; }
+  .operatorsTable thead tr {
+    background: #000000;
+    color: white;
+    font-size: 2rem;
+    border: 1px solid black; }
 
 .stores {
   display: -ms-flexbox;
@@ -1382,22 +1424,5 @@ pre.error {
       line-height: 1.4; }
     .javascript .introduction a {
       background-color: #48ded4; }
-  .javascript .codeExample {
-    list-style: none;
-    font-size: 1.8rem;
-    background-color: #ffc40e;
-    line-height: 1.5; }
-  .javascript .comment {
-    background-color: #93ff00;
-    -webkit-text-decoration-line: none;
-            text-decoration-line: none; }
-  .javascript .quotes {
-    width: 60rem;
-    margin: 0 auto; }
-  .javascript .underline {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    -webkit-text-decoration-style: solid;
-            text-decoration-style: solid; }
 
 /*# sourceMappingURL=style.css.map*/

@@ -20,14 +20,14 @@ block withMenu
         | var, let, const 모두 동일하게 데이타를 저정하는데 중요한 차이점은 변수의 유효범위 입니다. 즉, 상자에서 데이타를 꺼내어 사용할수 있는 범위가 다르고 const는 한번 선언한 값에 대해서는 변경을 할수 없는 등의 미묘하지만 중요한 차이점이 있습니다.
         br
         br
-        | var, let, const 변수는 이름으로 식별됩니다. 영어로 identifier라고 하죠. 영문자, 숫자, _(언더스코어), $ 중 하나로 시작하며 단, 숫자로 시작할수는 없습니다. 자바스크립은 카멜기법을 표준으로 사용합니다. 낙타 등 처럼 var camelName; 단어의 시작은 소문자 그리고 두번째 단어의 첫 글짜는 대문자로 작명하죠. 선언하는 방법 즉, 데이타값을 저장하는 방법은 간단합니다.
+        | var, let, const 변수는 이름으로 식별됩니다. 이름을 identifier(식별자)라 합니다. 이름은 영문자, 숫자, _(언더스코어), $ 중 하나로 시작하며 단, 숫자로 시작할수는 없습니다. 자바스크립은 카멜기법을 표준으로 사용합니다. 낙타 등 처럼 var camelName; 단어의 시작은 소문자 그리고 두번째 단어의 첫 글짜는 대문자로 작명하죠. 선언하는 방법 즉, 데이타값을 저장하는 방법은 간단합니다.
+        | keyword (var, let , const 중 하나)에 이름을 짖고 = equal sign(등부호)를 적고 = 싸인 오른쪽에 저장할 데이타 값을 부여하는것이죠. 
         span.comment 지금쯤 code editor가 있으시겠지만 
             a(href="https://codepen.io/pen/" target="_blank")  https://codepen.io/pen/ 
               span.comment 테스팅은 제가 즐겨쓰는 코드펜 추천드리며 타입하시면서 공부하는게 기억에 잘 남습니다.
       
       h3 var (variable: 변수)
-        p var 변수의 유효 범위는 function-scoped 또는 globally-scoped 입니다. 즉, function(함수)내부와 전체 범위란 말인데 그말은 프로그램 내부 어디에서든 접근이 가능할수 있단 말이에요. JavaScript의 hoisting이라는 메카니즘 때문에 선언된 변수가 풍선처럼 프로그램 최상단으로 끌어올려지는 작용인데 컴퓨터는 코드를 위에서 아래로 읽으며 일을하니 이런 특성 때문에 이름 충돌이나 뜻하지 안은 값변경 등 많은 문제가 발생 가능하게되서 문제가 될 여지가 많은 변수에요. 그래서 ES6에서 let과 const가 나오게 되었다고 보시면 됩니다.
-          span.comment let & const가 있으니 최대한 사용을 자재하는게 좋다고 생각합니다.
+        p var 변수의 유효 범위는 function-scoped 또는 globally-scoped 입니다. 즉, function(함수)내부와 전체 범위란 말인데 그말은 프로그램 내부 어디에서든 접근이 가능할수 있단 말이에요. JavaScript의 hoisting이라는 메카니즘 때문에 선언된 변수가 풍선처럼 프로그램 최상단으로 끌어올려지는 작용인데 이 특성 때문에 이름 충돌이나 뜻하지 안은 값변경 등 문제가 발생될 여지가 많은 변수에요. 그래서 ES6에서 let과 const가 나오게 되었다고 보시면 됩니다.
           ul.codeExample
             li 예문)
             li var sangjaBox = 1;
@@ -37,6 +37,11 @@ block withMenu
               small  // 같은 sangjaBox에 2를 선언하고
             li console.log(sangjaBox);
               small  // 2 다시 sangjaBox를 부르니 1대신 2를 줍니다. 값이 변경됬죠.
+            br
+            li var assignedAlready = "value assigned";
+            li var assignedAlready;
+            li console.log(assignedAlready);
+              small // "value assigned" 을 출력하죠. 변수를 다시 선언해도, 그 값을 잃지 안습니다.
       
       h3 let (렛)
         p 데이타를 메모리상에 저장하는 동일한 일은 한다했으니 var의 문제점을 보완하기 위해 let은 접근 범위가 block-scoped local variable 즉, {} 괄호 안에서만 접근이 가능하니 컴퓨터가 블록 범위 {} 밖에서는 사용하지 못하는거라 우리(프로그래머)가 컨트롤이 용이해졌다고 보시면 됩니다. var 보단 let 을 사용해야된다는 얘기가 됩니다.
@@ -81,6 +86,6 @@ block withMenu
             span.comment 지금은 그냥 기억하시고 각 부분을 이해하시면 됩니다. 프로젝트 만들어보고 실제로 사용해봐야지 뭔지 제대로 이해가 됩니다.
 
       h3 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
-      img.quotes(src='/images/photos/never-giveup.png' alt="never give up quote")
+      img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
       h3
-        a(href="/javascript/declarations") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇
+        a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇

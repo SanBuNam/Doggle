@@ -21,9 +21,9 @@ router.get(
 );
 
 router.get("/javascript", courseController.javaScript);
-router.get("/javascript/types", courseController.javaScriptType);
-router.get("/javascript/declarations", courseController.javaScriptDeclarations);
-router.get("/javascript/javaScriptThree", courseController.javaScriptThree);
+router.get("/javascript/types", courseController.javaScriptTypes);
+router.get("/javascript/declaration", courseController.javaScriptDeclaration);
+router.get("/javascript/operators", courseController.javaScriptOperators);
 router.get("/javascript/javaScriptFour", courseController.javaScriptFour);
 
 router.get("/", courseController.homePage);
