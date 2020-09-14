@@ -21,16 +21,16 @@ exports.javaScript = (req, res) => {
   res.render("javaScript", { title: "JavaScript 설명" });
 };
 
-exports.javaScriptType = (req, res) => {
-  res.render("javaScriptType", { title: "JavaScript 데이타 타입" });
+exports.javaScriptTypes = (req, res) => {
+  res.render("javaScriptTypes", { title: "JavaScript 데이타 타입" });
 };
 
-exports.javaScriptDeclarations = (req, res) => {
-  res.render("javaScriptDeclarations", { title: "var let const" });
+exports.javaScriptDeclaration = (req, res) => {
+  res.render("javaScriptDeclaration", { title: "var let const" });
 };
 
-exports.javaScriptThree = (req, res) => {
-  res.render("javaScriptThree", { title: "javaScriptThree" });
+exports.javaScriptOperators = (req, res) => {
+  res.render("javaScriptOperators", { title: "javaScript Operators" });
 };
 
 exports.javaScriptFour = (req, res) => {
