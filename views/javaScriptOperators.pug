@@ -18,7 +18,9 @@ block withMenu
         span.comment 8 = 2 + 2 * 3, 12 = (2 + 2) * 3 둘의 차이와 어떻게 이렇게 계산되는지는 아시죠? 그럼 연산자 사용하실때 일반적인 상식으로 생각하시고 그때그때 다시 찾아보면서 사용하다보면 익숙해지십니다.
         br
         br
-        | 위에서 이론적인 설명은 하였으니 간단한 예문으로 연산자들을 종류별로 정리하겠습니다.
+        | 위에서 이론적인 설명은 하였으니 간단한 예문으로 연산자들을 종류별로 정리하겠습니다. 아래 예문의 console.log()는 자바스크립트에서 출력값을 미리 볼수 있도록 사용되는 함수입니다. 여기까지 오셨으면 브라우져 developer tool에서 console 탭 사용하는 법은 아셔야 합니다. 
+        a(href="https://codepen.io/pen/" target="_blank")  https://codepen.io/pen/ 
+              span.comment 편의상 코드펜 링크 드립니다.😄
 
       h3 Arithmetic Operators (산술적 연산자)
         p 산술 연산자
@@ -35,20 +37,24 @@ block withMenu
                 td 문자열도 더 할수 있음. 숫자와 문자열을 더하면 문자열이됨.
               tr
                 td -
-                td 숫자 뺏샘
+                td 빼기
                 td 문자열에 사용 못함. 빼려하면 NaN (Not-A-Number 출력됨)
               tr
                 td *
-                td 설명2
+                td 곱하기
+                td 수학의 곱셈
               tr
                 td **
-                td 설명2
+                td 지수(수학)
+                td 지수는 같은 수를 여러 번 곱하는 수학이죠.
               tr
                 td /
-                td 설명2
+                td 나누기
+                td 수학의 곱셈
               tr
                 td %
-                td 설명2
+                td remainder operator는 나머지 연산이라함
+                td 나머지 연산자는 나눗셈과 원리가 같으나, 몫이 아닌 나머지를 구함.
           ul.codeExample
             li 예)  + 더하기
             li console.log(2 + 2);
@@ -59,6 +65,7 @@ block withMenu
               small  // 3 : 컴퓨터에서 true는 숫자 1로 계산됨. false는 0.
             li console.log(2021 + '년 대박');
               small  // "2021년 대박" :숫자와 문자를 더하면 문자열이 됨.
+            br
             li 예)  - 빼기
             li console.log(4 - 2);
               small  // 2
@@ -68,7 +75,45 @@ block withMenu
               small  // 3
             li console.log(4 - 'hello');
               small  // NaN : Not-A-Number (숫자 아님이라는 값)
-           
+            br
+            li 예)  * 곱하기
+            li console.log(2 * 3);
+              small  // 6
+            li console.log(-2 * 3);
+              small  // -6
+            li console.log('3' * 2);
+              small  // 6이 출력됨. 문자열 형식의 숫자를 숫자에 곱하면 숫자로 자동 전환하여 계산한다. 자바스크립트의 coercion (강제 전환)메카니즘에 의한것인데 의도하여 사용하는 경우가 아닌 이상 주의해야하는 자바스크립트의 특성 입니다.
+            li console.log('foo' * 2);
+              small  // NaN(숫자 아님 값) 숫자가 아닌 문자열에 숫자를 곱하면 계산을 못함으로 NaN을 반환한다.
+            br
+            li 예)  ** exponent (지수)
+            li console.log(3 ** 4);
+              small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
+            li console.log(10 ** -2);
+              small  // 0.01 수학입니다. 계산기랑 같습니다.
+            li  console.log((2 ** 3) ** 2);
+              small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
+            br
+            li 예)  / 나누기
+            li console.log(3 ** 4);
+              small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
+            li console.log(10 ** -2);
+              small  // 0.01 수학입니다. 계산기랑 같습니다.
+            li  console.log((2 ** 3) ** 2);
+              small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
+            br
+            li 예)  % 나머지 연산
+            li console.log(11 % 5);
+              small  // 1 11을 5로 2번 나누면 1이 남죠. 정수로 안떨어지고 남는 숫자가 반환됨.
+            li console.log(-11 % 5);
+              small  // -1
+            li  console.log(4 % 2);
+              small  // 0
+            li  console.log(-4 % 2);
+              small  // -0 수학은 수학인데 약간 다르죠? 컴퓨터는 늘 어떤식의 답을 출력하려합니다.
+            br
+            span.comment 위의 예문들과 같이 자바스크립트의 산술적 연산자는 일반 산수와는 달리 일부 문자열에 대한 작용 또는 타입 자동 전환(coercion)을 함으로 잘 알고 사용해야 합니다. 처음 코딩을 배우시는 분들은 우리가 익숙해있는 산술적 상식 또는 언어 구조와 다르기 때문에 왜 그런지 잘 이해가 안될수있습니디. 이유를 알려고하기 보단 원래 이렇게 프로그래밍 언어가 만들어졌기 때문에 있는 그대로 받아드리고 기억하는편이 좋다고 생각됩니다. 만약 우리가 다른 나라의 언어를 처음 배운다면 문법, 문장의 구조와 순서 등이 우리가 이미 알고있는 언어와 다른것을 왜 그런지 이해하려 하는것보다 언어 자체의 특성을 이해하고 잘 구사하려 생각하는게 쉽다고 생각됩니다.그건 언어 학자들의 몫으로 남겨두고.😄
+      
       h3 (대입 연산자)
         p 데이타를 메모리상에 저장하는 동일한 일은 한다했으니 var의 문제점을 보완하기 위해 let은 접근 범위가 block-scoped local variable 즉, {} 괄호 안에서만 접근이 가능하니 컴퓨터가 블록 범위 {} 밖에서는 사용하지 못하는거라 우리(프로그래머)가 컨트롤이 용이해졌다고 보시면 됩니다. var 보단 let 을 사용해야된다는 얘기가 됩니다.
           ul.codeExample
