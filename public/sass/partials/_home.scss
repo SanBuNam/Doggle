@@ -1,57 +1,20 @@
-.introduction {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 5rem;
-  .heading {
-    margin-left: 2rem;
-    margin-bottom: 3rem;
-  }
-  h1 {
-    padding: 2rem 0;
-    &::before {
-      background-color: $yellow;
-      width: 0.75em;
-      height: 0.75em;
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      z-index: -1;
-      --translate: -0.5rem;
-      --rotate: 3deg;
-      transform: translateX(var(--translate)) translateY(var(--translate))
-        rotate(var(--rotate));
-    }
-  }
-  h3 {
-    position: relative;
-    &::before {
-      background-color: $yellow;
-      width: 0.75em;
-      height: 0.75em;
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      z-index: -1;
-      --translate: -0.5rem;
-      --rotate: 3deg;
-      transform: translateX(var(--translate)) translateY(var(--translate))
-        rotate(var(--rotate));
-    }
-  }
+.heading {
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+}
 
-  .cause {
+.cause {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.intro {
+  padding: 1rem 2rem;
+  .picture {
     display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .intro {
-    padding: 1rem 2rem;
-    .picture {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      img {
-        height: 3rem;
-      }
+    grid-template-columns: 1fr 1fr;
+    img {
+      height: 3rem;
     }
   }
 }
