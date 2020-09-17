@@ -3,6 +3,7 @@
   grid-template-columns: 30rem 1fr;
 }
 .codeExample {
+  padding: 1rem;
   list-style: none;
   font-size: 1.8rem;
   background-color: $yellow;
@@ -14,7 +15,7 @@
   text-decoration-line: none;
 }
 .quotes {
-  width: 60rem;
+  width: 600px;
   margin: 0 auto;
 }
 .underline {

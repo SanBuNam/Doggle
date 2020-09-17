@@ -5,9 +5,9 @@ include mixins/_sideMenu
 block withMenu
   .javascript
     +sideMenu(h.javaScriptMenu)
-    .introduction
+    .pageContent
       h1=title
-      h5 
+      h6 
         span.comment 어떤 순서로 자바스크립트와 코딩을 배우는게 효과적인지 배우는 입장에선 알기가 어려울수 밖에 없죠. 본인이 처음부터 배워보고 훗날 뒤돌아봤을때 어떤 순서로 배우는게 효과적이었을지 정리가 가능하게 되는거 같습니다.
         | 저도 공대를 나온 전공자가 아니여서 거의 독학으로 배웠어요. 그래서 프로그래머로 취직하고 자신감이 생기는데 까지는 엄청 힘들고 시간 허비가 많았던거 같습니다. 제가 알려드리는 방법과 순서가 최선인지는 모르겠지만 학교 코스와 붓캠프들 코스들 조사하고 내가 직접해본 후 나름 정리한 순서와 추려낸 과제들이 입문자들에겐 많은 도움이 될거라는 자신은 있습니다. 처음엔 이해가 잘 안되는 부분이 많겠지만 여러 소스를 통해 계속 반복적으로 시간을 투자하시면 누구나 할수 있다는것을 말씀드리고 싶습니다.
         br
@@ -25,67 +25,66 @@ block withMenu
         span.comment 지금쯤 code editor가 있으시겠지만 
             a(href="https://codepen.io/pen/" target="_blank")  https://codepen.io/pen/ 
               span.comment 테스팅은 제가 즐겨쓰는 코드펜 추천드리며 타입하시면서 공부하는게 기억에 잘 남습니다.
-      
-      h3 var (variable: 변수)
+      .div
+        h3 var (variable: 변수)
         p var 변수의 유효 범위는 function-scoped 또는 globally-scoped 입니다. 즉, function(함수)내부와 전체 범위란 말인데 그말은 프로그램 내부 어디에서든 접근이 가능할수 있단 말이에요. JavaScript의 hoisting이라는 메카니즘 때문에 선언된 변수가 풍선처럼 프로그램 최상단으로 끌어올려지는 작용인데 이 특성 때문에 이름 충돌이나 뜻하지 안은 값변경 등 문제가 발생될 여지가 많은 변수에요. 그래서 ES6에서 let과 const가 나오게 되었다고 보시면 됩니다.
-          ul.codeExample
-            li 예문)
-            li var sangjaBox = 1;
-            li console.log(sangjaBox);
-              small  // 1 sangja라고 부르니 1을 돌려줍니다.
-            li sangjaBox = 2;
-              small  // 같은 sangjaBox에 2를 선언하고
-            li console.log(sangjaBox);
-              small  // 2 다시 sangjaBox를 부르니 1대신 2를 줍니다. 값이 변경됬죠.
-            br
-            li var assignedAlready = "value assigned";
-            li var assignedAlready;
-            li console.log(assignedAlready);
-              small // "value assigned" 을 출력하죠. 변수를 다시 선언해도, 그 값을 잃지 안습니다.
-      
-      h3 let (렛)
+        ul.codeExample
+          li var sangjaBox = 1;
+          li console.log(sangjaBox);
+            small  // 1 sangja라고 부르니 1을 돌려줍니다.
+          li sangjaBox = 2;
+            small  // 같은 sangjaBox에 2를 선언하고
+          li console.log(sangjaBox);
+            small  // 2 다시 sangjaBox를 부르니 1대신 2를 줍니다. 값이 변경됬죠.
+          br
+          li var assignedAlready = "value assigned";
+          li var assignedAlready;
+          li console.log(assignedAlready);
+            small // "value assigned" 을 출력하죠. 변수를 다시 선언해도, 값을 유지합니다.
+      .div
+        h3 let (렛)
         p 데이타를 메모리상에 저장하는 동일한 일은 한다했으니 var의 문제점을 보완하기 위해 let은 접근 범위가 block-scoped local variable 즉, {} 괄호 안에서만 접근이 가능하니 컴퓨터가 블록 범위 {} 밖에서는 사용하지 못하는거라 우리(프로그래머)가 컨트롤이 용이해졌다고 보시면 됩니다. var 보단 let 을 사용해야된다는 얘기가 됩니다.
-          ul.codeExample
-            li 예문)  var과 let의 차이를 보여드릴게요.
-            li var x = 1;
-            li if (x === 1) {
-            li    &#160 var x = 2;
-            li    &#160 console.log(x);
-              small   // 2 가 출력됨
-            li }
-            li  console.log(x);
-              small  // 또 2가 출력됨- 함수내부 x가 함수 밖의 x를 이름이 같으닌까 덮어쒸운 현상 발상함
-            br
-            li 예문) 이번엔 let 을 사용
-            li let x = 1;
-            li if (x === 1) {
-            li    &#160 let x = 2;
-            li    &#160 console.log(x);
-              small   // 2 가 출력됨
-            li }
-            li  console.log(x);
-              small  // 1 이 출렴됨 즉, 함수 안밖에 x는 별개의 identifier 여서 컴퓨터가 다르게 인식하는것
-            span.comment 이해가 안되셔도 상심 마세요. 사람이 컴퓨터처럼 단순하게 생각하는데는 적응 기간이 필요해요. 차차 저절로 이해가 됩니다.
-      
-      h3 const (콘스트라 읽고 constant: 불변한다는 뜻)
+        ul.codeExample
+          li 
+            small  // var과 let의 차이를 보여드릴게요.
+          li var x = 1;
+          li if (x === 1) {
+          li    &#160 var x = 2;
+          li    &#160 console.log(x);
+            small   // 2 가 출력됨
+          li }
+          li  console.log(x);
+            small  // 또 2가 출력됨- 함수내부 x가 함수 밖의 x를 이름이 같으닌까 덮어쒸운 현상 발상함
+          br
+          li 
+            small  // 이번엔 let 을 사용
+          li let x = 1;
+          li if (x === 1) {
+          li    &#160 let x = 2;
+          li    &#160 console.log(x);
+            small   // 2 가 출력됨
+          li }
+          li  console.log(x);
+            small  // 1 이 출렴됨 즉, 함수 안밖에 x는 별개의 identifier 여서 컴퓨터가 다르게 인식하는것
+          span.comment 이해가 안되셔도 상심 마세요. 사람이 컴퓨터처럼 단순하게 생각하는데는 적응 기간이 필요해요.
+      .div
+        h3 const (콘스트라 읽고 constant: 불변한다는 뜻)
         p let과 같이 접근 가능 범위가 block-scoped 입니다. let과의 차이점은 한번 선언된 값을 변경할수가 없다는것입니다. 객체 내부에서 사용될때 value값이나 배열은 변경할수 있지만 일단은 선언된 해당값에 대해 변경할수 없고 다시 선언할수 없다라고 아시면 됩니다.
-          span.comment 예문으로 보여드릴게요.
-          ul.codeExample
-            li 예문)
-            li const sangjaBox = 1;
-            li sanjsBox = 2;
-              small  // Uncaught TypeError: Assignment to constant variable
-              br
-              small  // 지정한 값을 변경할수 없음
-            li const objectOne = { x: 1 };
-            li objectOne.x = 2;
-            li console.log(objectOne.x)
-              small  // 2를 출력함
-              br
-              small  // 객체에 대해서는 아직 안배웠지만 객체내에 value값은 바꿀수 있단걸 보여드립니다.
-            span.comment 지금은 그냥 기억하시고 각 부분을 이해하시면 됩니다. 프로젝트 만들어보고 실제로 사용해봐야지 뭔지 제대로 이해가 됩니다.
+        ul.codeExample
+          li const sangjaBox = 1;
+          li sanjsBox = 2;
+            small  // Uncaught TypeError: Assignment to constant variable
+            br
+            small  // 지정한 값을 변경할수 없음
+          li const objectOne = { x: 1 };
+          li objectOne.x = 2;
+          li console.log(objectOne.x)
+            small  // 2를 출력함
+            br
+            small  // 객체에 대해서는 아직 안배웠지만 객체내에 value값은 바꿀수 있단걸 보여드립니다.
+          span.comment 지금은 그냥 기억하시고 각 부분을 이해하시면 됩니다. 프로젝트에 실제로 사용해봐야지 잘 이해가 됩니다.
 
-      h3 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
+      h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠?😅
       img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
-      h3
+      h4
         a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇

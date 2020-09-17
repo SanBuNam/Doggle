@@ -7,7 +7,7 @@ block withMenu
     +sideMenu(h.javaScriptMenu)
     .pageContent
       h1=title
-      h5 코딩을 배울때 우선적으로 알아야 하는것은 프로그래밍 언어의 데이타 타입(data types)입니다. 한글의 모음과 자음을 배우듯이 영어의 알파벳 스펠링을 배우는것처럼 코딩의 기본이 되는 글자 타입, 숫자 타입 등을 말합니다. 그리고 Operator(연산자)란 프로그램의 데이터를 처리(계산)하여 결과를 산출하는 부호 또는 기호입니다. 즉, 더하기, 빼기, 곱하기, 나누기 등의 기호 등을 말하는것이죠. 
+      h6 코딩을 배울때 우선적으로 알아야 하는것은 프로그래밍 언어의 데이타 타입(data types)입니다. 한글의 모음과 자음을 배우듯이 영어의 알파벳 스펠링을 배우는것처럼 코딩의 기본이 되는 글자 타입, 숫자 타입 등을 말합니다. 그리고 Operator(연산자)란 프로그램의 데이터를 처리(계산)하여 결과를 산출하는 부호 또는 기호입니다. 즉, 더하기, 빼기, 곱하기, 나누기 등의 기호 등을 말하는것이죠. 
         br
         br
         |자바스크립트에는 7개의 Primitive type(원시 타입)과 Object(객체 타입)으로 총 8개 종류의 타입이 있습니다.
@@ -23,86 +23,92 @@ block withMenu
         br
         |그럼 각각의 타입들의 세부 설명 드리겠습니다.
       
-      h3 Number (숫자)
-      p 우리가 일반적으로 사용하는 1,2,3..등 숫자를 표현할때 쓰는 숫자 타입입니다. 정수와 소수점 모두 사용이 가능합니다. 특징이 있다면 3가지의 의미있는 상징적인 값들을 표현할수 있다는것이죠. 이 값에는 +Infinity(무한대), -Infinity 그리고 NaN (숫자가 아님)이라는 표현이 있는데 이또한 아라비안 숫자와 더불어 숫자 타입에 포함됩니다.
-        br
-        |자바스크립트는 컴퓨터가 숫자를 이해할수 있도록 "64비트 형식 IEEE754 값"으로 정의되는데 
-        span.comment (코딩에 입문하시는 단계에서는 굳이 모르셔도 됩니다.심심하실때 인터넷 찾아보셔요.) 여기서 말하고자 하는건 이같은 이유로 간혹 이상한 숫자 계산이 발생할수 있다는 겁니다. 
-        | 가령, 0.1 + 0.2 를 계산하면 0.30000000000000004 이렇게 나와서 황당할수가 있으니 필요에 따라 소숫점 자릿수를 정의하셔야 한다는겁니다. 연산자를 배울때 자세히 알려드리겠습니다.
+      .div
+        h3 Number (숫자)
+        p 우리가 일반적으로 사용하는 1,2,3..등 숫자를 표현할때 쓰는 숫자 타입입니다. 정수와 소수점 모두 사용이 가능합니다. 특징이 있다면 3가지의 의미있는 상징적인 값들을 표현할수 있다는것이죠. 이 값에는 +Infinity(무한대), -Infinity 그리고 NaN (숫자가 아님)이라는 표현이 있는데 이또한 아라비안 숫자와 더불어 숫자 타입에 포함됩니다.
+          br
+          |자바스크립트는 컴퓨터가 숫자를 이해할수 있도록 "64비트 형식 IEEE754 값"으로 정의되는데 
+          span.comment (코딩에 입문하시는 단계에서는 굳이 모르셔도 됩니다.심심하실때 인터넷 찾아보셔요.) 여기서 말하고자 하는건 이같은 이유로 간혹 이상한 숫자 계산이 발생할수 있다는 겁니다. 
+          | 가령, 0.1 + 0.2 를 계산하면 0.30000000000000004 이렇게 나와서 황당할수가 있으니 필요에 따라 소숫점 자릿수를 정의하셔야 한다는겁니다. 연산자를 배울때 자세히 알려드리겠습니다.
         ul.codeExample
-          li 예문)
           li 123 
             small // 백이십삼
           li 123.0 
             small // 위와 같음
           li 123 === 123.0 
             small // true 둘이 동일한것이 사실이다라고 나옵니다.
-
-      h3 Bigint (큰 정수값)
-      p BigInt는 기존의 자바스크립트 숫자 타입이 큰 정수값을 표현하는데의 한계점(-9007199254740991 ~ 9007199254740991외는 오류값 발생)을 보완하기위해 추가된 숫자 타입으로서 아주 큰 정수를 표현할때 사용 할수있습니다.
+      .div
+        h3 Bigint (큰 정수값)
+        p BigInt는 기존의 자바스크립트 숫자 타입이 큰 정수값을 표현하는데의 한계점(-9007199254740991 ~ 9007199254740991외는 오류값 발생)을 보완하기위해 추가된 숫자 타입으로서 아주 큰 정수를 표현할때 사용 할수있습니다.
         ul.codeExample
-          li 예문)
-            small  숫자 끝에 n를 더 하거나 BigInt(9007199254740995) 또는 BigInt("9007199254740995")로 표현합니다.
+          li 
+            small  // 숫자 끝에 n를 더 하거나 BigInt(9007199254740995) 또는 BigInt("9007199254740995")로 표현합니다.
           li const theBiggestInt = 9007199254740995n
             small  // 90071992547409915
           li const alsoHuge = BigInt(9007199254740995)
             small  // 90071992547409915
           li const hugeString = BigInt("9007199254740995")
             small  // 90071992547409915
-
-      h3 String (문자열)
-      p 이중 따옴표("")나 단일 따옴표('')안에 단어나 문장 등의 문자를 기입하면 string(문자열)로 컴퓨터가 인식하게 됩니다. "" 와 '' 둘 중 어떤걸 사용하셔도 무방합니다.
+      .div
+        h3 String (문자열)
+        p 이중 따옴표("")나 단일 따옴표('')안에 단어나 문장 등의 문자를 기입하면 string(문자열)로 컴퓨터가 인식하게 됩니다. "" 와 '' 둘 중 어떤걸 사용하셔도 무방합니다.
         ul.codeExample
-          li 예문)
-            small  작문하실때 단일과 이중 따옴표를 썩어 사용하여 예문처럼 문장내에 따옴표를 표현할수 있습니다.
+          li 
+            small  // 작문하실때 단일과 이중 따옴표를 썩어 사용하여 예문처럼 문장내에 따옴표를 표현할수 있습니다.
           li const string1 = "I'm a boy.";
           li const string2 = "전 한글로된 문장입니다.";
           li const string3 = "제 이름은 '문자열' 입니다.";
           li const string4 = new String('이렇게도 문장열을 만들수 있습니다.');
-      
-      h3 Boolean (참거짓)
-      p 영어로 불리언이라고 읽고 true 와 false 값을 가지는 논리 데이터 타입입니다. 주로 조건문에 주로 사용됩니다. 만약 무엇이 true(참)이면 또는 false(거짓)이면 어떤 행위를 하라고 컴퓨터에게 명령하는데 사용됩니다. 특이 사항은 0, -0, null, false, NaN, undefined, ""(빈문자열)은 false로 컴퓨터가 인식합니다. 
-        span.comment 당장, 이해가 안되도 괜찮아요 우리가 익숙한 표현 방식이 아니라서 그래요. 사용하다보면 알게되십니다. 
+      .div
+        h3 Boolean (참거짓)
+        p 영어로 불리언이라고 읽고 true 와 false 값을 가지는 논리 데이터 타입입니다. 주로 조건문에 주로 사용됩니다. 만약 무엇이 true(참)이면 또는 false(거짓)이면 어떤 행위를 하라고 컴퓨터에게 명령하는데 사용됩니다. 특이 사항은 0, -0, null, false, NaN, undefined, ""(빈문자열)은 false로 컴퓨터가 인식합니다. 
+          span.comment 당장, 이해가 안되도 괜찮아요 우리가 익숙한 표현 방식이 아니라서 그래요. 사용하다보면 알게되십니다. 
         ul.codeExample
           li const numberOne = 1;
           li const numberTwo = 2;
           li console.log(numberOne === numberTwo)
             small  // false 거짓 입니다.
+          br
           li const numberOneAgain = 1;
           li console.log(numberOne === numberOneAgain)
             small  // true 사실(참) 입니다.
-        
-      h3 Symbol (상징물)
-      p 영어로 심볼이라고 읽고..
-        span.comment 잠깐만요 현재 대중적으로 사용되는 모든 프로그래밍 언어는 영어로 되어있죠. 영어권이면 유리하겠지만 어쩔수 없습니다.영어  공부도 같이되는 장점으로 받아드리면 됩니다. 그냥 외우시지 마시고 네이버 사전으로 잠깐 뜻과 발음을 이해하고 넘어가는게 코딩배우는데  여러모로 도움이 됩니다. 저도 이제부턴 프로그래밍 언어 그대로 영어 단어를 사용하겠습니다. 배우실때도 장기적으로 그게 더좋습니다.
-        |  Symbol은 ES6(ECMAScript2015)부터 Object(객체)의 Property Key를 만들때 이름 충동의 위험을 막고자 새롭게 추가된 타입 입니다. 즉, Object의 property 이름은 string으로 인식되는데 Symbol을 사용하여 property 이름을 정의하면 타입이 Symbol로 정의되고 각각의 Symbol값은 유일무이한 값으로 동일 이름으로 인한 문제를 방지할수 있는것 입니다.
+      .div
+        h3 Symbol (상징물)
+        p 영어로 심볼이라고 읽고..
+          span.comment 잠깐만요 현재 대중적으로 사용되는 모든 프로그래밍 언어는 영어로 되어있죠. 영어권이면 유리하겠지만 어쩔수 없습니다.영어  공부도 같이되는 장점으로 받아드리면 됩니다. 그냥 외우시지 마시고 네이버 사전으로 잠깐 뜻과 발음을 이해하고 넘어가는게 코딩배우는데  여러모로 도움이 됩니다. 저도 이제부턴 프로그래밍 언어 그대로 영어 단어를 사용하겠습니다. 배우실때도 장기적으로 그게 더좋습니다.
+          |  Symbol은 ES6(ECMAScript2015)부터 Object(객체)의 Property Key를 만들때 이름 충동의 위험을 막고자 새롭게 추가된 타입 입니다. 즉, Object의 property 이름은 string으로 인식되는데 Symbol을 사용하여 property 이름을 정의하면 타입이 Symbol로 정의되고 각각의 Symbol값은 유일무이한 값으로 동일 이름으로 인한 문제를 방지할수 있는것 입니다.
         ul.codeExample
           li const stringOne = "string";
           li const stringTwo = "string";
           li console.log(stringOne === stringTwo)
             small  // true 같다고 인식됩니다.
+          br
           li const symOne = Symbol('symbol');
           li const symTwo = Symbol('symbol');
           li console.log(symOne === symTwo)
             small  // false 다르다고 인식됩니다.
 
-      h3 Undefined(정의되지 않은 값)과 null(무효값)
-      p undefined와 null 타입의 값은 둘다 값이 없다는것으로 동일하게 인식됩니다. 다만, null값은 의도적으로 값이 없음을 표현할때 사용하는것이고 undefined 는 컴퓨터가 인식할수 있는 값이 없을때 반환되는 값을 의미합니다.
+      .div
+        h3 Undefined(정의되지 않은 값)과
+          br
+          | null(무효값)
+        p undefined와 null 타입의 값은 둘다 값이 없다는것으로 동일하게 인식됩니다. 다만, null값은 의도적으로 값이 없음을 표현할때 사용하는것이고 undefined 는 컴퓨터가 인식할수 있는 값이 없을때 반환되는 값을 의미합니다.
         ul.codeExample
           li var undefinedValue;
           li console.log(undefinedValue);
             small  // undefined 반환되는 값이 없습니다.
           li console.log(typeof undefinedValue);
             small  // "undefined" 타입이 undefined 입니다.
+          br
           li var nullValue = null;
           li console.log(nullValue)
             small  // null 무효값이 설정되었습니다.
           li console.log(typeof nullValue);
             small  // "object" 타입이 object이고 값은 null 입니다.
-      
-      h3 Object (객체 타입)
-      p 자바스크립트는 객체 기반의 언어라고하며 그 말은 즉, JavaScript를 이루고 있는 거의 모든 데이타는 Object(사물)입니다. 우리가 실생활에서 사용하는 어떤 사물을 컴퓨터에게 표현할때 property(사물의 특징)과 method(수단, 수법)등을 묶어서 하나의 object 즉, 독립체로서 그와 관련된 동작(절차, 방법, 기능)을 컴퓨터에게 알려주는것 입니다.
-        span.comment  객체의 종류에는 Array, Function, Date, RegExp 등이 모두 객채에 포함되는데 각각의 객체에 대해서는 앞으로 각각 심도있게 배워보도록 하겠습니다.
+      .div
+        h3 Object (객체 타입)
+        p 자바스크립트는 객체 기반의 언어라고하며 그 말은 즉, JavaScript를 이루고 있는 거의 모든 데이타는 Object(사물)입니다. 우리가 실생활에서 사용하는 어떤 사물을 컴퓨터에게 표현할때 property(사물의 특징)과 method(수단, 수법)등을 묶어서 하나의 object 즉, 독립체로서 그와 관련된 동작(절차, 방법, 기능)을 컴퓨터에게 알려주는것 입니다.
+          span.comment 객체의 종류에는 Array, Function, Date, RegExp 등이 모두 객채에 포함되는데 각각의 객체에 대해서는 앞으로 각각 심도있게 배워보도록 하겠습니다.
         ul.codeExample
           li const person = {firstName: "순신", lastName: "이", age: 35, sex: "남자"};
           li console.log(person);
@@ -110,9 +116,9 @@ block withMenu
               br
               |  // 본 사물은 나이: 35, 이름: 순신, 성: 이, 성별: 남자 입니다라고 컴퓨터가 인식합니다.
       
-      h3 "모든 어플리케이션은 자바스크립트로 쓰여질수있고 결국은 모두 자바스크립트로 쓰여질것이다." 
+      h4 "모든 어플리케이션은 자바스크립트로 쓰여질수있고 결국은 모두 자바스크립트로 쓰여질것이다." 
         br
         | - Jeff Atwood @ founder of Stack Overflow and Discourse
       img.quotes(src='/images/photos/js-jeff-quote.jpg' alt="javascript quote")
-      h3
+      h4
         a(href="/javascript/declarations") 다음 순서는 변수 선언에 대해 배워보겠습니다.👇
