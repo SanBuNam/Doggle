@@ -15,18 +15,32 @@ body {
 
 .inner {
   max-width: 1060px;
+  padding: 1rem;
   margin: 0 auto; }
 
-.pageContent {
+.introduction {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 1rem 2rem 1rem 0.5rem;
-  margin-bottom: 5rem; }
-  .pageContent h1 {
-    padding: 2rem 0; }
-    .pageContent h1::before {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 990px; }
+  .introduction h1::before {
+    background-color: #ffc40e;
+    width: 0.75em;
+    height: 0.75em;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    --translate: -0.5rem;
+    --rotate: 3deg;
+    -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
+        transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+  .introduction h3 {
+    position: relative; }
+    .introduction h3::before {
       background-color: #ffc40e;
       width: 0.75em;
       height: 0.75em;
@@ -38,6 +52,28 @@ body {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+
+.pageContent {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 3rem 1rem 0;
+  margin: 0 auto;
+  margin-left: 0;
+  max-width: 900px; }
+  .pageContent h1::before {
+    background-color: #ffc40e;
+    width: 0.75em;
+    height: 0.75em;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    --translate: -0.5rem;
+    --rotate: 3deg;
+    -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
+        transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
   .pageContent h3 {
     position: relative; }
     .pageContent h3::before {
@@ -547,7 +583,6 @@ p {
   position: relative;
   z-index: 2;
   margin: 0;
-  z-index: 2;
   line-height: 1.1;
   -ms-transform: skew(0, -3deg);
       transform: skew(0, -3deg);
@@ -815,6 +850,7 @@ label {
     color: white; }
 
 .operatorsTable {
+  position: relative;
   width: 100%;
   border: 1px solid black;
   border-collapse: separate;
@@ -826,7 +862,7 @@ label {
   .operatorsTable thead tr {
     background: #000000;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: 1px solid black; }
 
 .stores {
@@ -1404,6 +1440,7 @@ pre.error {
       grid-template-columns: 30rem 1fr; }
 
 .codeExample {
+  padding: 1rem;
   list-style: none;
   font-size: 1.8rem;
   background-color: #ffc40e;
@@ -1416,7 +1453,7 @@ pre.error {
           text-decoration-line: none; }
 
 .quotes {
-  width: 60rem;
+  width: 600px;
   margin: 0 auto; }
 
 .underline {

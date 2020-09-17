@@ -26,7 +26,7 @@ exports.javaScriptTypes = (req, res) => {
 };
 
 exports.javaScriptDeclaration = (req, res) => {
-  res.render("javaScriptDeclaration", { title: "var let const" });
+  res.render("javaScriptDeclaration", { title: "var let const declaration" });
 };
 
 exports.javaScriptOperators = (req, res) => {
