@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const storeController = require("../controllers/storeController");
+const postController = require("../controllers/postController");
 const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 const courseController = require("../controllers/courseController");
@@ -26,32 +26,32 @@ router.get("/javascript/declaration", courseController.javaScriptDeclaration);
 router.get("/javascript/operators", courseController.javaScriptOperators);
 router.get("/javascript/javaScriptFour", courseController.javaScriptFour);
 
-router.get("/", courseController.homePage);
-router.get("/courses", catchErrors(courseController.getCourses));
-router.get("/course/:slug", catchErrors(courseController.getCourseBySlug));
+// router.get("/", courseController.homePage);
+// router.get("/courses", catchErrors(courseController.getCourses));
+// router.get("/course/:slug", catchErrors(courseController.getCourseBySlug));
 
-router.get("/stores", catchErrors(storeController.getStores));
-router.get("/stores/page/:page", catchErrors(storeController.getStores));
-router.get("/add", authController.isLoggedIn, storeController.addStore);
+router.get("/posts", catchErrors(postController.getPosts));
+router.get("/posts/page/:page", catchErrors(postController.getPosts));
+router.get("/add", authController.isLoggedIn, postController.addPost);
 
 router.post(
   "/add",
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.createStore)
+  postController.upload,
+  catchErrors(postController.resize),
+  catchErrors(postController.createPost)
 );
 router.post(
   "/add/:id",
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.updateStore)
+  postController.upload,
+  catchErrors(postController.resize),
+  catchErrors(postController.updatePost)
 );
 
-router.get("/stores/:id/edit", catchErrors(storeController.editStore));
-router.get("/store/:slug", catchErrors(storeController.getStoreBySlug));
+router.get("/posts/:id/edit", catchErrors(postController.editPost));
+router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
 
-router.get("/tags", catchErrors(storeController.getStoresByTag));
-router.get("/tags/:tag", catchErrors(storeController.getStoresByTag));
+router.get("/tags", catchErrors(postController.getPostsByTag));
+router.get("/tags/:tag", catchErrors(postController.getPostsByTag));
 
 router.get("/register", userController.registerForm);
 router.post(
@@ -78,7 +78,7 @@ router.post(
 router.get(
   "/hearts",
   authController.isLoggedIn,
-  catchErrors(storeController.getHearts)
+  catchErrors(postController.getHearts)
 );
 
 router.post(
@@ -87,12 +87,12 @@ router.post(
   catchErrors(reviewController.addReview)
 );
 
-router.get("/top", catchErrors(storeController.getTopStores));
+router.get("/top", catchErrors(postController.getTopPosts));
 
 /*
   API
 */
-router.get("/api/search", catchErrors(storeController.searchStores));
-router.post("/api/stores/:id/heart", catchErrors(storeController.heartStore));
+router.get("/api/search", catchErrors(postController.searchPosts));
+router.post("/api/posts/:id/heart", catchErrors(postController.heartPost));
 
 module.exports = router;

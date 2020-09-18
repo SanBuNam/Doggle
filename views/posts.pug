@@ -1,12 +1,12 @@
 extends layout
 
-include mixins/_storeCard
+include mixins/_postCard
 include mixins/_pagination
 
 block content
   .inner
     h2= title
-    .stores
-      each store in stores
-        +storeCard(store)
+    .posts
+      each post in posts
+        +postCard(post)
     +pagination(page, pages, count)

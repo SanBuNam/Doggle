@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 const slug = require("slugs");
 
-const storeSchema = new mongoose.Schema(
+const postSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       trim: true,
-      required: "Please enter a store name!",
+      required: "Please enter a post name!",
     },
     slug: String,
     description: {
@@ -32,27 +32,27 @@ const storeSchema = new mongoose.Schema(
   }
 );
 
-storeSchema.index({
+postSchema.index({
   name: "text",
   description: "text",
 });
 
-storeSchema.pre("save", async function (next) {
+postSchema.pre("save", async function (next) {
   if (!this.isModified("name")) {
     next();
     return;
   }
   this.slug = slug(this.name);
-  // find other stores that have a slug of same, same-1, same-2
+  // find other posts that have a slug of same, same-1, same-2
   const slugRegEx = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`, "i");
-  const storesWithSlug = await this.constructor.find({ slog: slugRegEx });
-  if (storesWithSlug.length) {
-    this.slug = `${this.slug}-${storesWithSlug.length + 1}`;
+  const postsWithSlug = await this.constructor.find({ slog: slugRegEx });
+  if (postsWithSlug.length) {
+    this.slug = `${this.slug}-${postsWithSlug.length + 1}`;
   }
   next();
 });
 
-storeSchema.statics.getTagsList = function () {
+postSchema.statics.getTagsList = function () {
   return this.aggregate([
     { $unwind: "$tags" },
     { $group: { _id: "$tags", count: { $sum: 1 } } },
@@ -60,13 +60,13 @@ storeSchema.statics.getTagsList = function () {
   ]);
 };
 
-storeSchema.statics.getTopStores = function () {
+postSchema.statics.getTopPosts = function () {
   return this.aggregate([
     {
       $lookup: {
         from: "reviews",
         localField: "_id",
-        foreignField: "store",
+        foreignField: "post",
         as: "reviews",
       },
     },
@@ -85,10 +85,10 @@ storeSchema.statics.getTopStores = function () {
   ]);
 };
 
-storeSchema.virtual("reviews", {
+postSchema.virtual("reviews", {
   ref: "Review",
   localField: "_id",
-  foreignField: "store",
+  foreignField: "post",
 });
 
 function autopopulate(next) {
@@ -96,7 +96,7 @@ function autopopulate(next) {
   next();
 }
 
-storeSchema.pre("find", autopopulate);
-storeSchema.pre("findOne", autopopulate);
+postSchema.pre("find", autopopulate);
+postSchema.pre("findOne", autopopulate);
 
-module.exports = mongoose.model("Store", storeSchema);
+module.exports = mongoose.model("Post", postSchema);

@@ -30,7 +30,7 @@ app.use(expressValidator());
 // populates req.cookies with any cookies that came along with the request
 app.use(cookieParser());
 
-// Sessions allow us to store data on visitors from request to request
+// Sessions allow us to post data on visitors from request to request
 // This keeps users logged in and allows us to send flash messages
 app.use(
   session({
@@ -38,7 +38,7 @@ app.use(
     key: process.env.KEY,
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    post: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
 

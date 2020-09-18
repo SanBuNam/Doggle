@@ -11,7 +11,7 @@ mongoose.connection.on("error", (err) => {
 });
 
 // import all of the models
-require("./models/Store");
+require("./models/Post");
 require("./models/User");
 require("./models/Review");
 require("./models/Course");

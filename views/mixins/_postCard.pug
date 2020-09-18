@@ -1,0 +1,25 @@
+mixin postCard(post = {})
+  .post
+    .post__hero
+      .post__actions
+        if user
+          .post__action.post__action--heart
+            form.heart(method="POST" action=`/api/posts/${post._id}/heart`)
+              - const heartStrings = user.hearts.map(obj => obj.toString())
+              - const heartClass = heartStrings.includes(post._id.toString()) ? 'heart__button--hearted' : ''
+              button.heart__button(type="submit" name="heart" class=heartClass)
+                != h.icon('heart')
+        if user && post.author.equals(user._id)
+          .post__action.post__action--edit
+            a(href=`/posts/${post._id}/edit`)
+              != h.icon('pencil')
+        if post.reviews
+          .post__action.post__action--count
+            != h.icon('review')
+            span= post.reviews.length
+
+      img(src=`/uploads/${post.photo || 'post.png'}`)
+      h2.title
+        a(href=`/posts/${post.slug}`) #{post.name}
+    .post__details
+      p= post.description.split(' ').slice(0, 25).join(' ')
