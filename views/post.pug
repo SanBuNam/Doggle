@@ -6,25 +6,25 @@ include mixins/_review
 block content
   .single
     .single__hero
-      img.single__image(src=`/uploads/${store.photo}`)
+      img.single__image(src=`/uploads/${post.photo}`)
       h2.title.title--single
-        a #{store.name}
+        a #{post.name}
 
   .single__details.inner
-    p= store.description
+    p= post.description
 
-    if store.tags
+    if post.tags
       ul.tags
-        each tag in store.tags
+        each tag in post.tags
           li.tag
             a.tag__link(href=`/tags/${tag}`)
               span.tag__text ##{tag}
 
     if user
-      +reviewForm(store)
+      +reviewForm(post)
 
-    if store.reviews
+    if post.reviews
       .reviews
-        each review in store.reviews
+        each review in post.reviews
           .review
             +review(review)

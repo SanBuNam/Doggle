@@ -1,6 +1,6 @@
 extends layout
 
-include mixins/_storeCard
+include mixins/_postCard
 
 block content
   .inner
@@ -12,6 +12,6 @@ block content
             span.tag__text= t._id
             span.tag__count= t.count
 
-    .stores
-      each store in stores
-        +storeCard(store)
+    .posts
+      each post in posts
+        +postCard(post)

@@ -36,7 +36,7 @@ courseSchema.index({
 courseSchema.virtual("reviews", {
   ref: "Review",
   localField: "_id",
-  foreignField: "store",
+  foreignField: "post",
 });
 
 function autopopulate(next) {

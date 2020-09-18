@@ -23,7 +23,7 @@ block withMenu
               span.comment 편의상 코드펜 링크 드립니다.😄
       .div
         h3 Arithmetic Operators (산술적 연산자)
-        p 산술 연산자
+        p 산술 연산자들은 Binary Operator 입니다. 2개의 피연산자(데이타)를 왼쪽에서 오른쪽으로 계산합니다.
         table.operatorsTable
           thead
             tr
@@ -115,7 +115,7 @@ block withMenu
           span.comment 위의 예문들과 같이 자바스크립트의 산술적 연산자는 일반 산수와는 달리 일부 문자열에 대한 작용 또는 타입 자동 전환(coercion)을 함으로 잘 알고 사용해야 합니다. 처음 코딩을 배우시는 분들은 우리가 익숙해있는 산술적 상식 또는 언어 구조와 다르기 때문에 왜 그런지 잘 이해가 안될수있습니디. 이유를 알려고하기 보단 원래 이렇게 프로그래밍 언어가 만들어졌기 때문에 있는 그대로 받아드리고 기억하는편이 좋다고 생각됩니다. 만약 우리가 다른 나라의 언어를 처음 배운다면 문법, 문장의 구조와 순서 등이 우리가 이미 알고있는 언어와 다른것을 왜 그런지 이해하려 하는것보다 언어 자체의 특성을 이해하고 잘 구사하려 생각하는게 쉽다고 생각됩니다.그건 언어 학자들의 몫으로 남겨두고.😄
       .div
         h3 Comparison Operators (대입 연산자)
-        p 데이타를 메모리상에 저장하는 동일한 일은 한다했으니 var의 문제점을 보완하기 위해 let은 접근 범위가 block-scoped local variable 즉, {} 괄호 안에서만 접근이 가능하니 컴퓨터가 블록 범위 {} 밖에서는 사용하지 못하는거라 우리(프로그래머)가 컨트롤이 용이해졌다고 보시면 됩니다. var 보단 let 을 사용해야된다는 얘기가 됩니다.
+        p 대입 연산자는 
         ul.codeExample
           li 예문)  var과 let의 차이를 보여드릴게요.
           li var x = 1;
@@ -152,8 +152,8 @@ block withMenu
       
       .div
         h3 (기타 연산자)
-
-      h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
-      img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
-      h4
-        a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇
+      .div
+        h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
+        img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
+        h4
+          a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇
