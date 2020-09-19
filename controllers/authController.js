@@ -8,14 +8,14 @@ const mail = require("../handlers/mail");
 exports.login = passport.authenticate("local", {
   failureRedirect: "/login",
   failureFlash: "Failed Login!",
-  successRedirect: "/",
+  successRedirect: "/posts",
   successFlash: "You are now logged in!",
 });
 
 exports.logout = (req, res) => {
   req.logout();
   req.flash("success", "You are now logged out!");
-  res.redirect("/");
+  res.redirect("/login");
 };
 
 exports.isLoggedIn = (req, res, next) => {

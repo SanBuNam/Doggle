@@ -33,18 +33,18 @@ courseSchema.index({
   description: "text",
 });
 
-courseSchema.virtual("reviews", {
-  ref: "Review",
-  localField: "_id",
-  foreignField: "post",
-});
+// courseSchema.virtual("reviews", {
+//   ref: "Review",
+//   localField: "_id",
+//   foreignField: "post",
+// });
 
-function autopopulate(next) {
-  this.populate("reviews");
-  next();
-}
+// function autopopulate(next) {
+//   this.populate("reviews");
+//   next();
+// }
 
-courseSchema.pre("find", autopopulate);
-courseSchema.pre("findOne", autopopulate);
+// courseSchema.pre("find", autopopulate);
+// courseSchema.pre("findOne", autopopulate);
 
 module.exports = mongoose.model("Course", courseSchema);

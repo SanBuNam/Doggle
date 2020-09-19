@@ -25,11 +25,6 @@ const reviewSchema = new mongoose.Schema({
     min: 1,
     max: 5,
   },
-  course: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Course",
-    required: "You must supply a course!",
-  },
 });
 
 function autopopulate(next) {

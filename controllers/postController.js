@@ -46,7 +46,7 @@ exports.createPost = async (req, res) => {
     "success",
     `Successfully Created ${post.name}. Care to leave a review?`
   );
-  res.redirect(`/post/${post.slug}`);
+  res.redirect(`/posts/${post.slug}`);
 };
 
 exports.getPosts = async (req, res) => {
