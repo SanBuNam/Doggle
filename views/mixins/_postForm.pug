@@ -1,20 +1,20 @@
 mixin postForm(post = {})
   form(action=`/add/${post._id || ''}` method="POST" class="card" enctype="multipart/form-data")
-    label(for="name") name
+    label(for="name") 제목
     input(type="text" name="name" value=post.name)
-    label(for="description") Description
+    label(for="description") 글
     textarea(name="description")= post.description
     //- Image Upload
-    label(for="photo") Photo
+    label(for="photo") 사진 한장
       input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg")
       if post.photo
         img(src=`/uploads/${post.photo}`, alt=post.name width=200)
-
-    - const choices = ['wifi', 'Open Late', 'Family Friendly', 'Vegetarian', 'Protection']
+    p 종류
+    - const choices = ['재밋따', '도움되', '위로되', '감동이야']
     - const tags = post.tags || []
     ul.tags
       each choice in choices
         .tag.tag__choice
           input(type="checkbox" id=choice value=choice name="tags" checked=(tags.includes(choice)))
           label(for=choice) #{choice}
-    input(type="submit" value="save" class="button")
+    input(type="submit" value="글 올리기" class="button")

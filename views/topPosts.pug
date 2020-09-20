@@ -13,9 +13,9 @@ block content
       each post, i in posts
         tr
           td
-            a(href=`/post/${post.slug}`)
+            a(href=`/posts/${post.slug}`)
               img(width=200 src=`/uploads/${post.photo || 'post.png'}` alt=post.name)
           td  #{i + 1}
-          td: a(href=`/post/${post.slug}`)= post.name
+          td: a(href=`/posts/${post.slug}`)= post.name
           td= post.reviews.length
           td #{Math.round(post.averageRating * 10) / 10} / 5

@@ -3,6 +3,45 @@
   margin-bottom: 3rem;
 }
 
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 990px;
+  h1 {
+    &::before {
+      background-color: $yellow;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+  }
+  h3 {
+    position: relative;
+    &::before {
+      background-color: $yellow;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+  }
+}
+
 .cause {
   display: grid;
   grid-template-columns: 1fr;
