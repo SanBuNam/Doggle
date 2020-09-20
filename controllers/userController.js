@@ -3,11 +3,11 @@ const User = mongoose.model("User");
 const promisify = require("es6-promisify");
 
 exports.loginForm = (req, res) => {
-  res.render("login", { title: "Login" });
+  res.render("login", { title: "로그인" });
 };
 
 exports.registerForm = (req, res) => {
-  res.render("register", { title: "Register" });
+  res.render("register", { title: "회원가입" });
 };
 
 exports.validateRegister = (req, res, next) => {
@@ -59,13 +59,11 @@ exports.updateAccount = async (req, res) => {
     name: req.body.name,
     email: req.body.email,
   };
-
   const user = await User.findOneAndUpdate(
     { _id: req.user._id },
     { $set: updates },
     { new: true, runValidators: true, context: "query" }
   );
-
   req.flash("success", "Updated the profile!");
   res.redirect("back");
 };

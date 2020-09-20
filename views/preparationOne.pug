@@ -3,9 +3,10 @@ extends layout
 include mixins/_sideMenu
 
 block withMenu
-  .preparation
-    +sideMenu(h.preparationMenu)
-    .div
-      h1=title
-      p two Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  .inner
+    .preparation
+      +sideMenu(h.preparationMenu)
+      .div
+        h1=title
+        p two Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 

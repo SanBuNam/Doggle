@@ -45,7 +45,7 @@ postSchema.pre("save", async function (next) {
   this.slug = slug(this.name);
   // find other posts that have a slug of same, same-1, same-2
   const slugRegEx = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`, "i");
-  const postsWithSlug = await this.constructor.find({ slog: slugRegEx });
+  const postsWithSlug = await this.constructor.find({ slug: slugRegEx });
   if (postsWithSlug.length) {
     this.slug = `${this.slug}-${postsWithSlug.length + 1}`;
   }
@@ -62,6 +62,7 @@ postSchema.statics.getTagsList = function () {
 
 postSchema.statics.getTopPosts = function () {
   return this.aggregate([
+    // Lookup Posts and populate their reviews
     {
       $lookup: {
         from: "reviews",
@@ -70,7 +71,9 @@ postSchema.statics.getTopPosts = function () {
         as: "reviews",
       },
     },
+    // filter for only items that have 2 or more reviews
     { $match: { "reviews.1": { $exists: true } } },
+    // Add the average reviews field
     {
       $project: {
         photo: "$$ROOT.photo",
@@ -80,7 +83,9 @@ postSchema.statics.getTopPosts = function () {
         averageRating: { $avg: "$reviews.rating" },
       },
     },
+    // sort it by new field, highest reviews first
     { $sort: { averageRating: -1 } },
+    // limit to at most 10
     { $limit: 10 },
   ]);
 };

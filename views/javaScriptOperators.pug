@@ -3,157 +3,158 @@ extends layout
 include mixins/_sideMenu
 
 block withMenu
-  .javascript
-    +sideMenu(h.javaScriptMenu)
-    .pageContent
-      h1=title
-      h6 우리가 수학 계산을 할때 여러 연산자(+,-, *, / 등)들이 있죠. 자바스크립트에도 코딩할때 사용되는 몇몇 종류의 operator(연산자)들이 있습니다. 한글처럼 모든 문장을 글로 써서 컴퓨터랑 소통할수는 없겠죠? 그래서 data들과 operator들을 조합하고 함수 등을 사용해서 컴퓨터에게 소통하여 명령을 내릴수 있는거에요. 그 중에는 산술적 연산자, 대입 연산자, 증감, 비교, 논리, 비트와 기타 몇몇 특이 연산자들이 있습니다.
-        span.comment 전 연산자라는 한자어가 잘 와닿지 안아요. Operator : 작동자/작업가 이해를 돕는거 같아요. 개인적인 생각입니다.
-        br
-        br
-        | 연산자 중에는 하나의 데이타에 작동하는 Unary, 2개의 데이타를 사용해 작동하는 Binary, 그리고 3개의 데이터를 사용해서 작업하는 Ternary operator 들이 있습니다. 종류별로 나누고 Unary, Binary, Ternary (영어로 하나, 둘, 셋이라는 어원) 나누는게 쉬운것 같습니다.
-        br
-        br
-        | 그리고 연산자를 사용해서 계산 등 작업을할때는 수학과 거의 비슷한 우선 순위가 있어요. 즉, 곱하기가 더하기보다 먼저 시행되잖아요? 그리고 대부분의 연산자들도 왼쪽에서 오른쪽 방향으로 작업을 하며 우선 순위는 괄호 ()를 사용해서 임의 조정이 가능합니다. 
-        span.comment 8 = 2 + 2 * 3, 12 = (2 + 2) * 3 둘의 차이와 어떻게 이렇게 계산되는지는 아시죠? 그럼 연산자 사용하실때 일반적인 상식으로 생각하시고 그때그때 다시 찾아보면서 사용하다보면 익숙해지십니다.
-        br
-        br
-        | 위에서 이론적인 설명은 하였으니 간단한 예문으로 연산자들을 종류별로 정리하겠습니다. 아래 예문의 console.log()는 자바스크립트에서 출력값을 미리 볼수 있도록 사용되는 함수입니다. 여기까지 오셨으면 브라우져 developer tool에서 console 탭 사용하는 법은 아셔야 합니다. 
-        a(href="https://codepen.io/pen/" target="_blank")  https://codepen.io/pen/ 
-              span.comment 편의상 코드펜 링크 드립니다.😄
-      .div
-        h3 Arithmetic Operators (산술적 연산자)
-        p 산술 연산자들은 Binary Operator 입니다. 2개의 피연산자(데이타)를 왼쪽에서 오른쪽으로 계산합니다.
-        table.operatorsTable
-          thead
-            tr
-              th 산술 연산자
-              th 설명
-              th 특이 사항(예문 참고)
-          tbody    
-            tr
-              td +
-              td 숫자를 더하거나 문자열을 더하는데 사용
-              td 문자열도 더 할수 있음. 숫자와 문자열을 더하면 문자열이됨.
-            tr
-              td -
-              td 빼기
-              td 문자열에 사용 못함. 빼려하면 NaN (Not-A-Number 출력됨)
-            tr
-              td *
-              td 곱하기
-              td 수학의 곱셈
-            tr
-              td **
-              td 지수(수학)
-              td 지수는 같은 수를 여러 번 곱하는 수학이죠.
-            tr
-              td /
-              td 나누기
-              td 수학의 곱셈
-            tr
-              td %
-              td remainder operator는 나머지 연산이라함
-              td 나머지 연산자는 나눗셈과 원리가 같으나, 몫이 아닌 나머지를 구함.
-        ul.codeExample
-          li 예)  + 더하기
-          li console.log(2 + 2);
-            small  // 4
-          li console.log('이' + '순신');
-            small  // "이순신"
-          li console.log(2 + true);
-            small  // 3 : 컴퓨터에서 true는 숫자 1로 계산됨. false는 0.
-          li console.log(2021 + '년 대박');
-            small  // "2021년 대박" :숫자와 문자를 더하면 문자열이 됨.
+  .inner
+    .javascript
+      +sideMenu(h.javaScriptMenu)
+      .pageContent
+        h1=title
+        h6 우리가 수학 계산을 할때 여러 연산자(+,-, *, / 등)들이 있죠. 자바스크립트에도 코딩할때 사용되는 몇몇 종류의 operator(연산자)들이 있습니다. 한글처럼 모든 문장을 글로 써서 컴퓨터랑 소통할수는 없겠죠? 그래서 data들과 operator들을 조합하고 함수 등을 사용해서 컴퓨터에게 소통하여 명령을 내릴수 있는거에요. 그 중에는 산술적 연산자, 대입 연산자, 증감, 비교, 논리, 비트와 기타 몇몇 특이 연산자들이 있습니다.
+          span.comment 전 연산자라는 한자어가 잘 와닿지 안아요. Operator : 작동자/작업가 이해를 돕는거 같아요. 개인적인 생각입니다.
           br
-          li 예)  - 빼기
-          li console.log(4 - 2);
-            small  // 2
-          li console.log(4.5 - 6);
-            small  // -1.5
-          li console.log(4 - true); 
-            small  // 3
-          li console.log(4 - 'hello');
-            small  // NaN : Not-A-Number (숫자 아님이라는 값)
           br
-          li 예)  * 곱하기
-          li console.log(2 * 3);
-            small  // 6
-          li console.log(-2 * 3);
-            small  // -6
-          li console.log('3' * 2);
-            small  // 6이 출력됨. 문자열 형식의 숫자를 숫자에 곱하면 숫자로 자동 전환하여 계산한다. 자바스크립트의 coercion (강제 전환)메카니즘에 의한것인데 의도하여 사용하는 경우가 아닌 이상 주의해야하는 자바스크립트의 특성 입니다.
-          li console.log('foo' * 2);
-            small  // NaN(숫자 아님 값) 숫자가 아닌 문자열에 숫자를 곱하면 계산을 못함으로 NaN을 반환한다.
+          | 연산자 중에는 하나의 데이타에 작동하는 Unary, 2개의 데이타를 사용해 작동하는 Binary, 그리고 3개의 데이터를 사용해서 작업하는 Ternary operator 들이 있습니다. 종류별로 나누고 Unary, Binary, Ternary (영어로 하나, 둘, 셋이라는 어원) 나누는게 쉬운것 같습니다.
           br
-          li 예)  ** exponent (지수)
-          li console.log(3 ** 4);
-            small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
-          li console.log(10 ** -2);
-            small  // 0.01 수학입니다. 계산기랑 같습니다.
-          li  console.log((2 ** 3) ** 2);
-            small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
           br
-          li 예)  / 나누기
-          li console.log(3 ** 4);
-            small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
-          li console.log(10 ** -2);
-            small  // 0.01 수학입니다. 계산기랑 같습니다.
-          li  console.log((2 ** 3) ** 2);
-            small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
+          | 그리고 연산자를 사용해서 계산 등 작업을할때는 수학과 거의 비슷한 우선 순위가 있어요. 즉, 곱하기가 더하기보다 먼저 시행되잖아요? 그리고 대부분의 연산자들도 왼쪽에서 오른쪽 방향으로 작업을 하며 우선 순위는 괄호 ()를 사용해서 임의 조정이 가능합니다. 
+          span.comment 8 = 2 + 2 * 3, 12 = (2 + 2) * 3 둘의 차이와 어떻게 이렇게 계산되는지는 아시죠? 그럼 연산자 사용하실때 일반적인 상식으로 생각하시고 그때그때 다시 찾아보면서 사용하다보면 익숙해지십니다.
           br
-          li 예)  % 나머지 연산
-          li console.log(11 % 5);
-            small  // 1 11을 5로 2번 나누면 1이 남죠. 정수로 안떨어지고 남는 숫자가 반환됨.
-          li console.log(-11 % 5);
-            small  // -1
-          li  console.log(4 % 2);
-            small  // 0
-          li  console.log(-4 % 2);
-            small  // -0 수학은 수학인데 약간 다르죠? 컴퓨터는 늘 어떤식의 답을 출력하려합니다.
           br
-          span.comment 위의 예문들과 같이 자바스크립트의 산술적 연산자는 일반 산수와는 달리 일부 문자열에 대한 작용 또는 타입 자동 전환(coercion)을 함으로 잘 알고 사용해야 합니다. 처음 코딩을 배우시는 분들은 우리가 익숙해있는 산술적 상식 또는 언어 구조와 다르기 때문에 왜 그런지 잘 이해가 안될수있습니디. 이유를 알려고하기 보단 원래 이렇게 프로그래밍 언어가 만들어졌기 때문에 있는 그대로 받아드리고 기억하는편이 좋다고 생각됩니다. 만약 우리가 다른 나라의 언어를 처음 배운다면 문법, 문장의 구조와 순서 등이 우리가 이미 알고있는 언어와 다른것을 왜 그런지 이해하려 하는것보다 언어 자체의 특성을 이해하고 잘 구사하려 생각하는게 쉽다고 생각됩니다.그건 언어 학자들의 몫으로 남겨두고.😄
-      .div
-        h3 Comparison Operators (대입 연산자)
-        p 대입 연산자는 
-        ul.codeExample
-          li 예문)  var과 let의 차이를 보여드릴게요.
-          li var x = 1;
-          li if (x === 1) {
-          li    &#160 var x = 2;
-          li    &#160 console.log(x);
-            small   // 2 가 출력됨
-          li }
-          li  console.log(x);
-            small  // 또 2가 출력됨- 함수내부 x가 함수 밖의 x를 이름이 같으닌까 덮어쒸운 현상 발상함
-          br
-          li 예문) 이번엔 let 을 사용
-          li let x = 1;
-          li if (x === 1) {
-          li    &#160 let x = 2;
-          li    &#160 console.log(x);
-            small   // 2 가 출력됨
-          li }
-          li  console.log(x);
-            small  // 1 이 출렴됨 즉, 함수 안밖에 x는 별개의 identifier 여서 컴퓨터가 다르게 인식하는것
-          span.comment 이해가 안되셔도 상심 마세요. 사람이 컴퓨터처럼 단순하게 생각하는데는 적응 기간이 필요해요. 차차 저절로 이해가 됩니다.
-      
-      .div
-        h3 (증감 연산자)
-      
-      .div
-        h3 (비교 연산자)
-      
-      .div
-        h3 (논리 연산자)
-      
-      .div
-        h3 (비트 연산자)
-      
-      .div
-        h3 (기타 연산자)
-      .div
-        h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
-        img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
-        h4
-          a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇
+          | 위에서 이론적인 설명은 하였으니 간단한 예문으로 연산자들을 종류별로 정리하겠습니다. 아래 예문의 console.log()는 자바스크립트에서 출력값을 미리 볼수 있도록 사용되는 함수입니다. 여기까지 오셨으면 브라우져 developer tool에서 console 탭 사용하는 법은 아셔야 합니다. 
+          a(href="https://codepen.io/pen/" target="_blank")  https://codepen.io/pen/ 
+                span.comment 편의상 코드펜 링크 드립니다.😄
+        .div
+          h3 Arithmetic Operators (산술적 연산자)
+          p 산술 연산자들은 Binary Operator 입니다. 2개의 피연산자(데이타)를 왼쪽에서 오른쪽으로 계산합니다.
+          table.operatorsTable
+            thead
+              tr
+                th 산술 연산자
+                th 설명
+                th 특이 사항(예문 참고)
+            tbody    
+              tr
+                td +
+                td 숫자를 더하거나 문자열을 더하는데 사용
+                td 문자열도 더 할수 있음. 숫자와 문자열을 더하면 문자열이됨.
+              tr
+                td -
+                td 빼기
+                td 문자열에 사용 못함. 빼려하면 NaN (Not-A-Number 출력됨)
+              tr
+                td *
+                td 곱하기
+                td 수학의 곱셈
+              tr
+                td **
+                td 지수(수학)
+                td 지수는 같은 수를 여러 번 곱하는 수학이죠.
+              tr
+                td /
+                td 나누기
+                td 수학의 곱셈
+              tr
+                td %
+                td remainder operator는 나머지 연산이라함
+                td 나머지 연산자는 나눗셈과 원리가 같으나, 몫이 아닌 나머지를 구함.
+          ul.codeExample
+            li 예)  + 더하기
+            li console.log(2 + 2);
+              small  // 4
+            li console.log('이' + '순신');
+              small  // "이순신"
+            li console.log(2 + true);
+              small  // 3 : 컴퓨터에서 true는 숫자 1로 계산됨. false는 0.
+            li console.log(2021 + '년 대박');
+              small  // "2021년 대박" :숫자와 문자를 더하면 문자열이 됨.
+            br
+            li 예)  - 빼기
+            li console.log(4 - 2);
+              small  // 2
+            li console.log(4.5 - 6);
+              small  // -1.5
+            li console.log(4 - true); 
+              small  // 3
+            li console.log(4 - 'hello');
+              small  // NaN : Not-A-Number (숫자 아님이라는 값)
+            br
+            li 예)  * 곱하기
+            li console.log(2 * 3);
+              small  // 6
+            li console.log(-2 * 3);
+              small  // -6
+            li console.log('3' * 2);
+              small  // 6이 출력됨. 문자열 형식의 숫자를 숫자에 곱하면 숫자로 자동 전환하여 계산한다. 자바스크립트의 coercion (강제 전환)메카니즘에 의한것인데 의도하여 사용하는 경우가 아닌 이상 주의해야하는 자바스크립트의 특성 입니다.
+            li console.log('foo' * 2);
+              small  // NaN(숫자 아님 값) 숫자가 아닌 문자열에 숫자를 곱하면 계산을 못함으로 NaN을 반환한다.
+            br
+            li 예)  ** exponent (지수)
+            li console.log(3 ** 4);
+              small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
+            li console.log(10 ** -2);
+              small  // 0.01 수학입니다. 계산기랑 같습니다.
+            li  console.log((2 ** 3) ** 2);
+              small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
+            br
+            li 예)  / 나누기
+            li console.log(3 ** 4);
+              small  // 81 출력됨 3 * 3 * 3 * 3 = 81 즉, 삼을 4번 곱한 값
+            li console.log(10 ** -2);
+              small  // 0.01 수학입니다. 계산기랑 같습니다.
+            li  console.log((2 ** 3) ** 2);
+              small  // 64 수학과 같이 괄호로 우선 순위를 정합니다.
+            br
+            li 예)  % 나머지 연산
+            li console.log(11 % 5);
+              small  // 1 11을 5로 2번 나누면 1이 남죠. 정수로 안떨어지고 남는 숫자가 반환됨.
+            li console.log(-11 % 5);
+              small  // -1
+            li  console.log(4 % 2);
+              small  // 0
+            li  console.log(-4 % 2);
+              small  // -0 수학은 수학인데 약간 다르죠? 컴퓨터는 늘 어떤식의 답을 출력하려합니다.
+            br
+            span.comment 위의 예문들과 같이 자바스크립트의 산술적 연산자는 일반 산수와는 달리 일부 문자열에 대한 작용 또는 타입 자동 전환(coercion)을 함으로 잘 알고 사용해야 합니다. 처음 코딩을 배우시는 분들은 우리가 익숙해있는 산술적 상식 또는 언어 구조와 다르기 때문에 왜 그런지 잘 이해가 안될수있습니디. 이유를 알려고하기 보단 원래 이렇게 프로그래밍 언어가 만들어졌기 때문에 있는 그대로 받아드리고 기억하는편이 좋다고 생각됩니다. 만약 우리가 다른 나라의 언어를 처음 배운다면 문법, 문장의 구조와 순서 등이 우리가 이미 알고있는 언어와 다른것을 왜 그런지 이해하려 하는것보다 언어 자체의 특성을 이해하고 잘 구사하려 생각하는게 쉽다고 생각됩니다.그건 언어 학자들의 몫으로 남겨두고.😄
+        .div
+          h3 Comparison Operators (대입 연산자)
+          p 대입 연산자는 
+          ul.codeExample
+            li 예문)  var과 let의 차이를 보여드릴게요.
+            li var x = 1;
+            li if (x === 1) {
+            li    &#160 var x = 2;
+            li    &#160 console.log(x);
+              small   // 2 가 출력됨
+            li }
+            li  console.log(x);
+              small  // 또 2가 출력됨- 함수내부 x가 함수 밖의 x를 이름이 같으닌까 덮어쒸운 현상 발상함
+            br
+            li 예문) 이번엔 let 을 사용
+            li let x = 1;
+            li if (x === 1) {
+            li    &#160 let x = 2;
+            li    &#160 console.log(x);
+              small   // 2 가 출력됨
+            li }
+            li  console.log(x);
+              small  // 1 이 출렴됨 즉, 함수 안밖에 x는 별개의 identifier 여서 컴퓨터가 다르게 인식하는것
+            span.comment 이해가 안되셔도 상심 마세요. 사람이 컴퓨터처럼 단순하게 생각하는데는 적응 기간이 필요해요. 차차 저절로 이해가 됩니다.
+        
+        .div
+          h3 (증감 연산자)
+        
+        .div
+          h3 (비교 연산자)
+        
+        .div
+          h3 (논리 연산자)
+        
+        .div
+          h3 (비트 연산자)
+        
+        .div
+          h3 (기타 연산자)
+        .div
+          h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
+          img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
+          h4
+            a(href="/javascript/operators") 다음은 우리에게 익숙한 연산자들을 배워보겠습니다.👇

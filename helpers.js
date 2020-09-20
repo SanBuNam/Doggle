@@ -23,12 +23,12 @@ exports.iconPng = (name) =>
 exports.siteName = `Coding Korea`;
 
 exports.menu = [
-  { slug: "/posts", title: "나눔의 장", icon: "post" },
-  { slug: "/preparation", title: "preparation", icon: "tag" },
-  { slug: "/javascript", title: "javascript", icon: "post" },
-  { slug: "/tags", title: "tags", icon: "tag" },
-  { slug: "/top", title: "top", icon: "top" },
-  { slug: "/add", title: "add", icon: "add" },
+  { slug: "/preparation", title: "코딩 정보", icon: "tag" },
+  { slug: "/javascript", title: "자바스크립트", icon: "post" },
+  { slug: "/posts", title: "코딩 생각", icon: "cup" },
+  { slug: "/tags", title: "태그", icon: "tag" },
+  { slug: "/top", title: "톱 공유", icon: "top" },
+  { slug: "/add", title: "정보 추가", icon: "add" },
 ];
 
 exports.preparationMenu = [
