@@ -12,7 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OperatorMono-Bold";
   src: url("/fonts/Operator/OperatorMono-Bold_Web.woff2") format("woff2"),
@@ -90,7 +89,7 @@ p {
   word-wrap: break-word;
   position: relative;
   z-index: 2;
-  margin: 0;
+  margin: 1rem;
   line-height: 1.1;
   transform: skew(0, -3deg);
   &--long {
@@ -119,6 +118,6 @@ p {
 
 .title--single {
   max-width: 900px;
-  font-size: 8rem;
+  font-size: 5rem;
   text-align: center;
 }
