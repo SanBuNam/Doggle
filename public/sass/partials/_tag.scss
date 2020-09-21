@@ -39,8 +39,17 @@
     background: $yellow;
     color: $black;
     display: flex;
-    padding-left: 10px;
-    clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
+    padding-bottom: 10px;
+    margin: 0 10px;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      75% 75%,
+      75% 100%,
+      50% 75%,
+      0% 75%
+    );
     &--active {
       background: lighten($purple, 40%);
       .tag__text {
@@ -65,13 +74,26 @@
       animation: gritty 2s steps(10) infinite;
     }
   }
+  &__link3 {
+    background: $yellow;
+    color: $black;
+    display: flex;
+    padding-left: 10px;
+    clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
+    &--active {
+      background: lighten($purple, 40%);
+      .tag__text {
+        color: white;
+      }
+    }
+  }
   &__text {
     padding: 1rem 1rem;
     display: block;
   }
   &__count {
     padding: 1rem 1rem;
-    background: white;
+    // background: white;
     border-left: 3px solid rgba(0, 0, 0, 0.1);
     margin-right: -1px; /* ugh */
     background-clip: padding-box;

@@ -547,7 +547,7 @@ p {
   word-wrap: break-word;
   position: relative;
   z-index: 2;
-  margin: 0;
+  margin: 1rem;
   line-height: 1.1;
   -ms-transform: skew(0, -3deg);
       transform: skew(0, -3deg);
@@ -572,7 +572,7 @@ p {
 
 .title--single {
   max-width: 900px;
-  font-size: 8rem;
+  font-size: 5rem;
   text-align: center; }
 
 @keyframes gritty {
@@ -949,9 +949,10 @@ label {
     color: #000000;
     display: -ms-flexbox;
     display: flex;
-    padding-left: 10px;
-    -webkit-clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
-            clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%); }
+    padding-bottom: 10px;
+    margin: 0 10px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); }
     .tag__link--active {
       background: #827cd2; }
       .tag__link--active .tag__text {
@@ -971,12 +972,23 @@ label {
         color: white; }
     .tag__link2:hover {
       animation: gritty 2s steps(10) infinite; }
+  .tag__link3 {
+    background: #ffcf3e;
+    color: #000000;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+    -webkit-clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
+            clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%); }
+    .tag__link3--active {
+      background: #827cd2; }
+      .tag__link3--active .tag__text {
+        color: white; }
   .tag__text {
     padding: 1rem 1rem;
     display: block; }
   .tag__count {
     padding: 1rem 1rem;
-    background: white;
     border-left: 3px solid rgba(0, 0, 0, 0.1);
     margin-right: -1px;
     /* ugh */
@@ -988,25 +1000,10 @@ label {
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%); }
-  .single__hero:before {
-    display: block;
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background: linear-gradient(45deg, #05b3d6 0%, rgba(5, 179, 214, 0) 70%), linear-gradient(135deg, #0958ec 10%, rgba(9, 88, 236, 0) 80%), linear-gradient(225deg, #d209ec 10%, rgba(210, 9, 236, 0) 80%), linear-gradient(315deg, #05e129 100%, rgba(5, 225, 41, 0) 70%);
-    opacity: 0.6;
-    z-index: 1;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%); }
+  -ms-flex-pack: left;
+      justify-content: left;
+  -ms-flex-align: top;
+      align-items: top; }
 
 .single__image {
   width: 100%;
@@ -1020,28 +1017,11 @@ label {
   background: white;
   position: relative;
   padding: 3rem;
-  margin-top: -10rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15); }
-
-.single__map {
-  width: calc(100% + 6rem);
-  max-width: none;
-  margin-top: -3rem;
-  margin-left: -3rem; }
-
-.single__location {
-  margin: 0;
-  margin-top: -3rem;
-  margin-right: -5rem;
-  background: #000000;
-  color: white;
-  display: inline-block;
-  float: right;
-  position: relative;
-  padding: 1rem; }
-  @media all and (max-width: 850px) {
-    .single__location {
-      margin-right: 0; } }
+  .single__details .divOne {
+    min-height: 110px;
+    border-bottom: solid 1px #e6e6e6;
+    margin-bottom: 20px; }
 
 .heart__button {
   background: none;
@@ -1092,7 +1072,7 @@ label {
   .review:before {
     width: 5px;
     left: 0;
-    content: '';
+    content: "";
     display: block;
     background: linear-gradient(0, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffcf3e 85%, #48ded4 95%);
     position: absolute;
@@ -1129,7 +1109,7 @@ label {
   .review__stars {
     color: #ffcf3e; }
   .review__body {
-    padding: 2rem; }
+    padding: 1rem; }
   .review p {
     white-space: pre-wrap; }
 
@@ -1241,9 +1221,9 @@ label {
 
 .button {
   border: 0;
-  background: #ffcf3e;
+  background: #ee7297;
   color: #000000;
-  font-family: 'Panama';
+  font-family: "Panama";
   font-weight: 600; }
 
 .avatar {

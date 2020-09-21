@@ -4,11 +4,11 @@ include mixins/_postCard
 
 block content
   .inner
-    h2 #{tag || 'Tags'}
+    h2 📝 #{tag || '포스팅 성향'}
     ul.tags
       each t in tags
         li.tag
-          a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : ''))
+          a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : '')) 📎
             span.tag__text= t._id
             span.tag__count= t.count
 

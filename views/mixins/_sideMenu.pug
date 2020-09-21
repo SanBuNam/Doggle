@@ -3,5 +3,5 @@ mixin sideMenu(menu)
     nav.verticalTags
       each item in menu
         li.tag
-          a.tag__link(href=item.slug, class=(currentPath.endsWith(item.slug) ? 'tag__link--active' : ''))
+          a.tag__link3(href=item.slug, class=(currentPath.endsWith(item.slug) ? 'tag__link3--active' : ''))
             span.tag__text #{item.icon} #{item.title}

@@ -4,27 +4,31 @@ include mixins/_reviewForm
 include mixins/_review
 
 block content
-  .single
-    .single__hero
-      img.single__image(src=`/uploads/${post.photo}`)
-      h2.title.title--single
-        a #{post.name}
+  .inner
+    .single
+      .single__hero
+        h2.title.title--single
+          a #{post.name}
+        img.single__image(src=`/uploads/${post.photo}`)
+  
+    .single__details
+      .divOne
+        p= post.description
+  
+      .div
+        if post.tags
+          h5 <유사 포스팅>
+          ul.tags
+            each tag in post.tags
+              li.tag
+                a.tag__link(href=`/tags/${tag}`)
+                  span.tag__text ##{tag}
 
-  .single__details.inner
-    p= post.description
+        if user
+          +reviewForm(post)
 
-    if post.tags
-      ul.tags
-        each tag in post.tags
-          li.tag
-            a.tag__link(href=`/tags/${tag}`)
-              span.tag__text ##{tag}
-
-    if user
-      +reviewForm(post)
-
-    if post.reviews
-      .reviews
-        each review in post.reviews
-          .review
-            +review(review)
+        if post.reviews
+          .reviews
+            each review in post.reviews
+              .review
+                +review(review)
