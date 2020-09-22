@@ -46,7 +46,7 @@ block withMenu
                 td 수학의 곱셈
               tr
                 td **
-                td 지수(수학)
+                td 지수
                 td 지수는 같은 수를 여러 번 곱하는 수학이죠.
               tr
                 td /
@@ -115,44 +115,152 @@ block withMenu
             br
             span.comment 위의 예문들과 같이 자바스크립트의 산술적 연산자는 일반 산수와는 달리 일부 문자열에 대한 작용 또는 타입 자동 전환(coercion)을 함으로 잘 알고 사용해야 합니다. 처음 코딩을 배우시는 분들은 우리가 익숙해있는 산술적 상식 또는 언어 구조와 다르기 때문에 왜 그런지 잘 이해가 안될수있습니디. 이유를 알려고하기 보단 원래 이렇게 프로그래밍 언어가 만들어졌기 때문에 있는 그대로 받아드리고 기억하는편이 좋다고 생각됩니다. 만약 우리가 다른 나라의 언어를 처음 배운다면 문법, 문장의 구조와 순서 등이 우리가 이미 알고있는 언어와 다른것을 왜 그런지 이해하려 하는것보다 언어 자체의 특성을 이해하고 잘 구사하려 생각하는게 쉽다고 생각됩니다.그건 언어 학자들의 몫으로 남겨두고.😄
         .div
-          h3 Comparison Operators (대입 연산자)
-          p 대입 연산자는 
+          h3 Assignment operators (대입 연산자)
+          p 대입 연산자는 왼쪽 변수(피연산 함수)에 오른쪽의 값을 대입할때 사용하는 Binary Operator(이항 연산자)입니다.
+          table.operatorsTable
+            thead
+              tr
+                th 대입 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td =
+                td 대입/소속 시킴
+                td 왼쪽 변수에 오른쪽 피연산자의 값을 대입
+              tr
+                td *=
+                td 곱셈 대입
+                td 변수값 곱하기 오른쪽 피연산자의 값을 변수에 저장
+              tr
+                td **=
+                td 지수승하 대입
+                td 변수값을 피연산자의 수만큼 곱하여 변수에 저장
+              tr
+                td /=
+                td 나눗셈 대입
+                td 변수값 나누기 오른쪽값이 변수에 저장
+              tr
+                td %=
+                td 나머지 대입
+                td 변수값 나누기 오른쪽값의 나머지값이 변수에 저장
+              tr
+                td +=
+                td 덧셈 대입
+                td 변수값 더하기 오른쪽값이 변수에 저장
+              tr
+                td -=
+                td 뺏셈 대입
+                td 변수값 빼기 오른쪽값이 변수에 저장
           ul.codeExample
-            li 예문)  var과 let의 차이를 보여드릴게요.
-            li var x = 1;
-            li if (x === 1) {
-            li    &#160 var x = 2;
-            li    &#160 console.log(x);
-              small   // 2 가 출력됨
-            li }
-            li  console.log(x);
-              small  // 또 2가 출력됨- 함수내부 x가 함수 밖의 x를 이름이 같으닌까 덮어쒸운 현상 발상함
-            br
-            li 예문) 이번엔 let 을 사용
+            li 예)  = 대입(equal)
             li let x = 1;
-            li if (x === 1) {
-            li    &#160 let x = 2;
-            li    &#160 console.log(x);
-              small   // 2 가 출력됨
-            li }
-            li  console.log(x);
-              small  // 1 이 출렴됨 즉, 함수 안밖에 x는 별개의 identifier 여서 컴퓨터가 다르게 인식하는것
-            span.comment 이해가 안되셔도 상심 마세요. 사람이 컴퓨터처럼 단순하게 생각하는데는 적응 기간이 필요해요. 차차 저절로 이해가 됩니다.
+            li const y = 2;
+            li console.log(x);
+              small  // 1
+            li console.log(x = y + 1);
+              small  // 3
+            li console.log(x = x * y);
+              small  // 6 출력됨. x가 1에서 3로 변경된 후 2(y값)를 곱하니 x는 6.
+            br
+            li Chain 대입 예문)
+            li let x = 10;
+            li let y = 20;
+            li let z = 30;
+            li x = y = z;
+            li console.log(x, y, z);
+              small  // 25 25 25 출력됨. 대입 순서가 오른쪽에서 왼쪽으로 제일 오른쪽 값으로 저장됩니다. 
+            br
+            li 예)  *= 곱셈 대입
+            li let a = 3;
+            li console.log(a *= 2);
+              small  // 6 출력됨. a = 3 * 2 또는 a = a * 2로 생각하면됨.
+            li console.log(a *= "string");
+              small  // 출력값: NaN (숫자 아님)
+            br
+            li 예)  **= 지수 대입
+            li let a = 3;
+            li console.log(a **= 2);
+              small  // 9 출력됨. 3을 2번 곱함
+            li console.log(a **= 0);
+              small  // 1 출력됨.
+            li console.log(a **= "string");
+              small  // 출력값: NaN (숫자 아님)
+            br
+            li 예)  /= 나눗셈 대입
+            li let a = 3;
+            li console.log(a /= 2);
+              small  // 1.5 출력됨. a = 3 / 2 또는 a = a / 2
+            li console.log(a /= 0);
+              small  // 출력값: Infinity (무한대 값)
+            li console.log(a /= "string");
+              small  // 출력값: NaN (숫자 아님)
+            br
+            li 예)  %= 나머지 대입
+            li let a = 3;
+            li console.log(a %= 2);
+              small  // 1 출력됨. a = 3 / 2하고 남은 1이 저장됨
+            li console.log(a %= 0);
+              small  // 출력값: NaN (숫자 아님)
+            li console.log(a %= "string");
+              small  // 출력값: NaN (숫자 아님)
+            br
+            li 예)  += 덧셈 대입
+            li let a = 2;
+            li let b = 'hello';
+            li console.log(a += 3);
+              small  // 5 출력됨.
+            li console.log(b += ' world');
+              small  // 출력값: "hello world" 문자열 더하면 합쳐짐
+            br
+            li 예)  -= 뺏셈 대입
+            li let a = 2;
+            li console.log(a -= 3);
+              small  // -1 출력됨.
+            li console.log(a -= 'Hello');
+              small  // 출력값: NaN (숫자 아님) 문자열 빼기는 안됨
+            span.comment 그 외 <<=, >>=, >>>=, &=, ^=, |=, &&=, ||=, ??= 이런 대입 연산자들도 있지만 아마도 사용하실 일이 없을뿐더라 배우실때는 시간, 에너지 낭비같아서 제외시켰어요. 추후 별도로 정리해드릴게요.
         
         .div
-          h3 (증감 연산자)
+          h3 Increment and decrement (증감 연산자)
+          p 증감 연산자는
+          table.operatorsTable
+            thead
+              tr
+                th 대입 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td 
+                td 
+                td 
+              tr
+                td 
+                td 
+                td 
+              tr
+                td 
+                td 
+                td 
+              tr
+                td 
+                td 
+                td 
+          ul.codeExample
+            li 예)  
+            li 
+            li 
+            li 
+              small  // 
+            li console.log();
+              small  // 
+            li console.log();
+              small  //  출력됨
+            br
+            span.comment 블라블라
+
         
-        .div
-          h3 (비교 연산자)
-        
-        .div
-          h3 (논리 연산자)
-        
-        .div
-          h3 (비트 연산자)
-        
-        .div
-          h3 (기타 연산자)
         .div
           h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
           img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")

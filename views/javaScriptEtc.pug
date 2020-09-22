@@ -1,0 +1,29 @@
+extends layout
+
+include mixins/_sideMenu
+
+block withMenu
+  .inner
+    .javascript
+      +sideMenu(h.javaScriptMenu)
+      .pageContent
+        h1=title
+        h6 지금 당장 공부하면 잘 쓰지도 안는데 머리 아픈 애들 모아놨으니 차차 심심할때 보세요. 자바스크립트 더 굿 파트라는 책이 있어요. 자바스크립트에 대해 다 알아도되지만 당장은 모르는게 나을수도 있고 알아도 안쓰는게 낮다는 말이 됩니다.
+//- <<=
+//- Left shift assignment.
+//- >>=
+//- Right shift assignment.
+//- >>>=
+//- Unsigned right shift assignment.
+//- &=
+//- Bitwise AND assignment.
+//- ^=
+//- Bitwise XOR assignment.
+//- |=
+//- Bitwise OR assignment.
+//- &&=
+//- Logical AND assignment.
+//- ||=
+//- Logical OR assignment.
+//- ??=
+//- Logical nullish assignment.
