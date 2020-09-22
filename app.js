@@ -63,7 +63,6 @@ app.use((req, res, next) => {
 app.use("/", routes);
 
 app.use(errorHandlers.notFound);
-
 app.use(errorHandlers.flashValidationErrors);
 
 if (app.get("env") === "development") {
@@ -73,5 +72,4 @@ if (app.get("env") === "development") {
 
 app.use(errorHandlers.productionErrors);
 
-// done! we export it so we can start the site in start.js
 module.exports = app;

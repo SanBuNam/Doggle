@@ -21,7 +21,6 @@
     border-bottom: 1px solid $grey;
     display: flex;
     & > * {
-      // this is fine, don't email me about it
       border-right: 1px solid $grey;
       padding: 0.2rem;
       display: flex;
