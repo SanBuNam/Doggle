@@ -1,4 +1,4 @@
 # JavaScript Course in Korean
 
-Personal project
+Pug, Node.js, MongoDB and etc
 
