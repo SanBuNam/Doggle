@@ -67,12 +67,10 @@ exports.reset = async (req, res) => {
     return res.redirect("/login");
   }
 
-  // if there is a user, show the rest password form
   res.render("reset", { title: "Reset your Password" });
 };
 
 exports.confirmedPasswords = (req, res, next) => {
-  // use [] when there's dash- in the property
   if (req.body.password === req.body["password-confirm"]) {
     next();
     return;
