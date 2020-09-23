@@ -24,14 +24,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Exposes a bunch of methods for validating data. Used heavily on userController.validateRegister
 app.use(expressValidator());
 
-// populates req.cookies with any cookies that came along with the request
 app.use(cookieParser());
 
-// Sessions allow us to post data on visitors from request to request
-// This keeps users logged in and allows us to send flash messages
 app.use(
   session({
     secret: process.env.SECRET,
@@ -66,7 +62,6 @@ app.use(errorHandlers.notFound);
 app.use(errorHandlers.flashValidationErrors);
 
 if (app.get("env") === "development") {
-  /* Development Error Handler - Prints stack trace */
   app.use(errorHandlers.developmentErrors);
 }
 

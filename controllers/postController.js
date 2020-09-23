@@ -5,7 +5,6 @@ const multer = require("multer"); // image upload
 const jimp = require("jimp"); // file size control
 const uuid = require("uuid"); // unique id generator
 
-// multer is for picture upload
 const multerOptions = {
   storage: multer.memoryStorage(),
   fileFilter(req, file, next) {
