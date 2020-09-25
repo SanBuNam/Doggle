@@ -282,16 +282,75 @@ block withMenu
                 th 특이 사항
             tbody    
               tr
-                td A++
-                td 후위 증감 연산자
-                td 피연산자의 값 반납 후 1을 더 합니다.
+                td === 
+                  br
+                  | (strict equality)
+                td 일치 연산자
+                td 양쪽 2개의 값이 <strong>같은지</strong> 확인 후 Boolean 값을 반환.
+              tr
+                td !== 
+                  br
+                  | (strict inequality)
+                td 비일치 연산자
+                td 양쪽 2개의 값이 <strong>다른지</strong> 확인 후 Boolean 값을 반환.
+              tr
+                td == 
+                  br
+                  | (equality)
+                td 동등 연산자
+                td 일치 연산자와 달리 타입을 강제 변경 후 <strong>같은지</strong> 확인합니다.
+              tr
+                td != 
+                  br
+                  | (inequality)
+                td 비동등 연산자
+                td 역시 1쪽의 타입을 강제 변경 후 양쪽이 <strong>다른지</strong>확인. 다르면 true.
           ul.codeExample
-            li 예) A++ 여기서 A는 아무개임
-            li let x = 3;
-            li y = x++;
-              small  // y = 3 즉, 첫 연산이 되기전 x값 3을 리턴 후 1을 더함
-        
-            span.comment 
+            li 예) === 일치(strict equality)
+            li console.log(2 === 2);
+              small  // 출력값: true
+            li console.log('coding' === 'coding');
+              small  // true
+            li console.log('2' ===  2);
+              small  // false
+            li console.log(0 === false);
+              small  // false
+              br
+              br
+            li 예) == 동일(equality)
+            li console.log(2 == 2);
+              small  // 출력값: true
+            li console.log('coding' == 'coding');
+              small  // true
+            li console.log('2' ==  2);
+              small  // true 일치 === 와 차이점인 타입을 강제 변경 후 같다라고 산출.
+            li console.log(0 == false);
+              small  // true 타입 강제 변경 후 0를 false값으로 인식하여 true를 반환.
+            li console.log(1 == true);
+              small  // 0은 false고 1은 true 값으로 강제 전환.
+              br
+              br
+            li 예) !== 비일치(strict inequality)
+            li console.log(2 !== 2);
+              small  // 출력값: false
+            li console.log('coding' !== 'coding');
+              small  // false
+            li console.log('2' !==  2);
+              small  // true 하나는 string이고 하나는 숫자이니 다른게 맞습니다.
+            li console.log(0 !== false);
+              small  // true 타입을 변경 안하니까 하나는 숫자고 하나는 Boolean이니 다릅니다.
+              br
+              br
+            li 예) != 비동일(inequality)
+            li console.log(2 != 2);
+              small  // 출력값: false
+            li console.log('coding' !== 'coding');
+              small  // false
+            li console.log('2' !==  2);
+              small  // false 타입을 변경하니 둘은 같은 값입니다.
+            li console.log(0 !== false);
+              small  // false 둘이 같다고 인식하는데 다르냐라고 물으니 false(틀렸다 또는 아니다)하죠.
+            span.comment 의도치 안은 타입 변경된 결과를 방지하기 위해 == 보단 ===를 사용하시는게 좋습니다.코딩 처음 배울때 Boolean이 은근히 헷갈립니다. 같니? 다르니? 옳다! 그르다! 그건 우리가 사용하는 인간의 언어가 고차원이라 단순하게 생각하는게 익숙하지 안아서 그런거니 그냥 단순하게 생각하시면 됩니다.
         
         .div
           h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
