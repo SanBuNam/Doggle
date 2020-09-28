@@ -1,6 +1,6 @@
 {
-  "name": "coding-in-korea",
-  "version": "0.0.0",
+  "name": "javascript-in-korea",
+  "version": "0.0.1",
   "private": true,
   "engines": {
     "node": ">= 7.6.0"

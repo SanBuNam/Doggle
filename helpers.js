@@ -14,7 +14,7 @@ exports.iconPng = (name) =>
 exports.siteName = `Coding Korea`;
 
 exports.menu = [
-  { slug: "/preparation", title: "코딩 정보", icon: "cup" },
+  // { slug: "/preparation", title: "코딩 정보", icon: "cup" },
   { slug: "/javascript", title: "자바스크립트", icon: "js-laptop" },
   { slug: "/posts", title: "회원 포스팅", icon: "think-code" },
   { slug: "/tags", title: "추천 포스팅", icon: "post-tags" },
