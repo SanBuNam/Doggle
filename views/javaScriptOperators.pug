@@ -12,7 +12,7 @@ block withMenu
           span.comment 전 연산자라는 한자어가 잘 와닿지 안아요. Operator : 작동자/작업가 이해를 돕는거 같아요. 개인적인 생각입니다.
           br
           br
-          | 연산자 중에는 하나의 데이타에 작동하는 Unary, 2개의 데이타를 사용해 작동하는 Binary, 그리고 3개의 데이터를 사용해서 작업하는 Ternary operator 들이 있습니다. 종류별로 나누고 Unary, Binary, Ternary (영어로 하나, 둘, 셋이라는 어원) 나누는게 쉬운것 같습니다.
+          | 연산자 중에는 하나의 데이타에 작동하는 Unary(단항), 2개의 데이타를 사용해 작동하는 Binary(이항), 그리고 3개의 데이터를 사용해서 작업하는 Ternary(삼항) operator 들이 있습니다. 종류별로 나누고 Unary, Binary, Ternary (영어로 하나, 둘, 셋이라는 어원) 나누는게 쉬운것 같습니다.
           br
           br
           | 그리고 연산자를 사용해서 계산 등 작업을할때는 수학과 거의 비슷한 우선 순위가 있어요. 즉, 곱하기가 더하기보다 먼저 시행되잖아요? 그리고 대부분의 연산자들도 왼쪽에서 오른쪽 방향으로 작업을 하며 우선 순위는 괄호 ()를 사용해서 임의 조정이 가능합니다. 
@@ -460,6 +460,49 @@ block withMenu
               small  // true 즉, auto 라는 변수 안에 든 사물(object)이 Car 라는 사물에서 유례됬니? 또는 Car의 사례 중 하나니?
             br
             span.comment 관계 연산자를 사용해서 얻은 결과의 Boolrean값이 true냐 false냐 컨디션에 따라 명령을 내리고 실행하는 등 할수 있는 연산자를 배운것이에요.
+        
+        .div
+          h3 Binary Logical operators (이항 논리 연산자)
+          p 논리식을 판단하며 2개의 피연산자들을 왼쪽에서 오늘쪽으로 결합 후 boolean 값을 반환합니다.
+          table.operatorsTable
+            thead
+              tr
+                th 대입 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td &&
+                td  논리 AND 연산
+                 br
+                 | (Logical AND operator)
+                td 양쪽 논리식이 모두 true(참)일때만 true값을 반환합니다.
+              tr
+                td ||
+                td  논리 OR 연산
+                 br
+                 | (Logical OR operator)
+                td 양쪽 논리식 중 하나 이상 true(참)일때만 true값을 반환합니다.
+          ul.codeExample
+            li 예) &&
+            li const a = 2;
+            li const b = -1;
+              br
+              br
+            li console.log(a > 0 && b > 0);
+              small  // false 둘 다 true가 아님으로 거짓
+              br
+              br
+            li 예) ||
+            li const a = 2;
+            li const b = -1;
+              br
+              br
+            li console.log(a > 0 || b > 0);
+              small  // true 둘 중 하나가 true일 경우
+              br
+              br
+            span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
         //- .div
         //-   h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
         //-   img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
