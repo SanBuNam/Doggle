@@ -219,6 +219,7 @@ block withMenu
               small  // -1 출력됨.
             li console.log(a -= 'Hello');
               small  // 출력값: NaN (숫자 아님) 문자열 빼기는 안됨
+            br
             span.comment 그 외 <<=, >>=, >>>=, &=, ^=, |=, &&=, ||=, ??= 이런 대입 연산자들도 있지만 아마도 사용하실 일이 없을뿐더라 배우실때는 시간, 에너지 낭비같아서 제외시켰어요. 추후 별도로 정리해드릴게요.
         
         .div
@@ -227,7 +228,7 @@ block withMenu
           table.operatorsTable
             thead
               tr
-                th 대입 연산자
+                th 증감 연산자
                 th 설명
                 th 특이 사항
             tbody    
@@ -269,6 +270,7 @@ block withMenu
             li y = ++x;
               small  // x = 1
               small  // y = 1 
+            br
             span.comment A++ 에서 A는 무작위 값이니 다른 어떤 숫자값이나 변수값으로 대체 가능합니다. 헷갈리지 마셔요.
 
         .div
@@ -277,7 +279,7 @@ block withMenu
           table.operatorsTable
             thead
               tr
-                th 대입 연산자
+                th 동등 연산자
                 th 설명
                 th 특이 사항
             tbody    
@@ -350,6 +352,7 @@ block withMenu
               small  // false 타입을 변경하니 둘은 같은 값입니다.
             li console.log(0 !== false);
               small  // false 둘이 같다고 인식하는데 다르냐라고 물으니 false(틀렸다 또는 아니다)하죠.
+            br
             span.comment 의도치 안은 타입 변경된 결과를 방지하기 위해 == 보단 ===를 사용하시는게 좋습니다.코딩 처음 배울때 Boolean이 은근히 헷갈립니다. 같니? 다르니? 옳다! 그르다! 그건 우리가 사용하는 인간의 언어가 고차원이라 단순하게 생각하는게 익숙하지 안아서 그런거니 그냥 단순하게 생각하시면 됩니다.
         .div
           h3 Relational operators (관계 연산자)
@@ -357,7 +360,7 @@ block withMenu
           table.operatorsTable
             thead
               tr
-                th 대입 연산자
+                th 관계 연산자
                 th 설명
                 th 특이 사항
             tbody    
@@ -467,7 +470,7 @@ block withMenu
           table.operatorsTable
             thead
               tr
-                th 대입 연산자
+                th 논리 연산자
                 th 설명
                 th 특이 사항
             tbody    
@@ -488,7 +491,6 @@ block withMenu
             li const a = 2;
             li const b = -1;
               br
-              br
             li console.log(a > 0 && b > 0);
               small  // false 둘 다 true가 아님으로 거짓
               br
@@ -497,11 +499,60 @@ block withMenu
             li const a = 2;
             li const b = -1;
               br
-              br
             li console.log(a > 0 || b > 0);
               small  // true 둘 중 하나가 true일 경우
+            br
+            span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
+        .div
+          h3 Binary Logical operators (이항 논리 연산자)
+          p 논리식을 판단하며 2개의 피연산자들을 왼쪽에서 오늘쪽으로 결합 후 boolean 값을 반환합니다.
+          table.operatorsTable
+            thead
+              tr
+                th 논리 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td &&
+                td  논리 AND 연산자
+                 br
+                 | (Logical AND operator)
+                td 양쪽 논리식이 모두 true(참)일때만 true값을 반환합니다.
+              tr
+                td ||
+                td  논리 OR 연산자
+                 br
+                 | (Logical OR operator)
+                td 양쪽 논리식 중 하나 이상 true(참)일때만 true값을 반환합니다.
+              tr
+                td ??
+                td  null 병합 연산자
+                 br
+                 | (nullish coalescing operator)
+                td 연산자의 왼쪽값이 null 또는 undefined일 경우 오른쪽값을 반환. null이 아니면 왼쪽값을 반환.
+          ul.codeExample
+            li 예) &&
+            li const a = 2;
+            li const b = -1;
               br
-              br
+            li console.log(a > 0 && b > 0);
+              small  // false 둘 다 true가 아님으로 거짓
+            br
+            li 예) ||
+            li const a = 2;
+            li const b = -1;
+            li console.log(a > 0 || b > 0);
+              small  // true 둘 중 하나가 true일 경우
+            br
+            li 예) ??
+            li const foo = null ?? 'default value';
+            li console.log(foo);
+              small  // "default value" 왼쪽값이 null이라 오른쪽값 반환
+            br
+            li const baz = 1 ?? 42;
+            li console.log(baz);
+              small  // 1
             span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
         //- .div
         //-   h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏

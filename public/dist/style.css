@@ -14,7 +14,7 @@ body {
     width: 100%; }
 
 .inner {
-  max-width: 960px;
+  max-width: 1060px;
   padding: 1rem;
   margin: 0 auto; }
 
@@ -829,6 +829,8 @@ label {
     color: white;
     font-size: 1.8rem;
     border: 1px solid black; }
+  .operatorsTable thead th {
+    min-width: 10rem; }
 
 .posts {
   display: -ms-flexbox;
