@@ -354,6 +354,7 @@ block withMenu
               small  // false 둘이 같다고 인식하는데 다르냐라고 물으니 false(틀렸다 또는 아니다)하죠.
             br
             span.comment 의도치 안은 타입 변경된 결과를 방지하기 위해 == 보단 ===를 사용하시는게 좋습니다.코딩 처음 배울때 Boolean이 은근히 헷갈립니다. 같니? 다르니? 옳다! 그르다! 그건 우리가 사용하는 인간의 언어가 고차원이라 단순하게 생각하는게 익숙하지 안아서 그런거니 그냥 단순하게 생각하시면 됩니다.
+        
         .div
           h3 Relational operators (관계 연산자)
           p 관계 연산자는 피연산자들을 비교하여 Boolean값을 반환합니다.
@@ -460,76 +461,37 @@ block withMenu
             li const auto = new Car('Hyundia', 'Genesis', 2020);
             br
             li console.log(auto instanceof Car);
-              small  // true 즉, auto 라는 변수 안에 든 사물(object)이 Car 라는 사물에서 유례됬니? 또는 Car의 사례 중 하나니?
+              small  // true 즉, auto 라는 변수 안에 든 사물(object)이 Car 라는 사물에서 유례됬죠? 또는 Car의 사례 중 하나죠?
             br
             span.comment 관계 연산자를 사용해서 얻은 결과의 Boolrean값이 true냐 false냐 컨디션에 따라 명령을 내리고 실행하는 등 할수 있는 연산자를 배운것이에요.
         
         .div
           h3 Binary Logical operators (이항 논리 연산자)
-          p 논리식을 판단하며 2개의 피연산자들을 왼쪽에서 오늘쪽으로 결합 후 boolean 값을 반환합니다.
+          p 논리식을 판단하며 2개의 피연산자들을 왼쪽에서 오늘쪽으로 결합 후 boolean 값을 반환함
           table.operatorsTable
             thead
               tr
-                th 논리 연산자
+                th 이항 논리 연산자
                 th 설명
                 th 특이 사항
             tbody    
               tr
                 td &&
-                td  논리 AND 연산
+                td 논리 AND 연산자
                  br
-                 | (Logical AND operator)
-                td 양쪽 논리식이 모두 true(참)일때만 true값을 반환합니다.
+                 | (Logical AND)
+                td 양쪽 논리식이 모두 true(참)일때만 true값을 반환함
               tr
                 td ||
-                td  논리 OR 연산
+                td 논리 OR 연산자
                  br
-                 | (Logical OR operator)
-                td 양쪽 논리식 중 하나 이상 true(참)일때만 true값을 반환합니다.
-          ul.codeExample
-            li 예) &&
-            li const a = 2;
-            li const b = -1;
-              br
-            li console.log(a > 0 && b > 0);
-              small  // false 둘 다 true가 아님으로 거짓
-              br
-              br
-            li 예) ||
-            li const a = 2;
-            li const b = -1;
-              br
-            li console.log(a > 0 || b > 0);
-              small  // true 둘 중 하나가 true일 경우
-            br
-            span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
-        .div
-          h3 Binary Logical operators (이항 논리 연산자)
-          p 논리식을 판단하며 2개의 피연산자들을 왼쪽에서 오늘쪽으로 결합 후 boolean 값을 반환합니다.
-          table.operatorsTable
-            thead
-              tr
-                th 논리 연산자
-                th 설명
-                th 특이 사항
-            tbody    
-              tr
-                td &&
-                td  논리 AND 연산자
-                 br
-                 | (Logical AND operator)
-                td 양쪽 논리식이 모두 true(참)일때만 true값을 반환합니다.
-              tr
-                td ||
-                td  논리 OR 연산자
-                 br
-                 | (Logical OR operator)
-                td 양쪽 논리식 중 하나 이상 true(참)일때만 true값을 반환합니다.
+                 | (Logical OR)
+                td 양쪽 논리식 중 하나 이상 true(참)일때만 true값을 반환함
               tr
                 td ??
-                td  null 병합 연산자
+                td null 병합 연산자
                  br
-                 | (nullish coalescing operator)
+                 | (nullish coalescing)
                 td 연산자의 왼쪽값이 null 또는 undefined일 경우 오른쪽값을 반환. null이 아니면 왼쪽값을 반환.
           ul.codeExample
             li 예) &&
@@ -564,6 +526,133 @@ block withMenu
             li console.log(preservingFalsy);
               small  // '' emptyString 변수가 null 또는 undefined가 아닌 경우
             span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
+        
+        .div
+          h3 Unary operators (단항 연산자)
+          p 단항 연산자는 하나의 피연산자에 사용함
+          table.operatorsTable
+            thead
+              tr
+                th 단항 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td +
+                td 단항 + 연산자
+                 br
+                 | (Unary plus)
+                td 단항 + 연산자는 피연산자가 숫자가 아닌 경우 숫자로 변환함
+              tr
+                td -
+                td 단항 - 연산자
+                 br
+                 | (Unary negation)
+                td 피연산자를 - 를 곱한다고 보시면됨
+              tr
+                td ~
+                td 비트 부정 연산자
+                 br
+                 | (Bitwise NOT)
+                td 비트값을 반대로 만듬
+              tr
+                td !
+                td 논리 부정 연산자
+                 br
+                 | (Logical NOT)
+                td 논리값을 반대로 만듬
+              tr
+                td delete
+                td 삭제 연산자
+                td object의 property을 삭제함
+              tr
+                td void
+                td void(빈공간, 공허함) 연산자
+                td expression의 반환값을 폐기함
+              tr
+                td typeof
+                td typeof(타입은) 연산자
+                td object의 타입을 반환
+          ul.codeExample
+            li 예) +
+            li const x = 2;
+            li const y = -2;
+            li console.log(+x);
+              small  // 2
+            li console.log(+y);
+              small  // -2
+            li console.log(+'');
+              small  // 0
+            li console.log(+true);
+              small  // 1
+            li console.log(+false);
+              small  // 0
+            li console.log(+'hello');
+              small  // NaN
+            br
+            li 예) -
+            li const x = 2;
+            li const y = -x;
+            li console.log(y);
+              small  // -2
+            br
+            li const a = '2';
+            li const y = -a;
+              small  // 숫자로 전환
+            li console.log(b);
+              small  // -2
+            br
+            li 예) ~
+            li const a = 5;
+              small  // 비트값 0000000000000101
+            li const b = -3;
+              small  // 비트값 1111111111111101
+            li console.log(~a);
+              small  // -6 출력. 비트값을 뒤집으면 1111111111111010
+              small  // 0이 1이되고 1은 0되어서 -6 으로 인식됨
+            li console.log(~b);
+              small  // 2 출력됨
+              small  // 0000000000000010로 변함
+            br
+            li 예) !
+            li const a = 3;
+            li console.log(!(a > 0));
+              small  // false 출력. true값을 뒤집어서 false를 반환함
+            br
+            li 예) delete
+            li const Employee = {
+            li  &#160 firstname: 'John',
+            li  &#160 lastname: 'Doe'
+            li };
+            li console.log(Employee.firstname);
+              small  // John 출력
+            li delete Employee.firstname
+              small  // firstname 속성을 삭제함
+            li console.log(Employee.firstname);
+              small  // undefined 출력
+            br
+            li 예) void
+            li void function test() {
+            li  &#160 console.log('hello')
+            li }();
+              small  // hello를 출력해야하지만 아래에 실행을 하면
+            br
+            li try {
+            li  &#160 test();
+            li } catch (e) {
+            li  &#160 console.log(e);
+            li }
+              small  // ReferenceError: test is not defined 가 출력됨
+            br
+            li 예) typeof
+            li console.log(typeof 10);
+              small  // "number"
+            li console.log(typeof 'hello');
+              small  // "string"
+            li console.log(typeof undeclaredVariable);
+              small  // "undefeind"
+            br
+            span.comment 각각의 단항 연산자의 특성을 암기하셨다가 작문(코딩)하실때 사용하시는겁니다.
         //- .div
         //-   h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
         //-   img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
