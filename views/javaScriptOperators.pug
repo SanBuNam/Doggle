@@ -553,6 +553,16 @@ block withMenu
             li const baz = 1 ?? 42;
             li console.log(baz);
               small  // 1
+            br
+            li extra) ?? 와 || 사용시 차이
+            li let emptyString = '';
+            li let notFalsyText = emptyString || 'Hello Korea';
+            li console.log(notFalsyText); 
+              small  // Hello world 출력. emptyString 은 falsy(거짓값: "", 0, NaN, null, undefined 포함)
+            br
+            li let preservingFalsy = emptyString ?? 'Hi neighborhood';
+            li console.log(preservingFalsy);
+              small  // '' emptyString 변수가 null 또는 undefined가 아닌 경우
             span.comment 영어 그대로 &&(AND: 그리고) 와 ||(OR: 또는) 어렵지 안죠?
         //- .div
         //-   h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
