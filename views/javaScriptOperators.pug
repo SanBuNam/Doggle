@@ -653,6 +653,33 @@ block withMenu
               small  // "undefeind"
             br
             span.comment 각각의 단항 연산자의 특성을 암기하셨다가 작문(코딩)하실때 사용하시는겁니다.
+         
+         .div
+          h3 Conditional (ternary) operator (조건부 삼항 연산자)
+          p 조건부 삼항 연산자는 조건에 따라 : 기호의 양쪽 피연산자 중 하나를 반환함
+          table.operatorsTable
+            thead
+              tr
+                th 조건부 삼항 연산자
+                th 설명
+                th 특이 사항
+            tbody    
+              tr
+                td condition ? ifTrue : ifFalse
+              
+          ul.codeExample
+            li 예) 
+            li function getFee(isMember) {
+            li  &#160 return (isMember ? '$2.00' : '$10.00');
+            li };
+            li console.log(getFee(true));
+              small  // "$2.00"
+            li console.log(getFee(false));
+              small  // "$10.00"
+            li console.log(getFee(null));
+              small  // "$10.00" null은 falsy(거짓)값임.
+            br
+            span.comment 조건의 값이 true이면 :의 왼쪽값을 반환하고 false면 오른쪽값을 반환함
         //- .div
         //-   h4 변수❓그냥 keyword(var, let, const)쓰고 이름(camelCase) 지어주고 값 저장(= 데이타 값)해주는게 다인데 우리가 지금 한글을 처음 배운다 생각하면 어렵게 느껴지겠죠? 화이팅👏👏
         //-   img.quotes(src='/images/photos/elon-self-taught.png' alt="코딩 독학")
