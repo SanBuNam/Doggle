@@ -5,11 +5,11 @@ html {
 
 body {
   background: #ffffff;
-  background: url("/images/photos/bg9.png") repeat;
+  // background: url("/images/photos/bg9.png") repeat;
   &:before {
     content: "";
     display: block;
-    background: $pink;
+    background: $purple;
     height: 10px;
     width: 100%;
   }
@@ -68,6 +68,6 @@ body {
 }
 
 .footer {
-  min-height: 25rem;
-  background-color: $purple;
+  min-height: 15rem;
+  background-color: $black;
 }

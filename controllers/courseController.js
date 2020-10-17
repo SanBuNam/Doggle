@@ -31,8 +31,8 @@ exports.javaScriptDeclaration = (req, res) => {
   res.render("javaScriptDeclaration", { title: "var let const declaration" });
 };
 exports.javaScriptOperators = (req, res) => {
-  res.render("javaScriptOperators", { title: "javaScript Operators" });
+  res.render("javaScriptOperators", { title: "Operators" });
 };
-exports.javaScriptFour = (req, res) => {
-  res.render("javaScriptFour", { title: "javaScriptFour" });
+exports.javaScriptControlFlow = (req, res) => {
+  res.render("javaScriptControlFlow", { title: "Control Flow" });
 };
