@@ -838,6 +838,10 @@ label {
       flex-wrap: wrap;
   margin: -1.25em 0 0 -1.25em; }
 
+.topPosts {
+  border-bottom: 1px black solid;
+  margin-bottom: 4rem; }
+
 .post {
   background: white;
   margin: 1.25em 0 0 1.25em;
@@ -856,6 +860,19 @@ label {
   @media all and (max-width: 550px) {
     .post {
       width: 100%; } }
+
+.postTitle {
+  word-wrap: break-word;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  margin: 1rem;
+  line-height: 1.1;
+  padding-bottom: 3rem; }
+  .postTitle a {
+    color: white;
+    border-bottom: 0;
+    background-image: linear-gradient(to right, #262161 100%, #262161 50%); }
 
 .post__actions {
   position: relative;
@@ -893,11 +910,8 @@ label {
     width: 100%;
     top: 0;
     right: 0;
-    background: linear-gradient(45deg, #05b3d6 0%, rgba(5, 179, 214, 0) 70%), linear-gradient(135deg, #0958ec 10%, rgba(9, 88, 236, 0) 80%), linear-gradient(225deg, #d209ec 10%, rgba(210, 9, 236, 0) 80%), linear-gradient(315deg, #05e129 100%, rgba(5, 225, 41, 0) 70%);
     opacity: 0.6;
-    z-index: 1;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
+    z-index: 1; }
   .post__hero img {
     height: 100%;
     width: 100%;
@@ -905,9 +919,7 @@ label {
     right: 0;
     position: absolute;
     left: 0;
-    object-fit: cover;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
+    object-fit: cover; }
 
 .tags {
   margin: 0;
