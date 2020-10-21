@@ -10,7 +10,7 @@ mixin postForm(post = {})
       if post.photo
         img(src=`/uploads/${post.photo}`, alt=post.name width=200)
     p 종류
-    - const choices = ['재밋어요', '도움되요', '위로되요', '감동적이에요']
+    - const choices = ['Coding Joke', 'JavaScript', 'Programming', 'Career']
     - const tags = post.tags || []
     ul.tags
       each choice in choices

@@ -19,7 +19,7 @@ router.get("/javascript", courseController.javaScript);
 router.get("/javascript/types", courseController.javaScriptTypes);
 router.get("/javascript/declaration", courseController.javaScriptDeclaration);
 router.get("/javascript/operators", courseController.javaScriptOperators);
-router.get("/javascript/javaScriptFour", courseController.javaScriptFour);
+router.get("/javascript/control-flow", courseController.javaScriptControlFlow);
 
 router.get("/posts", catchErrors(postController.getPosts));
 router.get("/posts/page/:page", catchErrors(postController.getPosts));

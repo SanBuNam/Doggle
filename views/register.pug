@@ -2,15 +2,15 @@ extends layout
 
 block content
   .inner
-    h1=title
+    h1 Free Membership
     form.form(action="/register" method="POST")
-      h2 즐겁고 유익한 한인 코딩 커뮤니티를 함께 만들어요❣️❣️❣️
-      label(for="name") 닉네임
+      h2 즐겁고 유익한 한인 코딩 커뮤니티
+      label(for="name") 닉네임 nickname
       input(type="text" name="name")
-      label(for="email") 이메일
+      label(for="email") 이메일 email
       input(type="email" name="email")
-      label(for="password") 패스워드
+      label(for="password") 패스워드 password
       input(type="password" name="password")
-      label(for="password-confirm") 패스워드 확인
+      label(for="password-confirm") 패스워드 확인 confirm password
       input(type="password" name="password-confirm")
       input.button(type="submit" value="회원 가입하기")

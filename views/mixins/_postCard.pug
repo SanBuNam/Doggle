@@ -19,7 +19,7 @@ mixin postCard(post = {})
             span= post.reviews.length
 
       img(src=`/uploads/${post.photo || 'post.png'}`)
-      h2.title
+      h2.postTitle
         a(href=`/posts/${post.slug}`) #{post.name}
     .post__details
       p= post.description.split(' ').slice(0, 25).join(' ')

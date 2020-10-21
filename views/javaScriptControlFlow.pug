@@ -1,0 +1,12 @@
+extends layout
+
+include mixins/_sideMenu
+
+block withMenu
+  .inner
+    .javascript
+      +sideMenu(h.javaScriptMenu)
+      .pageContent
+        h1=title
+        h6 
+          span.comment 
