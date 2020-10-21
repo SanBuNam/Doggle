@@ -39,17 +39,7 @@
     background: $yellow;
     color: $black;
     display: flex;
-    padding-bottom: 10px;
     margin: 0 10px;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 75%,
-      75% 75%,
-      75% 100%,
-      50% 75%,
-      0% 75%
-    );
     &--active {
       background: lighten($purple, 40%);
       .tag__text {
