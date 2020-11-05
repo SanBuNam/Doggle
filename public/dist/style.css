@@ -864,7 +864,7 @@ label {
 .postTitle {
   word-wrap: break-word;
   position: relative;
-  text-align: center;
+  text-align: left;
   z-index: 2;
   margin: 1rem;
   line-height: 1.1;
@@ -879,16 +879,14 @@ label {
   z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-  margin-bottom: 50px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
   display: -ms-flexbox;
   display: flex;
-  color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-align: left;
+      align-items: left;
+  -ms-flex-pack: left;
+      justify-content: left;
+  text-align: left; }
 
 .post__action {
   font-size: 10px; }
