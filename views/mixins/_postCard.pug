@@ -16,10 +16,13 @@ mixin postCard(post = {})
         if post.reviews
           .post__action.post__action--count
             != h.icon('review')
-            span= post.reviews.length
-
-      img(src=`/uploads/${post.photo || 'post.png'}`)
-      h2.postTitle
-        a(href=`/posts/${post.slug}`) #{post.name}
-    .post__details
-      p= post.description.split(' ').slice(0, 25).join(' ')
+            - let reviewCount = post.reviews.length;
+            - let binaryCheck = reviewCount > 1 ? 'reviews' : 'review';
+            span= reviewCount + ' ' + binaryCheck
+        
+      //- img(src=`/uploads/${post.photo || 'post.png'}`)
+      - let desc = post.description.split(' ').slice(0, 2).join(' ')+"...";
+      p.postTitle
+        a(href=`/posts/${post.slug}`) #{desc}
+    //- .post__details
+      //- p= post.description.split(' ').slice(0, 25).join(' ')

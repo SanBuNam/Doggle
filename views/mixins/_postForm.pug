@@ -5,7 +5,7 @@ mixin postForm(post = {})
     label(for="description") 글
     textarea(name="description")= post.description
     //- Image Upload
-    label(for="photo") 사진 한장
+    label(for="photo") 사진
       input(type="file" name="photo" id="photo" accept="image/gif, image/png, image/jpeg")
       if post.photo
         img(src=`/uploads/${post.photo}`, alt=post.name width=200)
