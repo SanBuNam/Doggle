@@ -13,6 +13,7 @@
   background: white;
   margin: 1.25em 0 0 1.25em;
   width: calc(33.3333% - 1.25em);
+  // width: calc(50% - 1.25em);
   box-shadow: $shad;
   &--wide {
     width: 100%;
@@ -44,6 +45,14 @@
     color: white;
     border-bottom: 0;
     background-image: linear-gradient(to right, $purple 100%, $purple 50%);
+  }
+}
+
+.postImage {
+  display: grid;
+  img {
+    max-height: 200px;
+    margin: 0 auto;
   }
 }
 

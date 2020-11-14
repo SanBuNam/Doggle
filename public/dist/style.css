@@ -874,6 +874,13 @@ label {
     border-bottom: 0;
     background-image: linear-gradient(to right, #262161 100%, #262161 50%); }
 
+.postImage {
+  display: -ms-grid;
+  display: grid; }
+  .postImage img {
+    max-height: 200px;
+    margin: 0 auto; }
+
 .post__actions {
   position: relative;
   z-index: 2;

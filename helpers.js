@@ -11,7 +11,7 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.iconPng = (name) =>
   fs.readFileSync(`./public/images/icons/${name}.png`);
 
-exports.siteName = `Coding Korea`;
+exports.siteName = `All Code. All Day.`;
 
 exports.menu = [
   { slug: "/javascript", title: "자바스크립트", icon: "" },
