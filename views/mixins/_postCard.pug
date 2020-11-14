@@ -20,9 +20,13 @@ mixin postCard(post = {})
             - let binaryCheck = reviewCount > 1 ? 'reviews' : 'review';
             span= reviewCount + ' ' + binaryCheck
         
-      //- img(src=`/uploads/${post.photo || 'post.png'}`)
       - let desc = post.description.split(' ').slice(0, 2).join(' ')+"...";
       p.postTitle
         a(href=`/posts/${post.slug}`) #{desc}
+        
+    //- .postImage
+    //-   img(src=`/uploads/${post.photo || 'post.png'}`)
+        
+      
     //- .post__details
       //- p= post.description.split(' ').slice(0, 25).join(' ')
