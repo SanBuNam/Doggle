@@ -4,19 +4,24 @@
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  background: $black;
+  background: $red;
+  color: $black;
   &__section {
     display: flex;
     &--search {
       flex: 1 1 auto;
+      .search__input {
+        font-size: 1.6rem;
+      }
     }
   }
   &__item {
     display: flex;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   &__link {
-    background: $black;
-    color: white;
+    background: $white;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
     padding: 1.2rem 2rem 1rem 2rem;
@@ -30,7 +35,7 @@
     svg {
       width: 40px;
       transition: all 0.2s;
-      fill: white;
+      fill: $white;
       margin-bottom: 1rem;
     }
     &:hover,
@@ -40,7 +45,8 @@
       svg {
         transform: scale(1.2);
       }
-      background: $purple;
+      background: $red;
+      color: $white;
       // background: linear-gradient(
       //     90deg,
       //     #48ded4 0%,

@@ -9,12 +9,6 @@ const { catchErrors } = require("../handlers/errorHandlers");
 
 router.get("/", courseController.homePage);
 
-router.get("/preparation", courseController.preparationPage);
-router.get("/preparation/preparationOne", courseController.preparationOne);
-router.get("/preparation/preparationTwo", courseController.preparationTwo);
-router.get("/preparation/preparationThree", courseController.preparationThree);
-router.get("/preparation/preparationFour", courseController.preparationFour);
-
 router.get("/javascript", courseController.javaScript);
 router.get("/javascript/types", courseController.javaScriptTypes);
 router.get("/javascript/declaration", courseController.javaScriptDeclaration);

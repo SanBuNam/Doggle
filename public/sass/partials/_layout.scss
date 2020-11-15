@@ -4,24 +4,16 @@ html {
 }
 
 body {
-  background: #ffffff;
-  // background: url("/images/photos/bg9.png") repeat;
-  &:before {
-    content: "";
-    display: block;
-    background: $purple;
-    height: 10px;
-    width: 100%;
-  }
+  background: $white;
 }
 
 .inner {
   max-width: 1060px;
   padding: 1rem;
   margin: 0 auto;
-  // @media all and (max-width: 1060px) {
-  //   padding: 2rem;
-  // }
+  @media all and (max-width: 1060px) {
+    padding: 2rem;
+  }
 }
 
 .pageContent {
@@ -33,7 +25,7 @@ body {
   max-width: 900px;
   h1 {
     &::before {
-      background-color: $yellow;
+      background-color: $blue;
       width: 0.75em;
       height: 0.75em;
       content: "";
@@ -68,6 +60,16 @@ body {
 }
 
 .footer {
+  z-index: 999999;
   min-height: 15rem;
-  background-color: $black;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  span {
+    color: $white;
+  }
 }

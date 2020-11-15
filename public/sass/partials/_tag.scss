@@ -41,7 +41,7 @@
     display: flex;
     margin: 0 10px;
     &--active {
-      background: lighten($purple, 40%);
+      background: lighten($blue, 40%);
       .tag__text {
         color: white;
       }
@@ -55,7 +55,7 @@
     margin: 1.3rem 0;
     clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
     &--active {
-      background: lighten($purple, 40%);
+      background: lighten($blue, 40%);
       .tag__text {
         color: white;
       }
@@ -71,7 +71,7 @@
     padding-left: 10px;
     clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
     &--active {
-      background: lighten($purple, 40%);
+      background: lighten($blue, 40%);
       .tag__text {
         color: white;
       }
