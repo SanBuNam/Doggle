@@ -1,5 +1,4 @@
 const fs = require("fs");
-
 exports.moment = require("moment");
 
 exports.dump = (obj) => JSON.stringify(obj, null, 2);
@@ -14,34 +13,18 @@ exports.iconPng = (name) =>
 exports.siteName = `All Code. All Day.`;
 
 exports.menu = [
-  { slug: "/javascript", title: "자바스크립트", icon: "" },
-  { slug: "/posts", title: "올 포스팅", icon: "" },
-  { slug: "/tags", title: "추천 포스팅", icon: "" },
+  { slug: "/javascript", title: "JavaScript", icon: "" },
+  { slug: "/posts", title: "All Posts", icon: "" },
+  { slug: "/tags", title: "Category", icon: "" },
   // { slug: "/top", title: "인기 포스팅", icon: "" },
-  { slug: "/add", title: "포스팅 추가", icon: "" },
-];
-
-exports.preparationMenu = [
-  { slug: "/preparation", title: "Main", icon: "" },
-  { slug: "/preparation/preparationOne", title: "로드 투 코드", icon: "" },
-  {
-    slug: "/preparation/preparationTwo",
-    title: "프로그래밍 관련 소통",
-    icon: "post",
-  },
-  { slug: "/preparation/preparationThree", title: "three", icon: "" },
-  {
-    slug: "/preparation/preparationFour",
-    title: "Four",
-    icon: "post",
-  },
+  // { slug: "/add", title: "Add Post", icon: "" },
 ];
 
 exports.javaScriptMenu = [
-  { slug: "/javascript", title: "자바스크립트란?", icon: "" },
+  { slug: "/javascript", title: "What is JS?", icon: "" },
   {
     slug: "/javascript/types",
-    title: "Data types",
+    title: "Data types in JS",
     icon: "",
   },
   {

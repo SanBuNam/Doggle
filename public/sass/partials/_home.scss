@@ -1,17 +1,17 @@
-.heading {
-  margin-left: 2rem;
-  margin-bottom: 3rem;
-}
-
 .introduction {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
   margin: 0 auto;
   max-width: 990px;
+  .heading {
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+  }
   h1 {
+    font-size: 6rem;
     &::before {
-      background-color: $yellow;
+      background-color: $blue;
       width: 0.75em;
       height: 0.75em;
       content: "";
@@ -22,38 +22,6 @@
       --rotate: 3deg;
       transform: translateX(var(--translate)) translateY(var(--translate))
         rotate(var(--rotate));
-    }
-  }
-  h3 {
-    position: relative;
-    &::before {
-      background-color: $yellow;
-      width: 0.75em;
-      height: 0.75em;
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      z-index: -1;
-      --translate: -0.5rem;
-      --rotate: 3deg;
-      transform: translateX(var(--translate)) translateY(var(--translate))
-        rotate(var(--rotate));
-    }
-  }
-}
-
-.cause {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.intro {
-  padding: 1rem 2rem;
-  .picture {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    img {
-      height: 3rem;
     }
   }
 }
@@ -72,17 +40,17 @@
       font-weight: 500;
       letter-spacing: -1px;
       background: url("/images/photos/blackgrit.png");
-      background-color: #ffc600;
+      background-color: $yellow;
       padding: 0.5rem 0.5rem 0.5rem 1.5rem;
       &:hover {
         animation: gritty 2s steps(10) infinite;
       }
     }
     &--one {
-      background-color: #f25460;
+      background-color: $red;
     }
     &--two {
-      background-color: #ffde2b;
+      background-color: $yellow;
     }
   }
 }

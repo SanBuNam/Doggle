@@ -14,7 +14,7 @@ const javascript = {
 };
 
 /*
-  This is our postCSS loader which gets fed into the next loader.
+  This is postCSS loader which gets fed into the next loader.
 */
 const postcss = {
   loader: "postcss-loader",

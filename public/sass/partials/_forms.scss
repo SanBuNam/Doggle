@@ -5,7 +5,7 @@ textarea {
   border: 1px solid $grey;
   &.input {
     &--error {
-      border-color: red;
+      border-color: $red;
     }
   }
 }
@@ -16,7 +16,7 @@ label {
 }
 
 .form {
-  background: white;
+  background: $white;
   padding: 2rem;
   box-shadow: $grad;
   & + .form {
