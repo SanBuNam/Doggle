@@ -7,6 +7,7 @@
   .heading {
     margin-left: 2rem;
     margin-bottom: 3rem;
+    margin: 0 auto;
   }
   h1 {
     font-size: 6rem;
@@ -27,30 +28,18 @@
 }
 
 .subjects {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
+  margin: 0 auto;
   .subject {
     box-shadow: $shad;
     border-radius: 10px;
-    .highlight {
-      position: relative;
-      margin-top: -2rem;
-      font-size: 3.5rem;
-      font-weight: 500;
-      letter-spacing: -1px;
-      background: url("/images/photos/blackgrit.png");
-      background-color: $yellow;
-      padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-      &:hover {
-        animation: gritty 2s steps(10) infinite;
-      }
-    }
     &--one {
       background-color: $red;
     }
     &--two {
-      background-color: $yellow;
+      background-color: $blue;
     }
   }
 }

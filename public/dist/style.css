@@ -1018,7 +1018,6 @@ label {
     padding: 1rem 1rem;
     border-left: 3px solid rgba(0, 0, 0, 0.1);
     margin-right: -1px;
-    /* ugh */
     background-clip: padding-box; }
 
 .single__hero {
@@ -1282,7 +1281,8 @@ pre.error {
   max-width: 990px; }
   .introduction .heading {
     margin-left: 2rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    margin: 0 auto; }
   .introduction h1 {
     font-size: 6rem; }
     .introduction h1::before {
@@ -1299,29 +1299,19 @@ pre.error {
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
 
 .subjects {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-flexbox;
+  display: flex;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-column-gap: 3rem; }
+  grid-column-gap: 3rem;
+  margin: 0 auto; }
   .subjects .subject {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
     border-radius: 10px; }
-    .subjects .subject .highlight {
-      position: relative;
-      margin-top: -2rem;
-      font-size: 3.5rem;
-      font-weight: 500;
-      letter-spacing: -1px;
-      background: url("/images/photos/blackgrit.png");
-      background-color: #ffcf3e;
-      padding: 0.5rem 0.5rem 0.5rem 1.5rem; }
-      .subjects .subject .highlight:hover {
-        animation: gritty 2s steps(10) infinite; }
     .subjects .subject--one {
       background-color: #ec3944; }
     .subjects .subject--two {
-      background-color: #ffcf3e; }
+      background-color: #4e7cd8; }
 
 .preparation {
   display: -ms-grid;
