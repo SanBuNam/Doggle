@@ -43,3 +43,23 @@
     }
   }
 }
+
+.one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 3rem;
+  justify-items: center;
+}
+
+.two {
+  // background-image: url("/mountain-range.jpg");
+  display: grid;
+  background-color: aquamarine;
+  min-height: 15rem;
+  &--one {
+    background-color: rebeccapurple;
+    text-align: center;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+}
