@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  background: $red;
+  background: $white;
   color: $black;
   &__section {
     display: flex;
@@ -12,6 +12,8 @@
       flex: 1 1 auto;
       .search__input {
         font-size: 1.6rem;
+        color: $black;
+        border: 1px solid $grey;
       }
     }
   }
