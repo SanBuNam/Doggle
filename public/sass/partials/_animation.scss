@@ -16,13 +16,3 @@
     animation: gritty 2s steps(10) infinite;
   }
 }
-
-.highlight {
-  padding: 1rem;
-  letter-spacing: -1px;
-  background: url("/images/photos/blackgrit.png");
-  background-color: #ffc600;
-  &:hover {
-    animation: gritty 2s steps(10) infinite;
-  }
-}

@@ -120,3 +120,24 @@ p {
   font-size: 5rem;
   text-align: center;
 }
+
+.highlightShort {
+  max-width: 570px;
+  padding: 1rem;
+  letter-spacing: -1px;
+  background: url("/images/photos/blackgrit.png");
+  background-color: #ffc600;
+  &:hover {
+    animation: gritty 2s steps(10) infinite;
+  }
+}
+
+.highlightWide {
+  padding: 1rem;
+  letter-spacing: -1px;
+  background: url("/images/photos/blackgrit.png");
+  background-color: #ffc600;
+  &:hover {
+    animation: gritty 2s steps(10) infinite;
+  }
+}

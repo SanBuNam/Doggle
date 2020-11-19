@@ -44,11 +44,15 @@
   }
 }
 
-.one {
+.features {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   justify-items: center;
+  background-color: yellow;
+  &--title {
+    grid-column: 1 / -1;
+  }
 }
 
 .two {
