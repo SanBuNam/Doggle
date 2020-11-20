@@ -49,21 +49,42 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   justify-items: center;
-  background-color: yellow;
   &--title {
     grid-column: 1 / -1;
   }
 }
 
-.two {
-  // background-image: url("/mountain-range.jpg");
-  display: grid;
-  background-color: aquamarine;
-  min-height: 15rem;
-  &--one {
-    background-color: rebeccapurple;
+.inspirationalQuotes {
+  background-image: url("/images/photos/mountain-range.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  &--quote {
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
     text-align: center;
-    max-width: 20rem;
     margin: 0 auto;
+    max-width: 55rem;
+    min-height: 30rem;
+  }
+}
+
+.promotionalContents {
+  // display: grid;
+  margin: 3rem auto;
+
+  &--title {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0;
+    img {
+      width: 4rem;
+    }
+  }
+
+  &--display {
+    max-width: 64rem;
+    margin: 0 auto;
+    background-color: violet;
+    min-height: 40rem;
   }
 }
