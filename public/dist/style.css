@@ -1304,31 +1304,37 @@ pre.error {
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
 
-.subjects {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-column-gap: 3rem;
-  margin: 0 auto; }
-  .subjects .subject {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 10px; }
-    .subjects .subject--one {
-      background-color: #ec3944; }
-    .subjects .subject--two {
-      background-color: #4e7cd8; }
-
 .features {
+  max-width: 990px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   grid-column-gap: 3rem;
   -ms-grid-column-align: center;
-      justify-items: center; }
+      justify-items: center;
+  margin: 0 auto; }
   .features--title {
-    grid-column: 1 / -1; }
+    grid-column: 1 / -1;
+    margin: 2rem auto; }
+  .features .codingCommunityContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem; }
+    .features .codingCommunityContainer .codingCommunity {
+      border-radius: 5px;
+      border: 1px solid black; }
+      .features .codingCommunityContainer .codingCommunity--image {
+        height: 200px;
+        background-color: #4571c9;
+        background-image: url("/images/photos/bg16.png");
+        background-size: auto 70%;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .features .codingCommunityContainer .codingCommunity--text {
+        padding: 30px 20px 10px; }
 
 .inspirationalQuotes {
   background-image: url("/images/photos/mountain-range.jpg");
