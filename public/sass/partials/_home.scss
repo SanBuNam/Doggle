@@ -93,10 +93,17 @@
   }
 
   &--display {
-    max-width: 64rem;
+    max-width: 990px;
     margin: 0 auto;
     background-color: violet;
     min-height: 40rem;
+  }
+  &--posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 5rem;
+    justify-content: center;
   }
 }
 

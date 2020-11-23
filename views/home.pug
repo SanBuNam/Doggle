@@ -1,5 +1,7 @@
 extends layout
 
+include mixins/_postCard
+
 block content
   .introduction
     .heading
@@ -38,8 +40,10 @@ block content
       h4 title goes here
       p centered paragraph goes here
     .promotionalContents--display
-      .promotionalContents
-        9 blocks of contents here
+      .promotionalContents--posts
+        each post in posts
+          =h.dump(post)
+          
 
 
     //- .subjects

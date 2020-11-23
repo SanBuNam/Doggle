@@ -149,5 +149,5 @@ exports.getHearts = async (req, res) => {
 
 exports.getTopPosts = async (req, res) => {
   const posts = await Post.getTopPosts();
-  res.render("topPosts", { posts, title: `⭐ Top Posts` });
+  res.render("home", { posts, title: `⭐ Top Posts` });
 };
