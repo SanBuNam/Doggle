@@ -7,7 +7,7 @@ const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
-router.get("/", courseController.homePage);
+router.get("/", catchErrors(postController.getTopPosts));
 
 router.get("/javascript", courseController.javaScript);
 router.get("/javascript/types", courseController.javaScriptTypes);
@@ -70,7 +70,7 @@ router.post(
   catchErrors(reviewController.addReview)
 );
 
-router.get("/top", catchErrors(postController.getTopPosts));
+// router.get("/top", catchErrors(postController.getTopPosts));
 
 // API
 router.get("/api/search", catchErrors(postController.searchPosts));

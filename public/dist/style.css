@@ -1357,10 +1357,19 @@ pre.error {
     .promotionalContents--title img {
       width: 4rem; }
   .promotionalContents--display {
-    max-width: 64rem;
+    max-width: 990px;
     margin: 0 auto;
     background-color: violet;
     min-height: 40rem; }
+  .promotionalContents--posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 5rem;
+    -ms-flex-pack: center;
+        justify-content: center; }
 
 .preparation {
   display: -ms-grid;
