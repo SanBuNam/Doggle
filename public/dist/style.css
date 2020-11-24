@@ -759,7 +759,6 @@ label {
       fill: #ffffff;
       margin-bottom: 1rem; }
     .nav__link:hover, .nav__link--active {
-      border-bottom-color: rgba(0, 0, 0, 0.2);
       border-right-color: rgba(0, 0, 0, 0.05);
       background: #ec3944;
       color: #ffffff; }
@@ -943,6 +942,13 @@ label {
     position: absolute;
     left: 0;
     object-fit: cover; }
+
+.userPosting {
+  margin: 4rem auto 3rem auto;
+  text-align: center; }
+
+.userPostingForm {
+  margin: 4rem auto 7.5rem auto; }
 
 .tags {
   margin: 0;
@@ -1286,9 +1292,7 @@ pre.error {
   margin: 0 auto;
   max-width: 990px; }
   .introduction .heading {
-    margin-left: 2rem;
-    margin-bottom: 3rem;
-    margin: 0 auto; }
+    margin: 3rem auto 2rem auto; }
   .introduction h1 {
     font-size: 6rem; }
     .introduction h1::before {
@@ -1324,6 +1328,7 @@ pre.error {
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem; }
     .features .codingCommunityContainer .codingCommunity {
+      max-width: 30rem;
       border-radius: 5px;
       border: 1px solid black; }
       .features .codingCommunityContainer .codingCommunity--image {
@@ -1351,25 +1356,31 @@ pre.error {
 .promotionalContents {
   margin: 3rem auto; }
   .promotionalContents--title {
-    margin: 0 auto;
+    margin: 6rem auto;
     text-align: center;
     line-height: 0; }
     .promotionalContents--title img {
       width: 4rem; }
   .promotionalContents--display {
     max-width: 990px;
-    margin: 0 auto;
-    background-color: violet;
-    min-height: 40rem; }
+    margin: 0 auto; }
   .promotionalContents--posts {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
-    grid-row-gap: 5rem;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    grid-gap: 3rem; }
+  .promotionalContents--polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .promotionalContents--polaroid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      overflow: hidden;
+      padding: 2rem;
+      padding-bottom: 0; }
+  .promotionalContents--polaroid__text {
+    text-align: center; }
 
 .preparation {
   display: -ms-grid;

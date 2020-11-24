@@ -474,8 +474,6 @@ module.exports = defaults;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// based on https://gist.github.com/paulirish/12fb951a8b893a454b32
-
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
@@ -975,8 +973,6 @@ function ajaxHeart(e) {
   var _this = this;
 
   e.preventDefault();
-  // console.log("HEART IT!");
-  // console.log(this);
   _axios2.default.post(this.action).then(function (res) {
     var isHearted = _this.heart.classList.toggle("heart__button--hearted");
     (0, _bling.$)(".heart-count").textContent = res.data.hearts.length;

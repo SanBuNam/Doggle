@@ -1,7 +1,5 @@
 extends layout
 
-include mixins/_postCard
-
 block content
   .introduction
     .heading
@@ -42,53 +40,12 @@ block content
     .promotionalContents--display
       .promotionalContents--posts
         each post in posts
-          =h.dump(post)
-          
-
-
-    //- .subjects
-    //-   .subject.subject--one
-    //-     h3.title.highlight
-    //-       a(href=`/community/}`) 코딩 커뮤니티
-    //-     ul.verticalTags
-    //-       li.tag
-    //-         a.tag__link2(href=`/community`)
-    //-           span.tag__text 로드 투 코드 (All About Coding)
-    //-       li.tag
-    //-         a.tag__link2(href="JavaSCript")
-    //-           span.tag__text 프로그래밍 관련 소통
-    //-       li.tag
-    //-         a.tag__link2(href="HTML")
-    //-           span.tag__text 자바스크립트의 모든것
-    //-       li.tag
-    //-         a.tag__link2(href="HTML")
-    //-           span.tag__text 풀 스택 앱 만들기
-    //-       li.tag
-    //-         a.tag__link2(href="CSS & SASS")
-    //-           span.tag__text 포토폴리오 잘 만들기
-    //-       li.tag
-    //-         a.tag__link2(href="JavaSCript")
-    //-           span.tag__text 프로그래머로 취직 잘하는 법
-
-    //-   .subject.subject--two
-    //-     h3.title.highlight
-    //-       a(href=`/posts/}`) 풀 스택 프로그래머
-    //-     ul.verticalTags
-    //-       li.tag
-    //-         a.tag__link2(href="HTML")
-    //-           span.tag__text 시작은 HTML부터
-    //-       li.tag
-    //-         a.tag__link2(href="CSS & SASS")
-    //-           span.tag__text CSS & SASS 도 알아야죠
-    //-       li.tag
-    //-         a.tag__link2(href="JavaSCript")
-    //-           span.tag__text JavaSCript 기본기부터
-    //-       li.tag
-    //-         a.tag__link2(href="React.js")
-    //-           span.tag__text React.js 프레임워크
-    //-       li.tag
-    //-         a.tag__link2(href="Node.js")
-    //-           span.tag__text Node.js 서버
-    //-       li.tag
-    //-         a.tag__link2(href="MongoDB")
-    //-           span.tag__text MongoDB 데이타 베이스
+          .promotionalContents--polaroid 
+            img(src=`/uploads/${post.photo || 'post.png'}`)
+            .promotionalContents--polaroid__text
+              p #{post.name} 
+                br 
+                | by #{post.name}
+    .promotionalContents--title
+      h4 bottom title goes here
+      p centered paragraph goes here centered paragraph goes here centered paragraph goes here centered paragraph goes here

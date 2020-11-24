@@ -61,8 +61,6 @@
   z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-  // margin-bottom: 50px;
-  // padding-top: 10px;
   padding-bottom: 2px;
   display: flex;
   align-items: left;
@@ -107,4 +105,13 @@
     left: 0;
     object-fit: cover;
   }
+}
+
+.userPosting {
+  margin: 4rem auto 3rem auto;
+  text-align: center;
+}
+
+.userPostingForm {
+  margin: 4rem auto 7.5rem auto;
 }
