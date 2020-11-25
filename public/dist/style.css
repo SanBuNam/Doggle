@@ -55,7 +55,7 @@ body {
 .footer {
   min-height: 15rem;
   width: 100%;
-  background-color: red;
+  background-color: #ec3944;
   color: white;
   text-align: center; }
   .footer span {
@@ -1328,18 +1328,25 @@ pre.error {
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem; }
     .features .codingCommunityContainer .codingCommunity {
-      max-width: 30rem;
       border-radius: 5px;
       border: 1px solid black; }
       .features .codingCommunityContainer .codingCommunity--image {
         height: 200px;
-        background-color: #4571c9;
         background-image: url("/images/photos/bg16.png");
         background-size: auto 70%;
         background-repeat: no-repeat;
         background-position: center; }
+      .features .codingCommunityContainer .codingCommunity .left {
+        background-color: #1b212c; }
+      .features .codingCommunityContainer .codingCommunity .right {
+        background-color: #4e7cd8; }
       .features .codingCommunityContainer .codingCommunity--text {
         padding: 30px 20px 10px; }
+      .features .codingCommunityContainer .codingCommunity--text__paraph ul {
+        padding: 0;
+        padding-left: 1rem;
+        list-style: circle;
+        line-height: normal; }
 
 .inspirationalQuotes {
   background-image: url("/images/photos/mountain-range.jpg");

@@ -41,19 +41,32 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
     .codingCommunity {
-      max-width: 30rem;
+      // max-width: 30rem;
       border-radius: 5px;
       border: 1px solid black;
       &--image {
         height: 200px;
-        background-color: #4571c9;
         background-image: url("/images/photos/bg16.png");
         background-size: auto 70%;
         background-repeat: no-repeat;
         background-position: center;
       }
+      .left {
+        background-color: $black;
+      }
+      .right {
+        background-color: $blue;
+      }
       &--text {
         padding: 30px 20px 10px;
+      }
+      &--text__paraph {
+        ul {
+          padding: 0;
+          padding-left: 1rem;
+          list-style: circle;
+          line-height: normal;
+        }
       }
     }
   }
