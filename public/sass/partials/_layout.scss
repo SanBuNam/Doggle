@@ -60,12 +60,20 @@ body {
 }
 
 .footer {
-  min-height: 15rem;
   width: 100%;
-  background-color: $red;
-  color: white;
-  text-align: center;
-  span {
+  background-color: $black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: $shad;
+  justify-items: center;
+  color: $white;
+  a {
     color: $white;
   }
+  // .socialLinks {
+  //   color: $green;
+  // }
+  // .directContacts {
+  //   color: $blue;
+  // }
 }

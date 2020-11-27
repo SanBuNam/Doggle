@@ -4,16 +4,15 @@
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  background: $white;
-  color: $black;
+  background: $grey;
+  box-shadow: $shad;
   &__section {
     display: flex;
     &--search {
       flex: 1 1 auto;
       .search__input {
         font-size: 1.6rem;
-        color: $black;
-        border: 1px solid $grey;
+        color: $white;
       }
     }
   }

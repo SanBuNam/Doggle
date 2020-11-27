@@ -31,7 +31,7 @@
   grid-template-columns: 1fr;
   grid-column-gap: 3rem;
   justify-items: center;
-  margin: 0 auto;
+  margin: 3rem auto;
   &--title {
     grid-column: 1 / -1;
     margin: 2rem auto;
@@ -41,9 +41,7 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
     .codingCommunity {
-      // max-width: 30rem;
-      border-radius: 5px;
-      border: 1px solid black;
+      border: 1px solid #9a9090;
       &--image {
         height: 200px;
         background-image: url("/images/photos/bg16.png");
@@ -84,6 +82,22 @@
     max-width: 55rem;
     min-height: 30rem;
   }
+  &--title {
+    margin: 0.5rem auto 0 auto;
+    padding: 1rem;
+    line-height: 0.5;
+    h4 {
+      font-size: 2.2rem;
+    }
+  }
+  &--text {
+    h5 {
+      padding: 0.5rem;
+      font-weight: 800;
+      color: $blue;
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .promotionalContents {
@@ -94,6 +108,10 @@
     line-height: 0;
     img {
       width: 4rem;
+    }
+    a {
+      color: $blue;
+      display: inline-block;
     }
   }
   &--display {

@@ -53,12 +53,17 @@ body {
     background-color: #4e7cd8; }
 
 .footer {
-  min-height: 15rem;
   width: 100%;
-  background-color: #ec3944;
-  color: white;
-  text-align: center; }
-  .footer span {
+  background-color: #1b212c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  -ms-grid-column-align: center;
+      justify-items: center;
+  color: #ffffff; }
+  .footer a {
     color: #ffffff; }
 
 html {
@@ -602,7 +607,6 @@ p {
 .grit {
   background: url("/images/photos/blackgrit.png");
   background-size: 600px;
-  padding: 2rem 2rem 2rem 0;
   position: relative; }
   .grit:hover {
     animation: gritty 2s steps(10) infinite; }
@@ -720,8 +724,8 @@ label {
   padding: 0;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  background: #ffffff;
-  color: #1b212c; }
+  background: #e6e6e6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
   .nav__section {
     display: -ms-flexbox;
     display: flex; }
@@ -730,8 +734,7 @@ label {
           flex: 1 1 auto; }
       .nav__section--search .search__input {
         font-size: 1.6rem;
-        color: #1b212c;
-        border: 1px solid #e6e6e6; }
+        color: #ffffff; }
   .nav__item {
     display: -ms-flexbox;
     display: flex;
@@ -1317,7 +1320,7 @@ pre.error {
   grid-column-gap: 3rem;
   -ms-grid-column-align: center;
       justify-items: center;
-  margin: 0 auto; }
+  margin: 3rem auto; }
   .features--title {
     grid-column: 1 / -1;
     margin: 2rem auto; }
@@ -1328,8 +1331,7 @@ pre.error {
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem; }
     .features .codingCommunityContainer .codingCommunity {
-      border-radius: 5px;
-      border: 1px solid black; }
+      border: 1px solid #9a9090; }
       .features .codingCommunityContainer .codingCommunity--image {
         height: 200px;
         background-image: url("/images/photos/bg16.png");
@@ -1359,6 +1361,17 @@ pre.error {
     margin: 0 auto;
     max-width: 55rem;
     min-height: 30rem; }
+  .inspirationalQuotes--title {
+    margin: 0.5rem auto 0 auto;
+    padding: 1rem;
+    line-height: 0.5; }
+    .inspirationalQuotes--title h4 {
+      font-size: 2.2rem; }
+  .inspirationalQuotes--text h5 {
+    padding: 0.5rem;
+    font-weight: 800;
+    color: #4e7cd8;
+    font-size: 2.2rem; }
 
 .promotionalContents {
   margin: 3rem auto; }
@@ -1368,6 +1381,9 @@ pre.error {
     line-height: 0; }
     .promotionalContents--title img {
       width: 4rem; }
+    .promotionalContents--title a {
+      color: #4e7cd8;
+      display: inline-block; }
   .promotionalContents--display {
     max-width: 990px;
     margin: 0 auto; }
