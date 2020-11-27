@@ -35,3 +35,18 @@ exports.javaScriptMenu = [
   { slug: "/javascript/operators", title: "Operators", icon: "" },
   { slug: "/javascript/control-flow", title: "Control Flow", icon: "" },
 ];
+
+exports.quotes = [
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "David", quote: "Life is to enjoy no matter what happens."},
+  {name: "Bible", quote: "Jesus loves me like no other person."},
+];

@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ko")
   head
     title= `${title} | ${h.siteName}`
     link(rel='stylesheet' href='/dist/style.css')
@@ -16,10 +16,6 @@ html(lang="en")
             each menu in h.menu
               li.nav__item
                 a.nav__link(href=menu.slug, class=(currentPath.startsWith(menu.slug) ? 'nav__link--active' : '')) #{menu.title}
-          .nav__section.nav__section--search
-            .search
-              input.search__input(type="text" placeholder="Search post" name="search")
-              .search__results
           .nav__section.nav__section--user
             li.nav__item: a.nav__link(href="/add", class=(currentPath.endsWith('/add') ? 'nav__link--active' : '')) Add post
             if user
@@ -28,6 +24,10 @@ html(lang="en")
             else
               li.nav__item: a.nav__link(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : '')) Log-in
               li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : '')) Sign up
+          .nav__section.nav__section--search
+            .search
+              input.search__input(type="text" placeholder="Search post" name="search")
+              .search__results
               
     block messages
       if locals.flashes
@@ -41,10 +41,32 @@ html(lang="en")
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     
     block content
-    block withMenu
-    
-    footer.footer
-      .foot1
 
+    footer.footer
+      .socialLinks
+        h5 코딩 관련 정보 공유 쇼셜
+        p instagram : 
+          span
+            a(href="") @instagram
+        p facebook : 
+          span
+            a(href="") @facebook
+        p youtube : 
+          span
+            a(href="") @youtube
+      .directContacts
+        h5 일 관련 연락처
+        p email : 
+          span
+            a(href="") stoicSanbunam@gmail.com
+        p website : 
+          span
+            a(href="") dcs.com
+        p meetup : 
+          span
+            a(href="") @meetup.com
     block scripts
       script(src="/dist/App.bundle.js")
+
+
+// nav on hover gif animation on matrix buttons?

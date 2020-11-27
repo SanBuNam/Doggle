@@ -4,18 +4,22 @@ block content
   .introduction
     .heading
       h1 ALL CODE. ALL DAY.
-      h4.highlightShort 초보에서 고수까지 쉽게 배울수 있는 온라인 무료 코딩 강좌
+      a(href="")
+        h4.highlightShort 누구나 쉽게 프로그래밍을 배울수 있는 온라인 무료 코딩 붓캠프
   
   .inspirationalQuotes
     .inspirationalQuotes--quote
-      .inspirationalQuotes-title
-        h4 inspirationalQuotes
-      .inspirationalQuotes-text
-        p eat(); code(); sleep(); repeat();
+      .inspirationalQuotes--title
+        h4 💻 프로그래밍과 ☕ 커피향 인생이 있는 인터넷 공간
+        h4 🏫 코딩 교육과 🌏 코딩 커뮤니티
+      .inspirationalQuotes--text
+        - let quotes = h.quotes
+        - let quoteSelector = Math.ceil(Math.random()*10);
+        h5 #{quotes[quoteSelector].quote} - by #{quotes[quoteSelector].name}
 
   .features
     .features--title
-      h3 올 인 코딩 탐구 생활
+      h3 코딩 탐구 생활
     .codingCommunityContainer
       .codingCommunity
         .codingCommunity--image.left
@@ -34,17 +38,17 @@ block content
             h4 코딩 수업 (자바 스크립트 풀 스택)
           .codingCommunity--text__paraph
             ul
-              li 프로그래밍 기본기 갇추기
+              li 프로그래밍 기본기 배우기
               li 자바스크립트 마스터하기
               li ES6 배우기
-              li React 프론트엔드 프레임웤 배우기
-              li Node.js 서버 | Mongodb 데이타 베이스 배우기
+              li React  프레임워크
+              li Node.js 서버 | Mongodb 데이타 베이스
 
   .promotionalContents
     .promotionalContents--title
       img(src="/images/photos/bg13.jpg")
-      h4 title goes here
-      p centered paragraph goes here
+      h4 멤버 스토리 나눔의 장
+      h5 코딩을 배우는 사람들과 소통하며 즐겁게 코딩을 배우세요. 
     .promotionalContents--display
       .promotionalContents--posts
         each post in posts
@@ -55,5 +59,7 @@ block content
                 br 
                 | by #{post.name}
     .promotionalContents--title
-      h4 bottom title goes here
-      p centered paragraph goes here centered paragraph goes here centered paragraph goes here centered paragraph goes here
+      h4 코딩을 배워보고 싶으신데 어떻게 시작해야할지 모르시겠다고요? 
+        span
+          a(href="") 👉 제가 독학의 노하우로 기초부터 이해하기 쉽게 가르쳐 드리겠습니다.
+        
