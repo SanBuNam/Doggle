@@ -34,7 +34,7 @@ router.post(
 );
 
 router.get("/tags", catchErrors(postController.getPostsByTag));
-router.get("/tags/:tag", catchErrors(postController.getPostsByTag));
+router.get("/tags/:tag/page/:page", catchErrors(postController.getPostsByTag));
 
 router.get("/register", userController.registerForm);
 router.post(

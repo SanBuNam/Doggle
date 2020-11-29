@@ -49,7 +49,7 @@ exports.createPost = async (req, res) => {
 
 exports.getPosts = async (req, res) => {
   const page = req.params.page || 1;
-  const limit = 6;
+  const limit = 9;
   const skip = page * limit - limit;
   const postsPromise = Post.find()
     .skip(skip)
@@ -77,9 +77,7 @@ const confirmOwner = (post, user) => {
 
 exports.editPost = async (req, res) => {
   const post = await Post.findOne({ _id: req.params.id });
-  // 2. confirm they are the owner of the post
   confirmOwner(post, req.user);
-  // 3. Render out the edit form so the user can update their post
   res.render("editPost", { title: `Edit ${post.name}`, post });
 };
 
@@ -104,12 +102,30 @@ exports.getPostBySlug = async (req, res, next) => {
 };
 
 exports.getPostsByTag = async (req, res) => {
+  const page = req.params.page || 1;
+  const limit = 9;
+  const skip = page * limit - limit;
+
   const tag = req.params.tag;
   const tagQuery = tag || { $exists: true };
   const tagsPromise = Post.getTagsList();
-  const postsPromise = Post.find({ tags: tagQuery });
-  const [tags, posts] = await Promise.all([tagsPromise, postsPromise]);
-  res.render("tag", { tags, title: "Tags", tag, posts });
+  const postsPromise = Post.find({ tags: tagQuery })
+    .skip(skip)
+    .limit(limit)
+    .sort({ created: "desc" });
+  const countPromise = Post.count({ tags: tagQuery });
+  const [tags, posts, count] = await Promise.all([tagsPromise, postsPromise, countPromise]);
+  const pages = Math.ceil(count / limit);
+  if (!posts.length && skip) {
+    req.flash(
+      "info",
+      `You asked for page ${page}. But that doesn't exist. So I put you on page ${pages}`
+    )
+    res.redirect(`/tags/${tag}/page/${page}`);
+    return;
+  }
+
+  res.render("tag", { tags, title: "Tags", tag, posts, page, pages, count });
 };
 
 exports.searchPosts = async (req, res) => {

@@ -17,7 +17,7 @@ html(lang="ko")
               li.nav__item
                 a.nav__link(href=menu.slug, class=(currentPath.startsWith(menu.slug) ? 'nav__link--active' : '')) #{menu.title}
           .nav__section.nav__section--user
-            li.nav__item: a.nav__link(href="/add", class=(currentPath.endsWith('/add') ? 'nav__link--active' : '')) Add post
+            //- li.nav__item: a.nav__link(href="/add", class=(currentPath.endsWith('/add') ? 'nav__link--active' : '')) Add post
             if user
               li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Log-out
               li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : '')) Account
@@ -44,7 +44,7 @@ html(lang="ko")
 
     footer.footer
       .socialLinks
-        h5 코딩 관련 정보 공유 쇼셜
+        h5 코딩 정보 공유 소셜
         p instagram : 
           span
             a(href="") @instagram
@@ -65,8 +65,6 @@ html(lang="ko")
         p meetup : 
           span
             a(href="") @meetup.com
+
     block scripts
       script(src="/dist/App.bundle.js")
-
-
-// nav on hover gif animation on matrix buttons?

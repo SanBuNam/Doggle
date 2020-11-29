@@ -5,20 +5,22 @@ block content
     .heading
       h1 ALL CODE. ALL DAY.
       a(href="")
-        h4.highlightShort 누구나 쉽게 프로그래밍을 배울수 있는 온라인 무료 코딩 붓캠프
+        h3.highlightWide 누구나 쉽게 프로그래밍을 배울수 있는 온라인 무료 코딩 붓캠프
   
   .inspirationalQuotes
     .inspirationalQuotes--quote
       .inspirationalQuotes--title
-        h4 💻 프로그래밍과 ☕ 커피향 인생이 있는 인터넷 공간
-        h4 🏫 코딩 교육과 🌏 코딩 커뮤니티
+        h4 🇺🇸 독학 프로그래머 👨‍💻 다윗이
+        h4 💻 프로그래밍을 기초부터 이해하기 쉽게 강의
       .inspirationalQuotes--text
         - let quotes = h.quotes
         - let quoteSelector = Math.ceil(Math.random()*10);
-        h5 #{quotes[quoteSelector].quote} - by #{quotes[quoteSelector].name}
+        h4 #{quotes[quoteSelector].quote} - by #{quotes[quoteSelector].name}
 
   .features
     .features--title
+      a(href="")
+        img(src="/images/icons/cup.svg")
       h3 코딩 탐구 생활
     .codingCommunityContainer
       .codingCommunity
@@ -28,9 +30,12 @@ block content
             h4 코딩 커뮤니티
           .codingCommunity--text__paraph
             ul
-              li 글로벌 한인 코딩 커뮤니티에 조인하세요 (Meetup)
-              li 프로그래밍 산업 동향 & 해외/국내 취직 정보 공유 및 지원
-              li 코딩 언어, 라이브러리, 툴 등 코딩 관련 업데이트 공유
+              a(href="")
+                li 🏁 글로벌 한인 코딩 커뮤니티에 조인하세요 (Meetup)
+              a(href="")
+                li 🏁 IT 산업 동향과 해외 취직 정보 공유 및 지원
+              a(href="")
+                li 🏁 코딩 언어, 라이브러리, 툴 등 코딩 관련 업데이트
       .codingCommunity
         .codingCommunity--image.right
         .codingCommunity--text
@@ -38,15 +43,21 @@ block content
             h4 코딩 수업 (자바 스크립트 풀 스택)
           .codingCommunity--text__paraph
             ul
-              li 프로그래밍 기본기 배우기
-              li 자바스크립트 마스터하기
-              li ES6 배우기
-              li React  프레임워크
-              li Node.js 서버 | Mongodb 데이타 베이스
+              a(href="")
+                li 🏁 프로그래밍 기본기 배우기
+              a(href="")
+                li 🏁 자바스크립트 마스터하기
+              a(href="")
+                li 🏁 ES6 배우기
+              a(href="")
+                li 🏁 React  프레임워크
+              a(href="")
+                li 🏁 Node.js 서버 | Mongodb 데이타 베이스
 
   .promotionalContents
     .promotionalContents--title
-      img(src="/images/photos/bg13.jpg")
+      a(href="")
+        img(src="/images/icons/cup.svg")
       h4 멤버 스토리 나눔의 장
       h5 코딩을 배우는 사람들과 소통하며 즐겁게 코딩을 배우세요. 
     .promotionalContents--display
@@ -55,11 +66,12 @@ block content
           .promotionalContents--polaroid 
             img(src=`/uploads/${post.photo || 'post.png'}`)
             .promotionalContents--polaroid__text
-              p #{post.name} 
-                br 
-                | by #{post.name}
+              a(href=`/posts/${post.slug}`)
+                p 
+                  span #{post.name} 
+                  | by #{post.name}
     .promotionalContents--title
       h4 코딩을 배워보고 싶으신데 어떻게 시작해야할지 모르시겠다고요? 
         span
-          a(href="") 👉 제가 독학의 노하우로 기초부터 이해하기 쉽게 가르쳐 드리겠습니다.
+          a.linkToCourse(href="") 👉  독학의 노하우를 기초부터 이해하기 쉽게 가르쳐 드립니다.
         

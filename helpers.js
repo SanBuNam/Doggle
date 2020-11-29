@@ -13,11 +13,10 @@ exports.iconPng = (name) =>
 exports.siteName = `All Code. All Day.`;
 
 exports.menu = [
-  { slug: "/javascript", title: "JavaScript", icon: "" },
+  { slug: "/javascript", title: "Courses", icon: "" },
   { slug: "/posts", title: "All Posts", icon: "" },
-  { slug: "/tags", title: "Category", icon: "" },
-  // { slug: "/top", title: "인기 포스팅", icon: "" },
-  // { slug: "/add", title: "Add Post", icon: "" },
+  { slug: "/tags", title: "tags", icon: "" },
+  { slug: "/add", title: "Add Post", icon: "" },
 ];
 
 exports.javaScriptMenu = [
@@ -37,16 +36,16 @@ exports.javaScriptMenu = [
 ];
 
 exports.quotes = [
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
-  {name: "David", quote: "Life is to enjoy no matter what happens."},
-  {name: "Bible", quote: "Jesus loves me like no other person."},
+  {name: "0", quote: "Life is to enjoy no matter what happens."},
+  {name: "1", quote: "Jesus loves me like no other person."},
+  {name: "2", quote: "Life is to enjoy no matter what happens."},
+  {name: "3", quote: "Jesus loves me like no other person."},
+  {name: "4", quote: "Life is to enjoy no matter what happens."},
+  {name: "5", quote: "Jesus loves me like no other person."},
+  {name: "6", quote: "Life is to enjoy no matter what happens."},
+  {name: "7", quote: "Jesus loves me like no other person."},
+  {name: "8", quote: "Life is to enjoy no matter what happens."},
+  {name: "9", quote: "Jesus loves me like no other person."},
+  {name: "10", quote: "Life is to enjoy no matter what happens."},
+  {name: "11", quote: "Jesus loves me like no other person."},
 ];
