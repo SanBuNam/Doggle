@@ -25,6 +25,34 @@
   }
 }
 
+.inspirationalQuotes {
+  background-image: url("/images/photos/mountain-range.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  &--quote {
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 55rem;
+    min-height: 30rem;
+    padding: 20px;
+  }
+  &--title {
+    margin: 0.5rem auto 0 auto;
+    padding: 1rem;
+    h4 {
+      font-size: 2.2rem;
+    }
+  }
+  &--text {
+    h5 {
+      padding: 0.5rem;
+      font-size: 2.2rem;
+    }
+  }
+}
+
 .features {
   max-width: 990px;
   display: grid;
@@ -35,6 +63,14 @@
   &--title {
     grid-column: 1 / -1;
     margin: 2rem auto;
+    text-align: center;
+    img {
+      width: 5rem;
+      transition: all 0.4s ease-out;
+      &:hover {
+        transform: rotate(-30deg) scale(1.25);
+      }
+    }
   }
   .codingCommunityContainer {
     display: grid;
@@ -50,7 +86,7 @@
         background-position: center;
       }
       .left {
-        background-color: $black;
+        background-color: $yellow;
       }
       .right {
         background-color: $blue;
@@ -62,56 +98,38 @@
         ul {
           padding: 0;
           padding-left: 1rem;
-          list-style: circle;
-          line-height: normal;
+          list-style: none;
+          line-height: 1.75;
+          font-size: 1.8rem;
+          li:hover {
+            color: $red;
+          }
         }
       }
     }
   }
 }
 
-.inspirationalQuotes {
-  background-image: url("/images/photos/mountain-range.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 40px 0;
-  &--quote {
-    background-color: rgba($color: #ffffff, $alpha: 0.8);
-    text-align: center;
-    margin: 0 auto;
-    max-width: 55rem;
-    min-height: 30rem;
-  }
-  &--title {
-    margin: 0.5rem auto 0 auto;
-    padding: 1rem;
-    line-height: 0.5;
-    h4 {
-      font-size: 2.2rem;
-    }
-  }
-  &--text {
-    h5 {
-      padding: 0.5rem;
-      font-weight: 800;
-      color: $blue;
-      font-size: 2.2rem;
-    }
-  }
-}
-
 .promotionalContents {
-  margin: 3rem auto;
+  margin: 4rem auto;
   &--title {
     margin: 6rem auto;
     text-align: center;
-    line-height: 0;
     img {
-      width: 4rem;
+      width: 5rem;
+      transition: all 0.4s ease-out;
+      &:hover {
+        transform: rotate(-30deg) scale(1.25);
+      }
     }
     a {
       color: $blue;
       display: inline-block;
+    }
+    .linkToCourse {
+      &:hover {
+        background: $yellow;
+      }
     }
   }
   &--display {
@@ -133,8 +151,18 @@
       padding: 2rem;
       padding-bottom: 0;
     }
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: scale(1.03);
+      background: $yellow;
+    }
   }
   &--polaroid__text {
-    text-align: center;
+    text-align: left;
+    margin-left: 2.25rem;
+    word-wrap: break-word;
+    span {
+      color: $blue;
+    }
   }
 }

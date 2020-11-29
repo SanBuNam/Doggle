@@ -65,16 +65,19 @@
     }
   }
   &__link3 {
-    background: $yellow;
+    background: lighten($red, 40%);
     color: $black;
     display: flex;
     padding-left: 10px;
     clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
     &--active {
-      background: lighten($blue, 40%);
+      background: $red;
       .tag__text {
-        color: white;
+        color: $white;
       }
+    }
+    &:hover {
+      background: $red;
     }
   }
   &__text {

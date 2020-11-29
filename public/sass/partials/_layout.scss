@@ -63,17 +63,17 @@ body {
   width: 100%;
   background-color: $black;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   box-shadow: $shad;
   justify-items: center;
   color: $white;
   a {
     color: $white;
   }
-  // .socialLinks {
-  //   color: $green;
-  // }
-  // .directContacts {
-  //   color: $blue;
-  // }
+  .socialLinks {
+    grid-column: 2;
+  }
+  .directContacts {
+    grid-column: 3;
+  }
 }

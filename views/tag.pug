@@ -1,6 +1,7 @@
 extends layout
 
 include mixins/_postCard
+include mixins/_tagPagination
 
 block content
   .inner
@@ -8,29 +9,11 @@ block content
     ul.tags
       each t in tags
         li.tag
-          a.tag__link(href=`/tags/${t._id}` class=(t._id === tag ? 'tag__link--active' : '')) 📎
+          a.tag__link(href=`/tags/${t._id}/page/1` class=(t._id === tag ? 'tag__link--active' : '')) 📎
             span.tag__text= t._id
             span.tag__count= t.count
-    
-    .topPosts
-      h2 Top #{posts.length} Posts
-      table.table
-        thead
-          td  photo
-          td  ranking
-          td  name
-          td  reviews
-          td  Average Rating
-        each post, i in posts
-          tr
-            td
-              a(href=`/posts/${post.slug}`)
-                img(width=200 src=`/uploads/${post.photo || 'post.png'}` alt=post.name)
-            td  #{i + 1}
-            td: a(href=`/posts/${post.slug}`)= post.name
-            td= post.reviews.length
-            td #{Math.round(post.averageRating * 10) / 10} / 5
   
     .posts
       each post in posts
         +postCard(post)
+    +tagPagination(page, pages, count)

@@ -1,4 +1,4 @@
-# JavaScript Course in Korean
+# Korean Coding Courses and Community
 
-Pug, Node.js, MongoDB and etc
+누구나 쉽게 프로그래밍을 배울수 있는 온라인 무료 코딩 수업
 
