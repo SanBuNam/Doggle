@@ -5,13 +5,24 @@ include mixins/_tagPagination
 
 block content
   .inner
-    h2 📝 #{tag || '포스팅 성향'}
+    h2 📝 #{tag || '멤버 포스팅'}
     ul.tags
-      each t in tags
-        li.tag
-          a.tag__link(href=`/tags/${t._id}/page/1` class=(t._id === tag ? 'tag__link--active' : '')) 📎
-            span.tag__text= t._id
-            span.tag__count= t.count
+      li.tag
+        a.tag__link(href=`/tags/page/1` class=(undefined == tag ? 'tag__link--active' : '')) 📎
+          span.tag__text= 'All'
+          span.tag__count= tags.filter(x => x._id)[0].count + ' 포스트'
+      li.tag
+        a.tag__link(href=`/tags/Wifi/page/1` class=('Wifi' === tag ? 'tag__link--active' : '')) 📎
+          span.tag__text= 'Wifi'
+          span.tag__count= tags.filter(x => x._id === 'Wifi')[0].count + ' 포스트'
+      li.tag
+        a.tag__link(href=`/tags/Vega/page/1` class=('Vega' === tag ? 'tag__link--active' : '')) 📎
+          span.tag__text= 'Vega'
+          span.tag__count= tags.filter(x => x._id === 'Vega')[0].count + ' 포스트'
+      li.tag
+        a.tag__link(href=`/tags/Licensed/page/1` class=('Licensed' === tag ? 'tag__link--active' : '')) 📎
+          span.tag__text= 'Licensed'
+          span.tag__count= tags.filter(x => x._id === 'Licensed')[0].count + ' 포스트'
   
     .posts
       each post in posts

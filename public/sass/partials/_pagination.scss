@@ -10,7 +10,7 @@
     padding: 1rem 3rem 1rem 1rem;
     a:after {
       margin-left: 1rem;
-      content: '→'
+      content: "→";
     }
   }
   &__prev {
@@ -18,7 +18,38 @@
     padding: 1rem 1rem 1rem 3rem;
     a:before {
       margin-right: 1rem;
-      content: '←'
+      content: "←";
+    }
+  }
+  &__text {
+    flex: 3 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.tagPagination {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: $shad;
+  border: 1px solid $grey;
+  &__next {
+    flex: 0 0 auto;
+    padding: 1rem 3rem 1rem 1rem;
+    a:after {
+      margin-left: 1rem;
+      content: "→";
+    }
+  }
+  &__prev {
+    flex: 0 0 auto;
+    padding: 1rem 1rem 1rem 3rem;
+    a:before {
+      margin-right: 1rem;
+      content: "←";
     }
   }
   &__text {

@@ -36,35 +36,18 @@
     }
   }
   &__link {
-    background: $yellow;
+    background: lighten($red, 40%);
     color: $black;
     display: flex;
     margin: 0 10px;
     &--active {
-      background: lighten($blue, 40%);
+      background: $red;
       .tag__text {
         color: white;
       }
     }
   }
   &__link2 {
-    background: url("/images/photos/bg4.png") repeat;
-    color: $black;
-    display: flex;
-    padding-left: 10px;
-    margin: 1.3rem 0;
-    clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
-    &--active {
-      background: lighten($blue, 40%);
-      .tag__text {
-        color: white;
-      }
-    }
-    &:hover {
-      animation: gritty 2s steps(10) infinite;
-    }
-  }
-  &__link3 {
     background: lighten($red, 40%);
     color: $black;
     display: flex;
@@ -78,6 +61,7 @@
     }
     &:hover {
       background: $red;
+      color: $white;
     }
   }
   &__text {

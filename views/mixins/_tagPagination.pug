@@ -1,11 +1,14 @@
 mixin tagPagination(page, pages, count)
-  .pagination
-    if  tag
-      .pagination__prev
-        if  page  > 1
-          a(href=`/tags/${tag}/page/${page - 1}`) Prev
-      .pagination__text
-        p page #{page} of #{pages} - #{count} total results
-      .pagination__next
-        if page < pages
-          a(href=`/tags/${tag}/page/${parseFloat(page) + 1}`) Next
+  .tagPagination
+    .tagPagination__prev
+      if  page  > 1 && tag
+        a(href=`/tags/${tag}/page/${page - 1}`) 이전 페이지
+      else if page  > 1 && !tag
+        a(href=`/tags/page/${page - 1}`) 이전 페이지
+    .tagPagination__text
+      p ##{page} 페이지 중 전체 #{pages} 페이지
+    .tagPagination__next
+      if page < pages && tag
+        a(href=`/tags/${tag}/page/${parseFloat(page) + 1}`) 다음 페이지
+      else if page < pages && !tag
+        a(href=`/tags/page/${parseFloat(page) + 1}`) 다음 페이지
