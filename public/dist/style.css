@@ -66,11 +66,9 @@ body {
   .footer a {
     color: #ffffff; }
   .footer .socialLinks {
-    -ms-grid-column: 2;
-        grid-column: 2; }
+    grid-column: 1 / 3; }
   .footer .directContacts {
-    -ms-grid-column: 3;
-        grid-column: 3; }
+    grid-column: 3 / 5; }
 
 html {
   box-sizing: border-box; }
@@ -876,7 +874,7 @@ label {
   .post--wide {
     width: 100%; }
   .post__details {
-    padding: 2rem; }
+    padding: 0.5rem; }
     .post__details p {
       line-height: 1.2;
       margin-bottom: 0; }
@@ -894,25 +892,25 @@ label {
   z-index: 2;
   margin: 1rem;
   line-height: 1.1;
-  padding-bottom: 3rem; }
+  padding: 0.5rem 0; }
   .postTitle a {
-    color: #ffffff;
-    border-bottom: 0;
-    background-image: linear-gradient(to right, #4e7cd8 100%, #4e7cd8 50%); }
+    background-image: linear-gradient(to right, #ffcf3e 100%, #ffcf3e 50%); }
 
 .postImage {
   display: -ms-grid;
   display: grid; }
   .postImage img {
-    max-height: 200px;
-    margin: 0 auto; }
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    overflow: hidden; }
 
 .post__actions {
   position: relative;
   z-index: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-  padding-bottom: 2px;
+  padding: 1rem 0 0.5rem 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: left;
@@ -922,7 +920,8 @@ label {
   text-align: left; }
 
 .post__action {
-  font-size: 10px; }
+  display: -ms-flexbox;
+  display: flex; }
   .post__action svg {
     width: 25px;
     fill: #ffffff; }
@@ -996,31 +995,16 @@ label {
       .tag__choice input:checked + label {
         background: #ffcf3e; }
   .tag__link {
-    background: #ffcf3e;
+    background: #fef3f4;
     color: #1b212c;
     display: -ms-flexbox;
     display: flex;
     margin: 0 10px; }
     .tag__link--active {
-      background: #f5f8fd; }
+      background: #ec3944; }
       .tag__link--active .tag__text {
         color: white; }
   .tag__link2 {
-    background: url("/images/photos/bg4.png") repeat;
-    color: #1b212c;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 10px;
-    margin: 1.3rem 0;
-    -webkit-clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
-            clip-path: polygon(10px 0%, 100% 1%, 100% 100%, 10px 100%, 0% 50%); }
-    .tag__link2--active {
-      background: #f5f8fd; }
-      .tag__link2--active .tag__text {
-        color: white; }
-    .tag__link2:hover {
-      animation: gritty 2s steps(10) infinite; }
-  .tag__link3 {
     background: #fef3f4;
     color: #1b212c;
     display: -ms-flexbox;
@@ -1028,12 +1012,13 @@ label {
     padding-left: 10px;
     -webkit-clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%);
             clip-path: polygon(10px 1%, 100% 1%, 100% 100%, 10px 100%, 0% 50%); }
-    .tag__link3--active {
+    .tag__link2--active {
       background: #ec3944; }
-      .tag__link3--active .tag__text {
+      .tag__link2--active .tag__text {
         color: #ffffff; }
-    .tag__link3:hover {
-      background: #ec3944; }
+    .tag__link2:hover {
+      background: #ec3944;
+      color: #ffffff; }
   .tag__text {
     padding: 1rem 1rem;
     display: block; }
@@ -1237,15 +1222,45 @@ label {
     padding: 1rem 3rem 1rem 1rem; }
     .pagination__next a:after {
       margin-left: 1rem;
-      content: '\2192'; }
+      content: "\2192"; }
   .pagination__prev {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     padding: 1rem 1rem 1rem 3rem; }
     .pagination__prev a:before {
       margin-right: 1rem;
-      content: '\2190'; }
+      content: "\2190"; }
   .pagination__text {
+    -ms-flex: 3 0 auto;
+        flex: 3 0 auto;
+    padding: 1rem;
+    text-align: center; }
+
+.tagPagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  background: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e6e6; }
+  .tagPagination__next {
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    padding: 1rem 3rem 1rem 1rem; }
+    .tagPagination__next a:after {
+      margin-left: 1rem;
+      content: "\2192"; }
+  .tagPagination__prev {
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    padding: 1rem 1rem 1rem 3rem; }
+    .tagPagination__prev a:before {
+      margin-right: 1rem;
+      content: "\2190"; }
+  .tagPagination__text {
     -ms-flex: 3 0 auto;
         flex: 3 0 auto;
     padding: 1rem;

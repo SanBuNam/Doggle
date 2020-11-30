@@ -121,7 +121,7 @@ exports.getPostsByTag = async (req, res) => {
       "info",
       `You asked for page ${page}. But that doesn't exist. So I put you on page ${pages}`
     )
-    res.redirect(`/tags/${tag}/page/${page}`);
+    res.redirect(`/tags/${tag}/page/${pages}`);
     return;
   }
 
@@ -165,5 +165,5 @@ exports.getHearts = async (req, res) => {
 
 exports.getTopPosts = async (req, res) => {
   const posts = await Post.getTopPosts();
-  res.render("home", { posts, title: `⭐ Top Posts` });
+  res.render("home", { posts, title: `무료 온라인 코딩 강좌` });
 };

@@ -12,7 +12,7 @@ html(lang="ko")
         nav.nav
           .nav__section
             li.nav__item
-              a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) 홈
+              a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) Home
             each menu in h.menu
               li.nav__item
                 a.nav__link(href=menu.slug, class=(currentPath.startsWith(menu.slug) ? 'nav__link--active' : '')) #{menu.title}

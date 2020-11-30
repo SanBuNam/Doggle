@@ -14,7 +14,7 @@ exports.siteName = `All Code. All Day.`;
 
 exports.menu = [
   { slug: "/javascript", title: "Courses", icon: "" },
-  { slug: "/posts", title: "All Posts", icon: "" },
+  // { slug: "/posts", title: "All Posts", icon: "" },
   { slug: "/tags", title: "tags", icon: "" },
   { slug: "/add", title: "Add Post", icon: "" },
 ];
