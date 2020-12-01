@@ -17,11 +17,11 @@ block content
   
       .div
         if post.tags
-          h5 <유사 추천 포스팅>
+          h5 선택된 태그 🗂️
           ul.tags
             each tag in post.tags
               li.tag
-                a.tag__link(href=`/tags/${tag}`)
+                a.tag__link(href=`/tags/${tag}/page/1`)
                   span.tag__text ##{tag}
 
         if user
