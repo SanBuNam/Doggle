@@ -1,9 +1,9 @@
 mixin reviewForm(post)
   form.reviewer(action=`/reviews/${post._id}` method="POST")
-    textarea(name="text" placeholder="포스터님께 좋은 피드백과 ⭐ 남겨주세요.💘")
+    textarea(name="text" placeholder="⭐ 리뷰 남겨 주세요!")
     .reviewer__meta
       .reviewer__stars
         each num in [5,4,3,2,1]
           input(type="radio" required id=`star${num}` name="rating" value=num)
           label(for=`star${num}`) #{num} Starts
-      input.button(type="submit" value="✏️  리뷰 남기기")
+      input.button(type="submit" value="✏️  리뷰 저장")

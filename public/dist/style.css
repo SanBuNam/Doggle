@@ -559,8 +559,6 @@ p {
   z-index: 2;
   margin: 1rem;
   line-height: 1.1;
-  -ms-transform: skew(0, -3deg);
-      transform: skew(0, -3deg);
   line-height: 1.1; }
   .title--long {
     font-size: 30px; }
@@ -578,12 +576,12 @@ p {
         transform: skew(-5deg); }
   .title a {
     border-bottom: 0;
-    background-image: linear-gradient(to right, rgba(255, 207, 62, 0.8) 100%, rgba(255, 207, 62, 0.8) 50%); }
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 50%); }
 
 .title--single {
   max-width: 900px;
   font-size: 5rem;
-  text-align: center; }
+  text-align: left; }
 
 .highlightShort {
   max-width: 570px;

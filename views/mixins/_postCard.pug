@@ -5,10 +5,10 @@ mixin postCard(post = {})
         if user
           .post__action.post__action--heart
             form.heart(method="POST" action=`/api/posts/${post._id}/heart`)
-              - const heartStrings = user.hearts.map(obj => obj.toString())
-              - const heartClass = heartStrings.includes(post._id.toString()) ? 'heart__button--hearted' : ''
+              - const heartStrings = user.hearts.map(obj => obj.toString());
+              - const heartClass = heartStrings.includes(post._id.toString()) ? 'heart__button--hearted' : '';
               button.heart__button(type="submit" name="heart" class=heartClass)
-                != h.icon('heart')  
+                != h.icon('heart')
         if user && post.author.equals(user._id)
           .post__action.post__action--edit
             a(href=`/posts/${post._id}/edit`)
@@ -25,6 +25,5 @@ mixin postCard(post = {})
     .postImage
       img(src=`/uploads/${post.photo || 'post.png'}`)
     
-    - let desc = post.description.split(' ').slice(0, 10).join(' ')+"...";
     .post__details
-      p= desc
+      p= post.description.split(' ').slice(0, 10).join(' ')+"..."
