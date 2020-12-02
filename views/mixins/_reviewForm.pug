@@ -1,6 +1,6 @@
 mixin reviewForm(post)
   form.reviewer(action=`/reviews/${post._id}` method="POST")
-    textarea(name="text" placeholder="⭐ 리뷰 남겨 주세요!")
+    textarea(name="text" placeholder="⭐⭐⭐⭐⭐ 리뷰 남겨 주세요!")
     .reviewer__meta
       .reviewer__stars
         each num in [5,4,3,2,1]
