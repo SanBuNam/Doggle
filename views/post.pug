@@ -26,6 +26,10 @@ block content
 
         if user
           +reviewForm(post)
+        else
+          .div
+            h4
+              a(href=`/login`) 로그인 후 리뷰가 가능합니다.
 
         if post.reviews
           .reviews
