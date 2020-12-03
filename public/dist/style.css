@@ -1102,11 +1102,11 @@ label {
   position: relative;
   padding-left: 5px; }
   .review:before {
-    width: 5px;
+    width: 1.5px;
     left: 0;
     content: "";
     display: block;
-    background: linear-gradient(0, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffcf3e 85%, #48ded4 95%);
+    background: #ec3944;
     position: absolute;
     height: 100%;
     background-attachment: fixed; }
@@ -1136,10 +1136,9 @@ label {
     .review__author .avatar {
       margin-right: 2rem; }
   .review__time {
-    font-size: 1.2rem;
-    color: #999999; }
+    font-size: 1.2rem; }
   .review__stars {
-    color: #ffcf3e; }
+    color: #4e7cd8; }
   .review__body {
     padding: 1rem; }
   .review p {
