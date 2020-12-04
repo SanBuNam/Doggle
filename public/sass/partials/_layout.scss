@@ -8,9 +8,10 @@ body {
 }
 
 .inner {
-  max-width: 1060px;
+  max-width: 960px;
   padding: 1rem;
   margin: 0 auto;
+  margin-top: 2rem;
   @media all and (max-width: 1060px) {
     padding: 2rem;
   }
@@ -67,6 +68,7 @@ body {
   box-shadow: $shad;
   justify-items: center;
   color: $white;
+  margin-top: 2rem;
   a {
     color: $white;
   }

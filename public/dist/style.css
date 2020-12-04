@@ -7,9 +7,10 @@ body {
   background: #ffffff; }
 
 .inner {
-  max-width: 1060px;
+  max-width: 960px;
   padding: 1rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 2rem; }
   @media all and (max-width: 1060px) {
     .inner {
       padding: 2rem; } }
@@ -62,7 +63,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
   -ms-grid-column-align: center;
       justify-items: center;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-top: 2rem; }
   .footer a {
     color: #ffffff; }
   .footer .socialLinks {
@@ -1046,14 +1048,17 @@ label {
   position: absolute; }
 
 .single__details {
-  background: white;
   position: relative;
   padding: 3rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15); }
-  .single__details .divOne {
-    min-height: 110px;
+  .single__details--description {
     border-bottom: solid 1px #e6e6e6;
-    margin-bottom: 20px; }
+    padding: 1rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto; }
+  .single__details--tags {
+    max-width: 860px;
+    margin: 0 auto; }
 
 .heart__button {
   background: none;
@@ -1092,15 +1097,26 @@ label {
     opacity: 0;
     left: 20px; } }
 
+.reviewForm {
+  max-width: 860px;
+  margin: 0 auto; }
+  .reviewForm a {
+    color: #4e7cd8;
+    border-bottom: 1px solid #ffcf3e; }
+
+.reviews {
+  max-width: 860px;
+  margin: 0 auto; }
+
 .review {
   background: white;
   border: 1px solid #e6e6e6;
   border-bottom: 0;
   border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  padding-left: 5px; }
+  padding-left: 5px;
+  margin: 2rem auto; }
   .review:before {
     width: 1.5px;
     left: 0;
@@ -1132,17 +1148,27 @@ label {
         justify-content: flex-start;
     padding-left: 2rem;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0; }
     .review__author .avatar {
       margin-right: 2rem; }
   .review__time {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    padding-top: 0;
+    padding-bottom: 0; }
   .review__stars {
-    color: #4e7cd8; }
+    color: #4e7cd8;
+    padding-top: 0;
+    padding-bottom: 0; }
   .review__body {
-    padding: 1rem; }
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0; }
   .review p {
-    white-space: pre-wrap; }
+    white-space: pre-wrap;
+    padding-top: 0;
+    padding-bottom: 0; }
 
 /*
   Reviewer Form

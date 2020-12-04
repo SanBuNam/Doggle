@@ -12,10 +12,11 @@ block content
         img.single__image(src=`/uploads/${post.photo}`)
   
     .single__details
-      .divOne
+      .single__details--description
+        h4 포스팅 내용
         p= post.description
   
-      .div
+      .single__details--tags
         if post.tags
           h5 선택된 태그 🗂️
           ul.tags
@@ -25,9 +26,10 @@ block content
                   span.tag__text ##{tag}
 
         if user
-          +reviewForm(post)
+          .reviewForm
+            +reviewForm(post)
         else
-          .div
+          .reviewForm
             h4
               a(href=`/login`) 로그인 후 리뷰가 가능합니다.
 
