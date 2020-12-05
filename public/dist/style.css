@@ -7,51 +7,13 @@ body {
   background: #ffffff; }
 
 .inner {
-  max-width: 960px;
+  max-width: 1060px;
   padding: 1rem;
   margin: 0 auto;
   margin-top: 2rem; }
   @media all and (max-width: 1060px) {
     .inner {
       padding: 2rem; } }
-
-.pageContent {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 1rem 3rem 1rem 0;
-  margin: 0 auto;
-  margin-left: 0;
-  max-width: 900px; }
-  .pageContent h1::before {
-    background-color: #4e7cd8;
-    width: 0.75em;
-    height: 0.75em;
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
-    --translate: -0.5rem;
-    --rotate: 3deg;
-    -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
-        transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .pageContent h3 {
-    position: relative; }
-    .pageContent h3::before {
-      background-color: #ffcf3e;
-      width: 0.75em;
-      height: 0.75em;
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      z-index: -1;
-      --translate: -0.5rem;
-      --rotate: 3deg;
-      -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
-          transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-  .pageContent a {
-    background-color: #4e7cd8; }
 
 .footer {
   width: 100%;
@@ -1485,6 +1447,44 @@ pre.error {
   -ms-grid-columns: 30rem 1fr;
       grid-template-columns: 30rem 1fr; }
 
+.pageContent {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 3rem 1rem 0;
+  margin: 0 auto;
+  margin-left: 0;
+  max-width: 900px; }
+  .pageContent h1::before {
+    background-color: #4e7cd8;
+    width: 0.75em;
+    height: 0.75em;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    --translate: -0.5rem;
+    --rotate: 3deg;
+    -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
+        transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+  .pageContent h3 {
+    position: relative; }
+    .pageContent h3::before {
+      background-color: #ffcf3e;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
+          transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+  .pageContent a {
+    background-color: #4e7cd8; }
+
 .codeExample {
   padding: 1rem;
   list-style: none;
@@ -1499,7 +1499,6 @@ pre.error {
           text-decoration-line: none; }
 
 .quotes {
-  width: 600px;
   margin: 0 auto; }
 
 .underline {

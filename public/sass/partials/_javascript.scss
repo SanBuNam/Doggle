@@ -2,6 +2,53 @@
   display: grid;
   grid-template-columns: 30rem 1fr;
 }
+.pageContent {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 3rem 1rem 0;
+  margin: 0 auto;
+  margin-left: 0;
+  max-width: 900px;
+  // @media all and (min-width: 1060px) {
+  //   width: 100%;
+  //   margin: 0 auto;
+  //   max-width: 1060px;
+  // }
+  h1 {
+    &::before {
+      background-color: $blue;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+  }
+  h3 {
+    position: relative;
+    &::before {
+      background-color: $yellow;
+      width: 0.75em;
+      height: 0.75em;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      --translate: -0.5rem;
+      --rotate: 3deg;
+      transform: translateX(var(--translate)) translateY(var(--translate))
+        rotate(var(--rotate));
+    }
+  }
+  a {
+    background-color: $blue;
+  }
+}
 .codeExample {
   padding: 1rem;
   list-style: none;
@@ -15,7 +62,6 @@
   text-decoration-line: none;
 }
 .quotes {
-  width: 600px;
   margin: 0 auto;
 }
 .underline {
