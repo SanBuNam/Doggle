@@ -700,7 +700,11 @@ label {
           flex: 1 1 auto; }
       .nav__section--search .search__input {
         font-size: 1.6rem;
-        color: #1b212c; }
+        color: #1b212c;
+        margin: 0;
+        text-align: center;
+        outline: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19); }
   .nav__item {
     display: -ms-flexbox;
     display: flex;
