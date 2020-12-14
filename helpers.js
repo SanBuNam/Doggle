@@ -36,8 +36,8 @@ exports.javaScriptMenu = [
 ];
 
 exports.quotes = [
-  {name: "0", quote: "Life is to enjoy no matter what happens."},
-  {name: "1", quote: "Jesus loves me like no other person."},
+  {name: "0", quote: "Life is to enjoy no matter what happens.Life is to enjoy no matter what happens.Life is to enjoy no matter what happens."},
+  {name: "1", quote: "Jesus loves me like no other person.Jesus loves me like no other person.Jesus loves me like no other person."},
   {name: "2", quote: "Life is to enjoy no matter what happens."},
   {name: "3", quote: "Jesus loves me like no other person."},
   {name: "4", quote: "Life is to enjoy no matter what happens."},
