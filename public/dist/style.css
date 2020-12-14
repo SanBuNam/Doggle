@@ -1309,7 +1309,7 @@ pre.error {
   .introduction .heading {
     margin: 3rem auto 2rem auto; }
   .introduction h1 {
-    font-size: 6rem; }
+    font-size: 8rem; }
     .introduction h1::before {
       background-color: #4e7cd8;
       width: 0.75em;
@@ -1322,6 +1322,8 @@ pre.error {
       --rotate: 3deg;
       -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
           transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
+  .introduction h3 {
+    font-size: 2.6rem; }
 
 .inspirationalQuotes {
   background-image: url("/images/photos/mountain-range.jpg");
@@ -1339,10 +1341,9 @@ pre.error {
     margin: 0.5rem auto 0 auto;
     padding: 1rem; }
     .inspirationalQuotes--title h4 {
-      font-size: 2.2rem; }
+      font-size: 2rem; }
   .inspirationalQuotes--text h5 {
-    padding: 0.5rem;
-    font-size: 2.2rem; }
+    font-size: 2rem; }
 
 .features {
   max-width: 990px;
