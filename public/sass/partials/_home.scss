@@ -43,14 +43,13 @@
   }
   &--title {
     margin: 0.5rem auto 0 auto;
-    padding: 1rem;
     h4 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
   &--text {
-    h5 {
-      font-size: 2rem;
+    h4 {
+      font-size: 3rem;
     }
   }
 }
@@ -82,16 +81,17 @@
       border: 1px solid #9a9090;
       &--image {
         height: 200px;
-        background-image: url("/images/photos/bg16.png");
         background-size: auto 70%;
         background-repeat: no-repeat;
         background-position: center;
       }
       .left {
         background-color: $yellow;
+        background-image: url("/images/photos/love-quotes.png");
       }
       .right {
         background-color: $blue;
+        background-image: url("/images/photos/code.png");
       }
       &--text {
         padding: 30px 20px 10px;
