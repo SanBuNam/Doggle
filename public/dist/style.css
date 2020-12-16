@@ -1338,12 +1338,11 @@ pre.error {
     min-height: 30rem;
     padding: 20px; }
   .inspirationalQuotes--title {
-    margin: 0.5rem auto 0 auto;
-    padding: 1rem; }
+    margin: 0.5rem auto 0 auto; }
     .inspirationalQuotes--title h4 {
-      font-size: 2rem; }
-  .inspirationalQuotes--text h5 {
-    font-size: 2rem; }
+      font-size: 3rem; }
+  .inspirationalQuotes--text h4 {
+    font-size: 3rem; }
 
 .features {
   max-width: 990px;
@@ -1375,14 +1374,15 @@ pre.error {
       border: 1px solid #9a9090; }
       .features .codingCommunityContainer .codingCommunity--image {
         height: 200px;
-        background-image: url("/images/photos/bg16.png");
         background-size: auto 70%;
         background-repeat: no-repeat;
         background-position: center; }
       .features .codingCommunityContainer .codingCommunity .left {
-        background-color: #ffcf3e; }
+        background-color: #ffcf3e;
+        background-image: url("/images/photos/love-quotes.png"); }
       .features .codingCommunityContainer .codingCommunity .right {
-        background-color: #4e7cd8; }
+        background-color: #4e7cd8;
+        background-image: url("/images/photos/code.png"); }
       .features .codingCommunityContainer .codingCommunity--text {
         padding: 30px 20px 10px; }
       .features .codingCommunityContainer .codingCommunity--text__paraph ul {
