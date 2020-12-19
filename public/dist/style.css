@@ -1339,8 +1339,8 @@ pre.error {
     padding: 20px; }
   .inspirationalQuotes--title {
     margin: 0.5rem auto 0 auto; }
-    .inspirationalQuotes--title h4 {
-      font-size: 3rem; }
+    .inspirationalQuotes--title img {
+      width: 10rem; }
   .inspirationalQuotes--text h4 {
     font-size: 3rem; }
 
