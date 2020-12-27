@@ -7,7 +7,7 @@ block content
       a(href="")
         h3.highlightWide 💻 코딩을 배우고 싶으신데 어디서부터 시작해야할지 잘 모르겠습니까?
           br 
-          |👨‍💻 독학 프로그래머 다윗이 비전공자들이 가장 쉽고 빠른 방법으로 가르쳐 드리겠습니다.
+          |👨‍💻 독학 프로그래머 다윗이 알려주는 누구나 배울수 있는 코딩!
   
   .inspirationalQuotes
     .inspirationalQuotes--quote
@@ -67,11 +67,15 @@ block content
             img(src=`/uploads/${post.photo || 'post.png'}`)
             .promotionalContents--polaroid__text
               a(href=`/posts/${post.slug}`)
-                p 
-                  span #{post.name} 
-                  | by #{post.name}
+                p  
+                  span #{post.name.toUpperCase()} 
+                  br 
+                  | by #{post.author || 'Auther Name'}
+                  br 
+                  small Posted: #{post.created || 'Dec. 25th 2020'}
     .promotionalContents--title
-      h4 코딩을 배워보고 싶으신데 어떻게 시작해야할지 모르시겠다고요? 
+      h4 누구나 다 할수 있습니다. 코딩을 배워보고 싶으세요? 
+        br
         span
-          a.linkToCourse(href="") 👉  독학의 노하우를 기초부터 이해하기 쉽게 가르쳐 드립니다.
+          a.linkToCourse(href="") 👉  독학의 노하우를 기초부터 누구나 이해하기 쉽게!
         
