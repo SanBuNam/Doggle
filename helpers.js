@@ -13,10 +13,10 @@ exports.iconPng = (name) =>
 exports.siteName = `All Code. All Day.`;
 
 exports.menu = [
-  { slug: "/javascript", title: "Courses", icon: "" },
+  { slug: "/javascript", title: "코딩 코스", icon: "" },
   // { slug: "/posts", title: "All Posts", icon: "" },
-  { slug: "/tags", title: "tags", icon: "" },
-  { slug: "/add", title: "Add Post", icon: "" },
+  { slug: "/tags", title: "포스트 보기", icon: "" },
+  { slug: "/add", title: "포스트 추가", icon: "" },
 ];
 
 exports.javaScriptMenu = [
