@@ -598,18 +598,38 @@ label {
   padding: 10px 0;
   display: block; }
 
-.form {
-  background: #ffffff;
-  padding: 2rem;
-  box-shadow: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffcf3e 85%, #48ded4 95%); }
-  .form + .form {
-    margin-top: 4rem; }
-  .form h2 {
-    margin: 0;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #e6e6e6; }
+.freeMembership {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  margin-bottom: 10rem; }
+  .freeMembership .form {
+    max-width: 500px;
+    height: 100%;
+    padding: 2rem;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05); }
+    .freeMembership .form + .form {
+      margin-top: 4rem; }
+    .freeMembership .form input[type="password"] {
+      margin-bottom: 2rem; }
+    .freeMembership .form h2 {
+      margin: 0;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e6e6e6; }
+  .freeMembership .bucketList {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    height: 100%; }
 
 .search {
   position: relative;
@@ -848,7 +868,7 @@ label {
   .post--wide {
     width: 100%; }
   .post__details {
-    padding: 0.5rem; }
+    padding: 1rem; }
     .post__details p {
       line-height: 1.2;
       margin-bottom: 0; }
@@ -1284,8 +1304,55 @@ label {
   border: 0;
   background: #ec3944;
   color: #1b212c;
-  font-family: "Panama";
   font-weight: 600; }
+
+.postage {
+  width: 100%;
+  min-width: 250px;
+  display: block;
+  height: 50px;
+  position: relative;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ffcf3e 35%, #ffe79d 100%);
+  margin-bottom: 20px;
+  padding: 15px 25px 0 40px;
+  color: darkslategray;
+  box-shadow: 1px 2px 1px -1px #777;
+  transition: background 200ms ease-in-out; }
+
+.shadow {
+  position: relative; }
+  .shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 75%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    -ms-transform: rotate(4deg);
+        transform: rotate(4deg);
+    transition: all 150ms ease-in-out; }
+
+.box:hover {
+  background: linear-gradient(to right, #ffcf3e 0%, #ffcf3e 100%); }
+
+.shadow:hover::before {
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10; }
+
+.circle {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+  width: 20px;
+  height: 20px;
+  display: inline-block; }
 
 .avatar {
   min-width: 50px;
