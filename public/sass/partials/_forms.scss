@@ -15,18 +15,35 @@ label {
   display: block;
 }
 
-.form {
-  background: $white;
-  padding: 2rem;
-  box-shadow: $grad;
-  & + .form {
-    margin-top: 4rem;
+.freeMembership {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 10rem;
+  .form {
+    max-width: 500px;
+    height: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shad;
+    & + .form {
+      margin-top: 4rem;
+    }
+    input[type="password"] {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $grey;
+    }
   }
-  h2 {
-    margin: 0;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid $grey;
+  .bucketList {
+    box-shadow: $shad;
+    height: 100%;
   }
 }

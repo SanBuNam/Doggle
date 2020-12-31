@@ -3,18 +3,24 @@ extends layout
 block content
   .inner
     h1 Free Membership
-    form.form(action="/register" method="POST")
-      h2 즐겁고 유익한 한인 코딩 커뮤니티
-      label(for="name") 닉네임 nickname
-      input(type="text" name="name")
-      label(for="email") 이메일 email
-      input(type="email" name="email")
-      label(for="password") 패스워드 password
-      input(type="password" name="password")
-      label(for="password-confirm") 패스워드 확인 confirm password
-      input(type="password" name="password-confirm")
-      input.button(type="submit" value="회원 가입하기")
-  
-    .div
-      h2 내게 능력주시는 하나님안에 내가 주의 뜻을 이루리라.
-      img(src="/images/photos/Elon-musk-no-degree.png")
+    .freeMembership
+      form.form(action="/register" method="POST")
+        h2 즐겁고 유익한 한인 코딩 커뮤니티
+        label(for="name") 📛 닉네임
+        input(type="text" name="name")
+        label(for="email") ✉️ 이메일
+        input(type="email" name="email")
+        label(for="password") 🛂 패스워드
+        input(type="password" name="password")
+        label(for="password-confirm") 🈴 패스워드 확인
+        input(type="password" name="password-confirm")
+        input.button(type="submit" value="회원 가입하기")
+    
+      .bucketList
+        a(href="").postage.shadow 코딩 배우기
+          .circle
+        a(href="").postage.shadow 포토폴리오 만들기
+          .circle
+        a(href="").postage.shadow 취직하기
+          .circle
+        img(src="/images/photos/digital-nomads.jpg")
