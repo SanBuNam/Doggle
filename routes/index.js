@@ -17,18 +17,18 @@ router.get("/javascript/control-flow", courseController.javaScriptControlFlow);
 
 router.get("/posts", catchErrors(postController.getPosts));
 router.get("/posts/page/:page", catchErrors(postController.getPosts));
-
-router.get("/add", authController.isLoggedIn, postController.addPost);
 router.get("/posts/:id/edit", catchErrors(postController.editPost));
 router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
+
+router.get("/add-post", authController.isLoggedIn, postController.addPost);
 router.post(
-  "/add",
+  "/add-post",
   postController.upload,
   catchErrors(postController.resize),
   catchErrors(postController.createPost)
 );
 router.post(
-  "/add/:id",
+  "/add-post/:id",
   postController.upload,
   catchErrors(postController.resize),
   catchErrors(postController.updatePost)
