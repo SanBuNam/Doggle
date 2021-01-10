@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 require("dotenv").config({ path: "variables.env" });
 
-mongoose.connect(process.env.DATABASE).catch(err => console.log(err));
-mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
+mongoose.connect(process.env.DATABASE).catch(err => console.log(err), { autoIndex: false });
+mongoose.Promise = global.Promise;
 mongoose.connection.on("error", (err) => {
-  console.error(` 🚫  🚫  🚫 → ${err.message}`);
+  console.error(`Stop!🚫  → ${err.message}`);
 });
 
 require("./models/Post");
