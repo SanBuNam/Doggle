@@ -1415,9 +1415,10 @@ pre.error {
   .inspirationalQuotes--title {
     margin: 0.5rem auto 0 auto; }
     .inspirationalQuotes--title img {
-      width: 10rem; }
-  .inspirationalQuotes--text h4 {
-    font-size: 3rem; }
+      width: 5rem; }
+  .inspirationalQuotes--text p {
+    font-size: 2rem;
+    font-weight: 400; }
 
 .features {
   max-width: 990px;
