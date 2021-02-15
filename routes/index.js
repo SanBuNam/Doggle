@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
+
 const postController = require("../controllers/postController");
 const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
+
 const { catchErrors } = require("../handlers/errorHandlers");
 
 router.get("/", catchErrors(postController.getTopPosts));
@@ -21,6 +23,7 @@ router.get("/posts/:id/edit", catchErrors(postController.editPost));
 router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
 
 router.get("/add-post", authController.isLoggedIn, postController.addPost);
+
 router.post(
   "/add-post",
   postController.upload,
@@ -39,6 +42,7 @@ router.get("/tags/:tag/page/:page", catchErrors(postController.getPostsByTag));
 router.get("/tags/page/:page", catchErrors(postController.getPostsByTag));
 
 router.get("/register", userController.registerForm);
+
 router.post(
   "/register",
   userController.validateRegister,
@@ -51,9 +55,12 @@ router.post("/login", authController.login);
 router.get("/logout", authController.logout);
 
 router.get("/account", authController.isLoggedIn, userController.account);
+
 router.post("/account", catchErrors(userController.updateAccount));
 router.post("/account/forgot", catchErrors(authController.forgot));
+
 router.get("/account/reset/:token", catchErrors(authController.reset));
+
 router.post(
   "/account/reset/:token",
   authController.confirmedPasswords,
