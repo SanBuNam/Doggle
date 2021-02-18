@@ -1,133 +1,70 @@
-// .button {
-//   border: 0;
-//   background: $red;
-//   color: $black;
-//   font-weight: 600;
-//   &:hover {
-//     color: white;
-//   }
-// }
-
-.button {
-  font-family: Hack, monospace;
-  background: #0f0f6d;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 2em;
-  padding: 1.5rem;
-  border: 0;
-  transition: all 0.5s;
-  border-radius: 10px;
-  width: auto;
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
-  &::after {
-    color: white;
-    content: "➡️";
-    font-weight: 400;
-    position: absolute;
-    left: 85%;
-    top: 31%;
-    right: 5%;
-    bottom: 0;
-    opacity: 0;
-  }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-  &:hover {
-    background: #2b2bff;
-    transition: all 0.5s;
-    border-radius: 10px;
-    box-shadow: 0px 6px 15px #0000ff61;
-    padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-    &::after {
-      opacity: 1;
-      transition: all 0.5s;
-    }
-  }
-}
+.btn--white {
+  background-color: #fff;
+  color: #1b212c; }
+  .btn--white::after {
+    background-color: #fff; }
 
-.login-btn {
-  font-family: Hack, monospace;
-  background: #bbff00;
-  color: #1d1d1d;
-  cursor: pointer;
-  font-size: 2em;
-  padding: 1.5rem;
-  border: 0;
-  transition: all 0.5s;
-  border-radius: 10px;
-  width: auto;
-  position: relative;
-  min-width: 250px;
+.btn--green {
+  background-color: #ffcf3e;
+  color: #1b212c; }
+  .btn--green::after {
+    background-color: #ffcf3e; }
 
-  &::after {
-    content: "";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    position: absolute;
-    left: 80%;
-    top: 54%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
 
-  &:hover {
-    background: #2b2bff;
-    transition: all 0.5s;
-    border-radius: 10px;
-    box-shadow: 0px 6px 15px #0000ff61;
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
-    color: #ffffff;
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
 
-    &::after {
-      opacity: 1;
-      transition: all 0.5s;
-      color: #ffffff;
-    }
-  }
-}
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  transition: all 0.2s; }
 
-.logout-btn {
-  font-family: Hack, monospace;
-  background: #d3d3d3;
-  color: #2c2c2c;
-  cursor: pointer;
-  font-size: 2em;
-  padding: 1.5rem;
-  border: 0;
-  transition: all 0.5s;
-  border-radius: 10px;
-  width: auto;
-  position: relative;
-  min-width: 250px;
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
 
-  &::after {
-    content: "\f2f5";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    position: absolute;
-    left: 80%;
-    top: 54%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  &:hover {
-    background: #2b2bff;
-    transition: all 0.5s;
-    border-radius: 10px;
-    box-shadow: 0px 6px 15px #0000ff61;
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
-    color: #ffffff;
-    &::after {
-      opacity: 1;
-      transition: all 0.5s;
-      color: #ffffff;
-    }
-  }
-}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }

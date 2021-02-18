@@ -15,3 +15,46 @@
     animation: gritty 2s steps(10) infinite;
   }
 }
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translate(-30rem);
+	}
+
+	80% {
+		transform: translate(1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translate(30rem);
+	}
+
+	80% {
+		transform: translate(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInButton {
+	0% {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
