@@ -13,9 +13,11 @@ html(lang="ko")
           .nav__section
             li.nav__item
               a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) 홈
+                //- != h.icon('cog')
             each menu in h.menu
               li.nav__item
                 a.nav__link(href=menu.slug, class=(currentPath.startsWith(menu.slug) ? 'nav__link--active' : '')) #{menu.title}
+                  //- != h.icon(item.icon)
           .nav__section.nav__section--user
             if user
               li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) 로그 아웃
