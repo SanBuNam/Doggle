@@ -6,7 +6,6 @@ const userController = require("../controllers/userController");
 const authController = require("../controllers/authController");
 const courseController = require("../controllers/courseController");
 const reviewController = require("../controllers/reviewController");
-
 const { catchErrors } = require("../handlers/errorHandlers");
 
 router.get("/", catchErrors(postController.getTopPosts));
