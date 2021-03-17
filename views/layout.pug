@@ -9,27 +9,63 @@ html(lang="ko")
   body
     block header
       header
+        //- nav(class="navbar navbar-expand-lg navbar-light bg-light")
+        //-   div.container-fluid
+        //-     a(class="navbar-brand #{currentPath.endsWith('/') ? 'nav__link--active' : '')}" href="/")  Minari
+        //-     button(button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+        //-       span.navbar-toggler-icon
+        //-     div(class="collapse navbar-collapse" id="navbarSupportedContent")
+        //-       ul(class="navbar-nav me-auto mb-2 mb-lg-0")
+        //-         li.nav-item
+        //-           a(class="nav-link active" aria-current="page" href="#") home
+        //-         li.nav-item 
+        //-           a(class="nav-link" href="#")  link
+                li.nav-item.dropdown
+                  a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Dropdown 
+                  ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                    li
+                      a(a class="dropdown-item" href="#") Action
+                    li
+                      a(a class="dropdown-item" href="#") Another
+                    li
+                      hr.dropdown-divider
+                    li
+                      a(a class="dropdown-item" href="#") something else
+        //-         li.nav-item
+        //-           a(class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true")  Disabled
+        //-       form.d-flex
+        //-         input(class="form-control me-2" type="search" placeholder="Search" aria-label="Search")
+        //-         button(class="btn btn-outline-success" type="submit") search
         nav.nav
           .nav__section
             li.nav__item
-              a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) 홈
-                //- != h.icon('cog')
+              a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) Minari
+                != h.icon('cog')
+          .nav__section.nav__section--search
+            .search
+              input.search__input(type="text" placeholder="Search by k-food name or ingredient" name="search")
+              .search__results
+              li.nav__item.dropdown
+                  a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Dropdown 
+                  ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                    li
+                      a(a class="dropdown-item" href="#") Action
+                    li
+                      a(a class="dropdown-item" href="#") Another
+                    li
+                      hr.dropdown-divider
+                    li
+                      a(a class="dropdown-item" href="#") something else
             each menu in h.menu
               li.nav__item
                 a.nav__link(href=menu.slug, class=(currentPath.startsWith(menu.slug) ? 'nav__link--active' : '')) #{menu.title}
-                  //- != h.icon(item.icon)
           .nav__section.nav__section--user
             if user
-              li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) 로그 아웃
-              li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : '')) 내 계정
+              li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Log-Out
+              li.nav__item: a.nav__link(href="/account", class=(currentPath.startsWith('/account') ? 'nav__link--active' : '')) My Acct.
             else
-              li.nav__item: a.nav__link(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : '')) 로그인
-              li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : '')) 회원 가입
-          .nav__section.nav__section--search
-            .search
-              input.search__input(type="text" placeholder="Search post" name="search")
-              .search__results
-              
+              li.nav__item: a.nav__link(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : '')) Log-In
+              li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : '')) Join Free Community
     block messages
       if locals.flashes
         .inner
@@ -70,3 +106,4 @@ html(lang="ko")
 
     block scripts
       script(src="/dist/App.bundle.js")
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
