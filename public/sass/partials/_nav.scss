@@ -39,10 +39,10 @@
     transition: transform 0.2s;
     border-bottom: 5px solid transparent;
     svg {
-      width: 40px;
+      width: 30px;
+      height: 24px;
       transition: all 0.2s;
       fill: $white;
-      margin-bottom: 1rem;
     }
     &:hover,
     &--active {
@@ -50,7 +50,7 @@
       svg {
         transform: scale(1.2);
       }
-      background: $red;
+      background: $green;
       color: $white;
     }
     &--logo {
@@ -63,6 +63,13 @@
         width: 200px;
         margin: 0;
       }
+    }
+  }
+
+  .dropdown-item {
+    font-size: 1.5rem;
+    &:hover {
+      background-color: $green;
     }
   }
 }

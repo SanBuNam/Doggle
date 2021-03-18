@@ -3,43 +3,47 @@ extends layout
 block content
   .introduction
     .heading
-      h1 Minari
-      a(href="")
-        h1.highlightWide  KOREAN COOKING
+      h1 
+        | Minari 
+        span Korean 
+        | Cooking
 
-  .features
-    .features--title
-      img(src="/images/icons/cup.svg")
-      h3 코딩 탐구 생활
-    .codingCommunityContainer
-      .codingCommunity
-        .codingCommunity--image.left
-        .codingCommunity--text
-          .codingCommunity--text__title
-            h4 코딩 커뮤니티
-          .codingCommunity--text__paraph
-            ul
-              a(href="")
-                li 🏁 코딩 기본기, tools & code editor 등
-              a(href="")
-                li 🏁 HTML & DOM Structure
-              a(href="")
-                li 🏁 CSS & Styling related
+  div.menuCarousel
+    div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
+      div.carousel-inner
+        div.carousel-item.active
+          img(src=("https://source.unsplash.com/nDqA4d5NL0k/1060x640") class="d-block w-100" alt="...")
+        div.carousel-item
+          img(src=("https://source.unsplash.com/nDqA4d5NL0k/1060x640") class="d-block w-100" alt="...")
+      button(class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="prev")
+        span(class="carousel-control-prev-icon" aria-hidden="true")
+        span(class="visually-hidden") Previous
+      button(class="carousel-control-next" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="next")
+        span(class="carousel-control-next-icon" aria-hidden="true")
+        span(class="visually-hidden") Next
 
-      .codingCommunity
-        .codingCommunity--image.right
-        .codingCommunity--text
-          .codingCommunity--text__title
-            h4 JavaScript Fullstack 배우기
-          .codingCommunity--text__paraph
-            ul
-              a(href="")
-                li 🏁 JavaScript
-              a(href="")
-                li 🏁 React
-              a(href="")
-                li 🏁 Node.js | Mongodb
-
+  div.kFood--categories
+    each catetory in h.categories
+      div.kFood--categories__category
+        img(src=("https://source.unsplash.com/nDqA4d5NL0k/200x200") alt=`${catetory.name}`)
+        h5=catetory.title
+  
+  div.mainDish
+    div.itemOne
+      p 1
+    div.itemTwo
+      p 2
+    div.itemThree
+      p 3
+    div.itemFour
+      p 4
+  
+  div.mainDish
+    div.itemFive
+      p 5
+    div.itemSix
+      p 6
+    
   .promotionalContents
     .promotionalContents--title
       a(href="")
@@ -59,9 +63,10 @@ block content
                   | by #{post.author || 'anonymous'}
                   br 
                   small Posted: #{post.created || 'Some time ago'}
+   
+
     .promotionalContents--title
       h4 코딩을 배워보고 싶으세요? 
         br
         span
           a.linkToCourse(href="") 👉 코딩 독학하는 방법을 이해하기 쉽게!
-        

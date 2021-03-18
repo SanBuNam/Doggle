@@ -8,13 +8,24 @@ exports.staticMap = ([lng, lat]) =>
 
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.iconPng = (name) =>
-  fs.readFileSync(`./public/images/icons/${name}.png`);
+  fs.readFileSync(`./public/images/photos/${name}.png`);
 
-exports.siteName = `All Code. All Day.`;
+exports.siteName = `K-Food Class`;
 
 exports.menu = [
-  { slug: "/javascript", title: "Cooking", icon: "" },
-  { slug: "/posts", title: "Community", icon: "" },
-  { slug: "/tags", title: "Shop", icon: "" },
-  { slug: "/add-post", title: "About", icon: "" },
+  { slug: "/javascript", title: "Cooking", img: "1" },
+  { slug: "/posts", title: "Community", img: "2" },
+  { slug: "/tags", title: "Shop", img: "3" },
+  { slug: "/add-post", title: "About", img: "4" },
+];
+
+exports.categories = [
+  { title: "Cooking", img: "1" },
+  { title: "Community", img: "2" },
+  { title: "Shop", img: "3" },
+  { title: "About", img: "4" },
+  { title: "Cooking", img: "1" },
+  { title: "Community", img: "2" },
+  { title: "Shop", img: "3" },
+  { title: "About", img: "4" }
 ];
