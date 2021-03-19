@@ -3,70 +3,118 @@ extends layout
 block content
   .introduction
     .heading
-      h1 
+      h1.grit
         | Minari 
         span Korean 
-        | Cooking
+        | Recipes
+      h3 ALL YOU CAN EAT!
+
+    div.bannersLeft
+      a(href="/")
+        .banner.banner1
+      a(href="/")
+        .banner.banner1
+
+    div.bannersRight
+      a(href="/")
+        .banner.banner1
+      a(href="/")
+        .banner.banner1
+
+  div.kFood--categories
+    each catetory in h.categories
+      div.kFood--categories__category
+        a(href="/")
+          img(src=("https://source.unsplash.com/200x200") alt=`${catetory.name}`)
+          h5=catetory.title
 
   div.menuCarousel
     div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
       div.carousel-inner
         div.carousel-item.active
-          img(src=("https://source.unsplash.com/nDqA4d5NL0k/1060x640") class="d-block w-100" alt="...")
+          img(src=("https://source.unsplash.com/1060x640") class="d-block w-100" alt="...")
         div.carousel-item
-          img(src=("https://source.unsplash.com/nDqA4d5NL0k/1060x640") class="d-block w-100" alt="...")
+          img(src=("https://source.unsplash.com/1060x640") class="d-block w-100" alt="...")
       button(class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="prev")
         span(class="carousel-control-prev-icon" aria-hidden="true")
         span(class="visually-hidden") Previous
       button(class="carousel-control-next" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="next")
-        span(class="carousel-control-next-icon" aria-hidden="true")
         span(class="visually-hidden") Next
+        span(class="carousel-control-next-icon" aria-hidden="true")
 
-  div.kFood--categories
-    each catetory in h.categories
-      div.kFood--categories__category
-        img(src=("https://source.unsplash.com/nDqA4d5NL0k/200x200") alt=`${catetory.name}`)
-        h5=catetory.title
-  
   div.mainDish
     div.itemOne
-      p 1
+      img(src=("https://source.unsplash.com/300x150"))
+      a(href="/")
+        h5 littleTitle
+      p Our Complete Collection of Soda bread recipes Say something more here brohhhhh
     div.itemTwo
-      p 2
+      img(src=("https://source.unsplash.com/300x200"))
+      a(href="/")
+        h5 littleTitle
+      p Our Complete Collection of Soda bread recipes Say something more here brohhhhh
     div.itemThree
-      p 3
+      img(src=("https://source.unsplash.com/400x500") alt="picture with a person welcoming")
+      a(href="/")
+        h4 Here's What Irish People Actually Eat on St. Patricks Day
+      p A greate vegateable side dis mad ewith bacone and sour ceram.
     div.itemFour
-      p 4
-  
+      h4 Most Popular
+      div.dishes
+        a(href="/")    
+          div
+            img(src=("https://source.unsplash.com/100x100"))
+        a(href="/")    
+          div
+            p Conrned Beef and Cabbage Recipes
+      div.dishes
+        a(href="/")    
+          div
+            img(src=("https://source.unsplash.com/100x100"))
+        a(href="/")    
+          div
+            p Conrned Beef and Cabbage Recipes
+      div.dishes
+        a(href="/")    
+          div
+            img(src=("https://source.unsplash.com/100x100"))
+        a(href="/")    
+          div
+            p Conrned Beef and Cabbage Recipes
+      div.dishes
+        a(href="/")    
+          div
+            img(src=("https://source.unsplash.com/100x100"))
+        a(href="/")    
+          div
+            p Conrned Beef and Cabbage Recipes
+
   div.mainDish
     div.itemFive
-      p 5
+      img(src=("https://source.unsplash.com/800x600") alt="picture with a person welcoming")
+      h4 Gerry's Easy Irish Stew
+      p A greate vegatable side dish made with bacon and sour crea.
+      h5 ⭐ ⭐ ⭐ ⭐ 4
+        small by 
+          a() cricrinapoli
     div.itemSix
-      p 6
+      img(src=("https://source.unsplash.com/500x600") alt="picture with a person welcoming")
+      h4 Gerry's Easy Irish Stew
+      p A greate vegatable side dish made with bacon and sour crea.
+      h5  ⭐ ⭐ ⭐ 3
+        small by 
+          a() cricrinapoli
     
-  .promotionalContents
-    .promotionalContents--title
-      a(href="")
-        img(src="/images/icons/cup.svg")
-      h4 나눔의 장
-      h5 이것저것 유익한 공유하십다.
-    .promotionalContents--display
-      .promotionalContents--posts
-        each post in posts
-          .promotionalContents--polaroid 
-            img(src=`/uploads/${post.photo || 'post.png'}`)
-            .promotionalContents--polaroid__text
-              a(href=`/posts/${post.slug}`)
-                p  
-                  span #{post.name.toUpperCase()} 
-                  br 
-                  | by #{post.author || 'anonymous'}
-                  br 
-                  small Posted: #{post.created || 'Some time ago'}
-   
-
-    .promotionalContents--title
-      h4 코딩을 배워보고 싶으세요? 
-        br
-        span
-          a.linkToCourse(href="") 👉 코딩 독학하는 방법을 이해하기 쉽게!
+  div.member
+    div.member--posts
+      each post in posts
+        div.member--picture 
+          img(src=`/uploads/${post.photo || 'post.png'}`)
+          div.member--picture__text
+            a(href=`/posts/${post.slug}`)
+              h5 #{post.name.toUpperCase()} 
+              p #{post.description || 'This is sample sentences This is sample sentences.'}
+              br
+              | ⭐⭐⭐⭐⭐ 5 by #{post.author || 'anonymous'} 
+              br 
+              small Posted: #{post.created || 'Some time ago'}

@@ -19,29 +19,30 @@ html(lang="ko")
               input.search__input(type="text" placeholder="Search by k-food name or ingredient" name="search")
               .search__results
           .nav__section.nav__section--user
-            li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Community
             li.nav__item.dropdown
-                a(class="nav-link nav__link" class=(currentPath.startsWith('/cook') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Cooking 🔽
+                a(href="/cook" class="nav-link nav__link" class=(currentPath.startsWith('/cook') ? 'nav__link--active' : '') id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Cooking 🔽
                 ul( class="dropdown-menu" aria-labelledby="navbarDropdown")
                   li
-                    a(class="dropdown-item" href="#") Action
+                    a(class="dropdown-item" href="/recipes") Recipes
                   li
-                    a(class="dropdown-item" href="#") Another
+                    a(class="dropdown-item" href="/ingredients") Ingredients
+                  li
+                    a(class="dropdown-item" href="/kitchenware") Kitchenware
                   li
                     hr.dropdown-divider
                   li
-                    a(class="dropdown-item" href="#") something else
+                    a(class="dropdown-item" href="/minari") Mirari Items
             li.nav__item.dropdown
-                a(style={} class="nav-link nav__link" class=(currentPath.startsWith('/shop') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Shop 🔽
+                a(style={} class="nav-link nav__link" class=(currentPath.startsWith('/shop') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Community 🔽
                 ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
                   li
-                    a(class="dropdown-item" href="#") Action
+                    a(class="dropdown-item" href="/blogs") Blogs
                   li
-                    a(class="dropdown-item" href="#") Another
+                    a(class="dropdown-item" href="/shop") Shop Supplies
                   li
                     hr.dropdown-divider
                   li
-                    a(class="dropdown-item" href="#") something else
+                    a(class="dropdown-item" href="/sales") On Sales
             li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) About
             if user
               li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Log-Out

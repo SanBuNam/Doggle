@@ -1,23 +1,28 @@
-@import "partials/variables";
-@import "partials/layout";
-@import "partials/normalize";
-@import "partials/typography";
-@import "partials/animation";
+@import "partials/abstracts/variables";
+@import "partials/abstracts/typography";
+@import "partials/abstracts/pagination";
+@import "partials/abstracts/normalize";
+@import "partials/abstracts/layout";
+
+@import "partials/base/helpers";
+@import "partials/base/animation";
+@import "partials/base/mixins";
+
+@import "partials/components/tag";
+@import "partials/components/flashes";
+@import "partials/components/buttons";
+@import "partials/components/story";
+@import "partials/components/search";
+@import "partials/components/heart";
+@import "partials/components/nav";
+@import "partials/components/map";
+
 @import "partials/forms";
-@import "partials/search";
-@import "partials/flashes";
-@import "partials/nav";
 @import "partials/table";
 @import "partials/post";
-@import "partials/tag";
-@import "partials/buttons";
 @import "partials/single";
-@import "partials/heart";
 @import "partials/reviews";
 @import "partials/reviewer";
-@import "partials/pagination";
-@import "partials/map";
-@import "partials/helpers";
 @import "partials/home";
-@import "partials/javascript";
+
 @import "~bootstrap/scss/bootstrap/";

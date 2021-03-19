@@ -20,12 +20,12 @@ exports.menu = [
 ];
 
 exports.categories = [
-  { title: "Cooking", img: "1" },
-  { title: "Community", img: "2" },
-  { title: "Shop", img: "3" },
-  { title: "About", img: "4" },
-  { title: "Cooking", img: "1" },
-  { title: "Community", img: "2" },
-  { title: "Shop", img: "3" },
-  { title: "About", img: "4" }
+  { title: "Rice", img: "1" },
+  { title: "Kimchi", img: "2" },
+  { title: "Soup", img: "3" },
+  { title: "Beef", img: "4" },
+  { title: "Pork", img: "1" },
+  { title: "Chicken", img: "2" },
+  { title: "Seafood", img: "4" },
+  { title: "Salads", img: "4" }
 ];

@@ -1,4 +1,4 @@
-$innerContainer: 1060px;
+$innerContainer: 1100px;
 $white: #ffffff;
 $black: #1b212c;
 $yellow: #ffcf3e;
@@ -23,3 +23,11 @@ $verticalGrad: linear-gradient(
   $yellow 85%,
   #48ded4 95%
 );
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
