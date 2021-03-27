@@ -18,7 +18,7 @@ const multerOptions = {
 };
 
 exports.addPost = (req, res) => {
-  res.render("editPost", { title: "포스팅 하기" });
+  res.render("editPost", { title: "Add Post" });
 };
 
 exports.upload = multer(multerOptions).single("photo");
@@ -69,6 +69,7 @@ exports.getPosts = async (req, res) => {
   res.render("posts", { title: "Posts", posts, page, pages, count });
 };
 
+// validate post owner
 const confirmOwner = (post, user) => {
   if (!post.author.equals(user._id)) {
     throw Error("You must own a post in order to edit it!");

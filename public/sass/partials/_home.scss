@@ -1,17 +1,17 @@
 .introduction {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   margin: 0 auto;
   transition: all 0.4s ease-in;
   .heading {
-    margin: 0 auto;
-    text-align: center;
+    margin: 2rem auto 1rem auto;
+    text-align: right;
     h1 {
+      font-family: Tahoma, Verdana, Segoe, sans-serif;
       padding: 0;
-      font-size: 8rem;
+      font-size: 5rem;
       color: $black;
       &::before {
-        background-color: $green;
+        background-color: $red;
         width: 0.75em;
         height: 0.75em;
         content: "";
@@ -24,7 +24,7 @@
           rotate(var(--rotate));
       }
       span {
-        color: $green;
+        color: $blue;
       }
     }
     h3 {
@@ -37,23 +37,31 @@
 }
 
 .kFood--categories {
-  max-width: 900px;
-  margin: 4rem auto;
+  position: fixed;
+  position: fixed;
+  margin-right: 13px;
+  right: 0;
+  top: 55px;
+  z-index: 100;
   display: grid;
-  grid-template-columns: repeat(8, auto);
-  grid-template-rows: 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
   justify-content: center;
   justify-items: center;
   &__category {
-    position: relative;
-    width: 100px;
-    height: 100px;
+    display: grid;
+    grid-template-rows: 0.75fr 0.25fr;
+    grid-template-columns: 1fr;
+    width: 50px;
+    height: 50px;
     text-align: center;
     transition: all 0.15s ease-in;
     img {
       border-radius: 50%;
       height: auto;
+    }
+    h5 {
+      display: block;
     }
     &:hover {
       transform: translateY(-12px) scale(1.05);
@@ -62,8 +70,8 @@
 }
 
 .menuCarousel {
-  max-width: 600px;
-  margin: 10rem auto 5rem auto;
+  max-width: 760px;
+  margin: 1rem auto 3rem auto;
   button {
     color: $red;
     font-weight: bold;
@@ -159,7 +167,6 @@
     grid-gap: 3rem;
   }
   &--picture {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.12s ease-out;
     img {
       margin: 0 auto;
@@ -188,8 +195,10 @@
       }
     }
     &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
       transform: scale(1.02);
-      background: $green;
+      // background: $green;
     }
   }
 }
@@ -228,8 +237,8 @@
   top: 55px;
   z-index: 100;
   .banner {
-    width: 66px;
-    height: 166px;
+    width: 200px;
+    height: 300px;
     margin: 6px auto;
     border-radius: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
