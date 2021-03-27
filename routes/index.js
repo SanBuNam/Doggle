@@ -6,17 +6,15 @@ const authController = require("../controllers/authController");
 const reviewController = require("../controllers/reviewController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
-// GET routes
+//  routes
 router.get("/", catchErrors(postController.getTopPosts));
-router.get("/posts", catchErrors(postController.getPosts));
-router.get("/posts/page/:page", catchErrors(postController.getPosts));
-router.get("/posts/:id/edit", catchErrors(postController.editPost));
-router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
-router.get("/add-post", authController.isLoggedIn, postController.addPost);
+
 router.get("/tags", catchErrors(postController.getPostsByTag));
-router.get("/tags/:tag/page/:page", catchErrors(postController.getPostsByTag));
 router.get("/tags/page/:page", catchErrors(postController.getPostsByTag));
+router.get("/tags/:tag/page/:page", catchErrors(postController.getPostsByTag));
+
 router.get("/register", userController.registerForm);
+
 router.get("/login", userController.loginForm);
 router.get("/logout", authController.logout);
 router.get("/account", authController.isLoggedIn, userController.account);
@@ -24,6 +22,12 @@ router.get("/account/reset/:token", catchErrors(authController.reset));
 router.get("/hearts", authController.isLoggedIn, catchErrors(postController.getHearts));
 
 // POST routes
+router.get("/posts", catchErrors(postController.getPosts));
+router.get("/posts/page/:page", catchErrors(postController.getPosts));
+router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
+router.get("/posts/:id/edit", catchErrors(postController.editPost));
+router.get("/add-post", authController.isLoggedIn, postController.addPost);
+
 router.post(
   "/add-post",
   postController.upload,

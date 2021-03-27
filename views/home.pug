@@ -1,40 +1,40 @@
 extends layout
 
 block content
-  .introduction
+  div.introduction
     .heading
       h1.grit
         | Minari 
         span Korean 
         | Foods
-      h3 ALL YOU CAN EAT!
+      h3 ALL YOU CAN EAT! Make it yourself!
 
-    div.bannersLeft
-      a(href="/")
-        .banner.banner1
+    //- div.bannersLeft
+    //-   a(href="/")
+    //-     .banner.banner1
       //- a(href="/")
       //-   .banner.banner1
 
-    div.bannersRight
-      a(href="/")
-        .banner.banner1
-      //- a(href="/")
-      //-   .banner.banner1
+    //- div.bannersRight
+    //-   a(href="/")
+    //-     .banner.banner1
+    //-   //- a(href="/")
+    //-   //-   .banner.banner1
 
-  div.kFood--categories
-    each catetory in h.categories
-      div.kFood--categories__category
-        a(href="/")
-          img(src=("https://source.unsplash.com/200x200") alt=`${catetory.name}`)
-          h5=catetory.title
+  //- div.kFood--categories
+  //-   each catetory in h.categories
+  //-     div.kFood--categories__category
+  //-       a(href="/")
+  //-         img(src=("https://source.unsplash.com/200x200") alt=`${catetory.name}`)
+  //-     h5=catetory.title
 
   div.menuCarousel
     div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
       div.carousel-inner
         div.carousel-item.active
-          img(src=("https://source.unsplash.com/1060x640") class="d-block w-100" alt="...")
+          img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
         div.carousel-item
-          img(src=("https://source.unsplash.com/1060x640") class="d-block w-100" alt="...")
+          img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
       button(class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="prev")
         span(class="carousel-control-prev-icon" aria-hidden="true")
         span(class="visually-hidden") Previous
