@@ -51,7 +51,7 @@
       svg {
         transform: scale(1.2);
       }
-      background: $green;
+      background: $red;
       color: $white;
     }
     &--logo {
@@ -70,7 +70,7 @@
   .dropdown-item {
     font-size: 1.5rem;
     &:hover {
-      background-color: $green;
+      background-color: $red;
     }
   }
 }

@@ -1172,7 +1172,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       fill: #ffffff; }
     .nav__link:hover, .nav__link--active {
       border-right-color: rgba(0, 0, 0, 0.05);
-      background: #27c497;
+      background: #cd2e3a;
       color: #ffffff; }
       .nav__link:hover svg, .nav__link--active svg {
         -ms-transform: scale(1.2);
@@ -1186,7 +1186,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   .nav .dropdown-item {
     font-size: 1.5rem; }
     .nav .dropdown-item:hover {
-      background-color: #27c497; }
+      background-color: #cd2e3a; }
 
 @media all and (max-width: 1200px) {
   .nav__link {
@@ -1597,7 +1597,7 @@ label {
   margin: 0 auto;
   transition: all 0.4s ease-in; }
   .introduction .heading {
-    margin: 2rem auto 1rem auto;
+    margin: 1rem auto;
     text-align: right; }
     .introduction .heading h1 {
       font-family: Tahoma, Verdana, Segoe, sans-serif;

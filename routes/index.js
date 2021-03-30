@@ -9,11 +9,26 @@ const { catchErrors } = require("../handlers/errorHandlers");
 //  routes
 router.get("/", catchErrors(postController.getTopPosts));
 
-router.get("/tags", catchErrors(postController.getPostsByTag));
-router.get("/tags/page/:page", catchErrors(postController.getPostsByTag));
-router.get("/tags/:tag/page/:page", catchErrors(postController.getPostsByTag));
+router.get("/userPosts", catchErrors(postController.getPostsByTag));
+router.get("/userPosts/page/:page", catchErrors(postController.getPostsByTag));
+router.get("/userPosts/:tag/page/:page", catchErrors(postController.getPostsByTag));
 
 router.get("/register", userController.registerForm);
+
+
+router.post(
+  "/add-post",
+  postController.upload,
+  catchErrors(postController.resize),
+  catchErrors(postController.createPost)
+);
+router.post(
+  "/add-post/:id",
+  postController.upload,
+  catchErrors(postController.resize),
+  catchErrors(postController.updatePost)
+);
+
 
 router.get("/login", userController.loginForm);
 router.get("/logout", authController.logout);
@@ -28,18 +43,7 @@ router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
 router.get("/posts/:id/edit", catchErrors(postController.editPost));
 router.get("/add-post", authController.isLoggedIn, postController.addPost);
 
-router.post(
-  "/add-post",
-  postController.upload,
-  catchErrors(postController.resize),
-  catchErrors(postController.createPost)
-);
-router.post(
-  "/add-post/:id",
-  postController.upload,
-  catchErrors(postController.resize),
-  catchErrors(postController.updatePost)
-);
+
 router.post(
   "/register",
   userController.validateRegister,
