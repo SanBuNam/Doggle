@@ -1591,20 +1591,20 @@ label {
       -ms-flex: 1;
           flex: 1; }
 
-.introduction {
+.intro {
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
-  transition: all 0.4s ease-in; }
-  .introduction .heading {
+  transition: all 0.2s ease-in; }
+  .intro .heading {
     margin: 1rem auto;
-    text-align: right; }
-    .introduction .heading h1 {
+    text-align: left; }
+    .intro .heading h1 {
       font-family: Tahoma, Verdana, Segoe, sans-serif;
       padding: 0;
       font-size: 5rem;
       color: #000000; }
-      .introduction .heading h1::before {
+      .intro .heading h1::before {
         background-color: #cd2e3a;
         width: 0.75em;
         height: 0.75em;
@@ -1616,58 +1616,33 @@ label {
         --rotate: 3deg;
         -ms-transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate));
             transform: translateX(var(--translate)) translateY(var(--translate)) rotate(var(--rotate)); }
-      .introduction .heading h1 span {
-        color: #0047a0; }
-    .introduction .heading h3 {
-      transition: all 0.4s ease-in; }
-      .introduction .heading h3:hover {
-        -ms-transform: skew(-12deg) scale(1.2);
-            transform: skew(-12deg) scale(1.2); }
+    .intro .heading h3 {
+      transition: all 0.2s ease-in; }
+      .intro .heading h3:hover {
+        -ms-transform: skew(-9deg) scale(1.12);
+            transform: skew(-9deg) scale(1.12); }
 
-.kFood--categories {
-  position: fixed;
-  position: fixed;
-  margin-right: 13px;
-  right: 0;
-  top: 55px;
-  z-index: 100;
+.out {
+  max-width: 1060px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (auto)[8];
-      grid-template-rows: repeat(8, auto);
+  grid-gap: 25px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
   -ms-flex-pack: center;
-      justify-content: center;
-  -ms-grid-column-align: center;
-      justify-items: center; }
-  .kFood--categories__category {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 0.75fr 0.25fr;
-        grid-template-rows: 0.75fr 0.25fr;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    transition: all 0.15s ease-in; }
-    .kFood--categories__category img {
-      border-radius: 50%;
-      height: auto; }
-    .kFood--categories__category h5 {
-      display: block; }
-    .kFood--categories__category:hover {
-      -ms-transform: translateY(-12px) scale(1.05);
-          transform: translateY(-12px) scale(1.05); }
-
-.menuCarousel {
-  max-width: 760px;
-  margin: 1rem auto 3rem auto; }
-  .menuCarousel button {
-    color: #cd2e3a;
-    font-weight: bold;
-    font-size: 1.67rem; }
+      justify-content: center; }
+  .out .one {
+    text-align: right; }
+  .out .slidingPictures {
+    max-width: 480px;
+    margin: 1rem auto 4rem auto; }
+    .out .slidingPictures button {
+      color: #cd2e3a;
+      font-weight: bold;
+      font-size: 1.67rem; }
 
 .mainDish {
   margin: 0 auto;
@@ -1773,47 +1748,36 @@ label {
       -ms-transform: scale(1.02);
           transform: scale(1.02); }
 
-.bannersRight {
-  position: fixed;
-  margin-right: 13px;
-  right: 0;
-  top: 55px;
-  z-index: 100; }
-  .bannersRight .banner {
-    width: 66px;
-    height: 166px;
-    margin: 6px auto;
-    border-radius: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px; }
-  .bannersRight .banner1 {
-    background: #27c497 url(https://source.unsplash.com/70x280) no-repeat center left; }
-  .bannersRight .banner2 {
-    background: #0047a0 url(https://source.unsplash.com/70x280) no-repeat center left; }
-
-.bannersLeft {
-  position: fixed;
-  margin-left: 3px;
-  left: 0;
-  top: 55px;
-  z-index: 100; }
-  .bannersLeft .banner {
-    width: 200px;
-    height: 300px;
-    margin: 6px auto;
-    border-radius: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px; }
-  .bannersLeft .banner1 {
-    background: #27c497 url(https://source.unsplash.com/70x280) no-repeat center left; }
-  .bannersLeft .banner2 {
-    background: #0047a0 url(https://source.unsplash.com/70x280) no-repeat center left; }
+.kFood--categories {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 25px;
+  -ms-grid-columns: (auto)[8];
+      grid-template-columns: repeat(8, auto);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-grid-column-align: center;
+      justify-items: center; }
+  .kFood--categories__category {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transition: all 0.15s ease-in;
+    margin: 2rem auto 6rem auto; }
+    .kFood--categories__category img {
+      border-radius: 50%;
+      height: auto; }
+    .kFood--categories__category h5 {
+      display: block; }
+    .kFood--categories__category:hover {
+      -ms-transform: translateY(-12px) scale(1.05);
+          transform: translateY(-12px) scale(1.05); }
 
 /*!
  * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)

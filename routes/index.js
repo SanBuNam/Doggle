@@ -15,7 +15,6 @@ router.get("/userPosts/:tag/page/:page", catchErrors(postController.getPostsByTa
 
 router.get("/register", userController.registerForm);
 
-
 router.post(
   "/add-post",
   postController.upload,
