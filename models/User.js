@@ -22,7 +22,7 @@ const userSchema = new Schema({
   },
   resetPasswordToken: String,
   resetPasswordExpires: Date,
-  hearts: [{ type: mongoose.Schema.ObjectId, ref: "Post" }],
+  likes: [{ type: mongoose.Schema.ObjectId, ref: "Post" }],
 });
 
 userSchema.virtual("gravatar").get(function () {

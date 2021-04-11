@@ -42,12 +42,15 @@ postSchema.pre("save", async function (next) {
     next();
     return;
   }
+
   this.slug = slug(this.name);
   const slugRegEx = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`, "i");
   const postsWithSlug = await this.constructor.find({ slug: slugRegEx });
+
   if (postsWithSlug.length) {
     this.slug = `${this.slug}-${postsWithSlug.length + 1}`;
   }
+
   next();
 });
 
