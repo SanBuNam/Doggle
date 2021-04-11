@@ -1,10 +1,10 @@
-.introduction {
+.intro {
   display: grid;
   margin: 0 auto;
-  transition: all 0.4s ease-in;
+  transition: all 0.2s ease-in;
   .heading {
     margin: 1rem auto;
-    text-align: right;
+    text-align: left;
     h1 {
       font-family: Tahoma, Verdana, Segoe, sans-serif;
       padding: 0;
@@ -23,59 +23,35 @@
         transform: translateX(var(--translate)) translateY(var(--translate))
           rotate(var(--rotate));
       }
-      span {
-        color: $blue;
-      }
     }
     h3 {
-      transition: all 0.4s ease-in;
+      transition: all 0.2s ease-in;
       &:hover {
-        transform: skew(-12deg) scale(1.2);
+        transform: skew(-9deg) scale(1.12);
       }
     }
   }
 }
 
-.kFood--categories {
-  position: fixed;
-  position: fixed;
-  margin-right: 13px;
-  right: 0;
-  top: 55px;
-  z-index: 100;
+.out {
+  max-width: 1060px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, auto);
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   justify-content: center;
-  justify-items: center;
-  &__category {
-    display: grid;
-    grid-template-rows: 0.75fr 0.25fr;
-    grid-template-columns: 1fr;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    transition: all 0.15s ease-in;
-    img {
-      border-radius: 50%;
-      height: auto;
-    }
-    h5 {
-      display: block;
-    }
-    &:hover {
-      transform: translateY(-12px) scale(1.05);
-    }
+  .one {
+    text-align: right;
   }
-}
-
-.menuCarousel {
-  max-width: 760px;
-  margin: 1rem auto 3rem auto;
-  button {
-    color: $red;
-    font-weight: bold;
-    font-size: 1.67rem;
+  .slidingPictures {
+    max-width: 480px;
+    margin: 1rem auto 4rem auto;
+    button {
+      color: $red;
+      font-weight: bold;
+      font-size: 1.67rem;
+    }
   }
 }
 
@@ -203,56 +179,85 @@
   }
 }
 
-.bannersRight {
-  position: fixed;
-  margin-right: 13px;
-  right: 0;
-  top: 55px;
-  z-index: 100;
-  .banner {
-    width: 66px;
-    height: 166px;
-    margin: 6px auto;
-    border-radius: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-  }
-  .banner1 {
-    background: $green url(https://source.unsplash.com/70x280) no-repeat center
-      left;
-  }
-  .banner2 {
-    background: $blue url(https://source.unsplash.com/70x280) no-repeat center
-      left;
-  }
-}
+// .bannersRight {
+//   position: fixed;
+//   margin-right: 13px;
+//   right: 0;
+//   top: 55px;
+//   z-index: 100;
+//   .banner {
+//     width: 66px;
+//     height: 166px;
+//     margin: 6px auto;
+//     border-radius: 15px;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -moz-border-radius: 15px;
+//     -webkit-border-radius: 15px;
+//   }
+//   .banner1 {
+//     background: $green url(https://source.unsplash.com/70x280) no-repeat center
+//       left;
+//   }
+//   .banner2 {
+//     background: $blue url(https://source.unsplash.com/70x280) no-repeat center
+//       left;
+//   }
+// }
 
-.bannersLeft {
-  position: fixed;
-  margin-left: 3px;
-  left: 0;
-  top: 55px;
-  z-index: 100;
-  .banner {
-    width: 200px;
-    height: 300px;
-    margin: 6px auto;
-    border-radius: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-  }
-  .banner1 {
-    background: $green url(https://source.unsplash.com/70x280) no-repeat center
-      left;
-  }
-  .banner2 {
-    background: $blue url(https://source.unsplash.com/70x280) no-repeat center
-      left;
+// .bannersLeft {
+//   position: fixed;
+//   margin-left: 3px;
+//   left: 0;
+//   top: 55px;
+//   z-index: 100;
+//   .banner {
+//     width: 200px;
+//     height: 300px;
+//     margin: 6px auto;
+//     border-radius: 15px;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+//     -moz-border-radius: 15px;
+//     -webkit-border-radius: 15px;
+//   }
+//   .banner1 {
+//     background: $green url(https://source.unsplash.com/70x280) no-repeat center
+//       left;
+//   }
+//   .banner2 {
+//     background: $blue url(https://source.unsplash.com/70x280) no-repeat center
+//       left;
+//   }
+// }
+
+.kFood--categories {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  justify-items: center;
+  &__category {
+    display: grid;
+    // grid-template-rows: 0.75fr 0.25fr;
+    grid-template-columns: 1fr;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    transition: all 0.15s ease-in;
+    margin: 2rem auto 6rem auto;
+    img {
+      border-radius: 50%;
+      height: auto;
+    }
+    h5 {
+      display: block;
+    }
+    &:hover {
+      transform: translateY(-12px) scale(1.05);
+    }
   }
 }

@@ -1,47 +1,54 @@
 extends layout
 
 block content
-  div.introduction
-    .heading
-      h1.grit
-        | Minari Spirit (Gloal Korean Community)
-        span Korean Foods
-        | Coding Class (Englis and Korean) & Crypto My List
-      h3 Dawit's Cloud Land of Fun! I have to enjoy building.
+  div.intro
+    div.heading
+      h1.grit Minari Digital K-Town
+      h3 Life is short. Laugh more, Enjoy eating and learning.
 
     //- div.bannersLeft
     //-   a(href="/")
     //-     .banner.banner1
       //- a(href="/")
       //-   .banner.banner1
-
     //- div.bannersRight
     //-   a(href="/")
     //-     .banner.banner1
-    //-   //- a(href="/")
-    //-   //-   .banner.banner1
+      //- a(href="/")
+      //-   .banner.banner1
 
-  //- div.kFood--categories
-  //-   each catetory in h.categories
-  //-     div.kFood--categories__category
-  //-       a(href="/")
-  //-         img(src=("https://source.unsplash.com/200x200") alt=`${catetory.name}`)
-  //-     h5=catetory.title
-
-  div.menuCarousel
-    div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
-      div.carousel-inner
-        div.carousel-item.active
-          img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
-        div.carousel-item
-          img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
-      button(class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="prev")
-        span(class="carousel-control-prev-icon" aria-hidden="true")
-        span(class="visually-hidden") Previous
-      button(class="carousel-control-next" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="next")
-        span(class="visually-hidden") Next
-        span(class="carousel-control-next-icon" aria-hidden="true")
-
+  div.out
+    div.one
+      p Hi, I'm David Lee. Korean American | softwere programmer | food enthuthist.
+      | I just want to share what I like, listen to others and laugh more.
+      br  
+      | I want to try different food around the 
+      br
+      | So, here I'll share what I make best since it is 
+      br  
+      | what I've been eating since I was born the K-Food!
+      
+    div.slidingPictures
+      div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
+        div.carousel-inner
+          div.carousel-item.active
+            img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
+          div.carousel-item
+            img(src=("https://source.unsplash.com/760x390") class="d-block w-100" alt="...")
+        button(class="carousel-control-prev" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="prev")
+          span(class="carousel-control-prev-icon" aria-hidden="true")
+          span(class="visually-hidden") Previous
+        button(class="carousel-control-next" type="button" data-bs-target="#carouselMenuControls"  data-bs-slide="next")
+          span(class="visually-hidden") Next
+          span(class="carousel-control-next-icon" aria-hidden="true")
+ 
+  div.kFood--categories
+    each catetory in h.categories
+      div.kFood--categories__category
+        a(href="/")
+          img(src=("https://source.unsplash.com/200x200") alt=`${catetory.title}`).
+        p #{catetory.title}
+  
   div.mainDish
     div.itemOne
       img(src=("https://source.unsplash.com/300x150"))

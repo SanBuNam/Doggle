@@ -32,7 +32,7 @@ const styles = {
   ]),
 };
 
-// Use plugins - this one will compress the JS
+// Plugin to compress the JS
 const uglify = new webpack.optimize.UglifyJsPlugin({
   // eslint-disable-line
   compress: { warnings: false },
@@ -40,7 +40,7 @@ const uglify = new webpack.optimize.UglifyJsPlugin({
 
 const config = {
   entry: {
-    App: "./public/javascripts/course-app.js",
+    App: "./public/javascripts/node-app.js",
   },
   devtool: "source-map",
   output: {
