@@ -6,19 +6,8 @@ block content
       h1.grit Minari Digital K-Town
       h3 Life is short. Laugh more, Enjoy eating and learning.
 
-    //- div.bannersLeft
-    //-   a(href="/")
-    //-     .banner.banner1
-      //- a(href="/")
-      //-   .banner.banner1
-    //- div.bannersRight
-    //-   a(href="/")
-    //-     .banner.banner1
-      //- a(href="/")
-      //-   .banner.banner1
-
-  div.out
-    div.one
+  div.whoAmI
+    div.dawit
       p Hi, I'm David Lee. Korean American | softwere programmer | food enthuthist.
       | I just want to share what I like, listen to others and laugh more.
       br  
@@ -28,7 +17,7 @@ block content
       br  
       | what I've been eating since I was born the K-Food!
       
-    div.slidingPictures
+    div.menuCarousel
       div(id="carouselMenuControls" class="carousel slide" data-bs-ride="carousel")
         div.carousel-inner
           div.carousel-item.active
@@ -42,61 +31,41 @@ block content
           span(class="visually-hidden") Next
           span(class="carousel-control-next-icon" aria-hidden="true")
  
-  div.kFood--categories
+  div.kFood
     each catetory in h.categories
-      div.kFood--categories__category
+      div.kFood--category
         a(href="/")
           img(src=("https://source.unsplash.com/200x200") alt=`${catetory.title}`).
         p #{catetory.title}
   
-  div.mainDish
-    div.itemOne
+  div.kMagazine
+    div.foodOne
       img(src=("https://source.unsplash.com/300x150"))
       a(href="/")
-        h5 littleTitle
+        h5 foodOne
       p Our Complete Collection of Soda bread recipes Say something more here brohhhhh
-    div.itemTwo
+    div.foodTwo
       img(src=("https://source.unsplash.com/300x200"))
       a(href="/")
-        h5 littleTitle
+        h5 foodTwo
       p Our Complete Collection of Soda bread recipes Say something more here brohhhhh
-    div.itemThree
+    div.foodThree
       img(src=("https://source.unsplash.com/400x500") alt="picture with a person welcoming")
       a(href="/")
         h4 Here's What Irish People Actually Eat on St. Patricks Day
-      p A greate vegateable side dis mad ewith bacone and sour ceram.
-    div.itemFour
-      h4 Most Popular
-      div.dishes
-        a(href="/")    
-          div
-            img(src=("https://source.unsplash.com/100x100"))
-        a(href="/")    
-          div
-            p Conrned Beef and Cabbage Recipes
-      div.dishes
-        a(href="/")    
-          div
-            img(src=("https://source.unsplash.com/100x100"))
-        a(href="/")    
-          div
-            p Conrned Beef and Cabbage Recipes
-      div.dishes
-        a(href="/")    
-          div
-            img(src=("https://source.unsplash.com/100x100"))
-        a(href="/")    
-          div
-            p Conrned Beef and Cabbage Recipes
-      div.dishes
-        a(href="/")    
-          div
-            img(src=("https://source.unsplash.com/100x100"))
-        a(href="/")    
-          div
-            p Conrned Beef and Cabbage Recipes
+      p A greate vegateable side Our Complete Collection of Soda bread recipes Say something more here brohhhhh
+    div.foodFour
+      h4 Popular Dishes
+      each dish in h.dishes
+        div.popular__dishes
+          a(href="/")    
+            div
+              img(src=("https://source.unsplash.com/100x100"))
+          a(href="/")    
+            div
+              p #{dish.title} eate vegateable side Our Complete Collection of Soda bread recipes Say something more here brohhhhh
 
-  div.mainDish
+  div.kMagazine
     div.itemFive
       img(src=("https://source.unsplash.com/800x600") alt="picture with a person welcoming")
       h4 Gerry's Easy Irish Stew

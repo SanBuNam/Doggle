@@ -29,3 +29,10 @@ exports.categories = [
   { title: "Seafood", img: "4" },
   { title: "Salads", img: "4" }
 ];
+
+exports.dishes = [
+  { title: "Rice", img: "1" },
+  { title: "Kimchi", img: "2" },
+  { title: "Soup", img: "3" },
+  { title: "Beef", img: "4" }
+];
