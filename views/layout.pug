@@ -23,26 +23,30 @@ html(lang="ko")
                 a(href="/cook" class="nav-link nav__link" class=(currentPath.startsWith('/cook') ? 'nav__link--active' : '') id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Cooking 🔽
                 ul( class="dropdown-menu" aria-labelledby="navbarDropdown")
                   li
-                    a(class="dropdown-item" href="/recipes") Recipes
+                    a(class="dropdown-item" href="/recipes") K-food recipe
                   li
-                    a(class="dropdown-item" href="/ingredients") Ingredients
-                  li
-                    a(class="dropdown-item" href="/kitchenware") Kitchenware
+                    a(class="dropdown-item" href="/ingredients") Learn to code
                   li
                     hr.dropdown-divider
                   li
                     a(class="dropdown-item" href="/minari") Mirari Items
+                  
             li.nav__item.dropdown
                 a(style={} class="nav-link nav__link" class=(currentPath.startsWith('/shop') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Community 🔽
                 ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
                   li
                     a(class="dropdown-item" href="/blogs") Blogs
                   li
-                    a(class="dropdown-item" href="/userPosts") User Posts
+                    a(class="dropdown-item" href="/userPosts") Member's Recipe
                   li
                     hr.dropdown-divider
                   li
-                    a(class="dropdown-item" href="/sales") On Sales
+                    a(class="dropdown-item" href="/sales") Log-in
+                  li
+                    a(class="dropdown-item" href="/sales") Add Post
+                  li
+                    a(class="dropdown-item" href="/minari") Mirari Coin
+
             li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) About
             if user
               li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Log-Out

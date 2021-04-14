@@ -1,0 +1,53 @@
+.bannersRight {
+  position: fixed;
+  margin-right: 13px;
+  right: 0;
+  top: 55px;
+  z-index: 100;
+  .banner {
+    width: 66px;
+    height: 166px;
+    margin: 6px auto;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+  }
+  .banner1 {
+    background: $green url(https://source.unsplash.com/70x280) no-repeat center
+      left;
+  }
+  .banner2 {
+    background: $blue url(https://source.unsplash.com/70x280) no-repeat center
+      left;
+  }
+}
+
+.bannersLeft {
+  position: fixed;
+  margin-left: 3px;
+  left: 0;
+  top: 55px;
+  z-index: 100;
+  .banner {
+    width: 200px;
+    height: 300px;
+    margin: 6px auto;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+  }
+  .banner1 {
+    background: $green url(https://source.unsplash.com/70x280) no-repeat center
+      left;
+  }
+  .banner2 {
+    background: $blue url(https://source.unsplash.com/70x280) no-repeat center
+      left;
+  }
+}
