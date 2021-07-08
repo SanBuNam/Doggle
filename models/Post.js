@@ -83,7 +83,7 @@ postSchema.statics.getTopPosts = function () {
       },
     },
     { $sort: { averageRating: -1 } },
-    { $limit: 21 },
+    { $limit: 9 },
   ]);
 };
 

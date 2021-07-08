@@ -13,12 +13,12 @@ block content
   
     .single__details
       .single__details--description
-        h4 포스팅 내용
+        h4 Posting
         p= post.description
   
       .single__details--tags
         if post.tags
-          h5 선택된 태그 🗂️
+          h5 Tags 🗂️
           ul.tags
             each tag in post.tags
               li.tag
@@ -31,7 +31,7 @@ block content
         else
           .reviewForm
             h4
-              a(href=`/login`) 로그인 후 리뷰가 가능합니다.
+              a(href=`/login`) Log-In
 
         if post.reviews
           .reviews
