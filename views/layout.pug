@@ -1,5 +1,5 @@
 doctype html
-html(lang="ko")
+html(lang="en")
   head
     title= `${title} | ${h.siteName}`
     link(rel='stylesheet' href='/dist/style.css')
@@ -13,32 +13,33 @@ html(lang="ko")
           .nav__section
             li.nav__item
               a.nav__link(href="/", class=(currentPath.endsWith('/') ? 'nav__link--active' : '')) 
-                != h.icon('heart')
+                != h.icon('cup')
           .nav__section.nav__section--search
             .search
               input.search__input(type="text" placeholder="Search by k-food name or ingredient" name="search")
               .search__results
           .nav__section.nav__section--user
             li.nav__item.dropdown
-                a(href="/cook" class="nav-link nav__link" class=(currentPath.startsWith('/cook') ? 'nav__link--active' : '') id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  K-Food Recipes 🔽
+                a(href="/Kfood-recipes" class="nav-link nav__link" class=(currentPath.startsWith('/K-Food-recipes') ? 'nav__link--active' : '') id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  KFood Kichen
                 ul( class="dropdown-menu" aria-labelledby="navbarDropdown")
                   li
-                    a(class="dropdown-item" href="/recipes") K-food recipes
+                    a(class="dropdown-item" href="/Kfood-recipes") Secrets Kfood 
                   li
-                    a(class="dropdown-item" href="/ingredients") Member's recipes
+                    a(class="dropdown-item" href="/Kfood-recipes") share Secret recipes
+                  
+            li.nav__item.dropdown
+                a(style={} class="nav-link nav__link" class=(currentPath.startsWith('/shop') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Community
+                ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                  li
+                    a(class="dropdown-item" href="/blogs") Add Recipes
                   li
                     hr.dropdown-divider
                   li
-                    a(class="dropdown-item" href="/sales") Log-in
+                    a(class="dropdown-item" href="/login") Log-in
                   li
-                    a(class="dropdown-item" href="/sales") Add recipes
-                  
-            li.nav__item.dropdown
-                a(style={} class="nav-link nav__link" class=(currentPath.startsWith('/shop') ? 'nav__link--active' : '') href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false")  Community 🔽
-                ul(class="dropdown-menu" aria-labelledby="navbarDropdown")
-                  li
-                    a(class="dropdown-item" href="/blogs") Learn to Code
+                    a(class="dropdown-item" href="/add-post") Join Community
 
+            li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Blogs
             li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) About
             if user
               li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : '')) Log-Out
@@ -58,12 +59,14 @@ html(lang="ko")
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     
+
     block content
+
 
     footer.footer__section
       .footer__section--container
         .socialLinks
-          h5 코딩 정보 공유 소셜
+          h5 Social Media
           p instagram : 
             span
               a(href="") @instagram
@@ -74,7 +77,7 @@ html(lang="ko")
             span
               a(href="") @youtube
         .directContacts
-          h5 일 관련 연락처
+          h5 Work Contact
           p email : 
             span
               a(href="") stoicSanbunam@gmail.com

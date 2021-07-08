@@ -6,13 +6,11 @@ const authController = require("../controllers/authController");
 const reviewController = require("../controllers/reviewController");
 const { catchErrors } = require("../handlers/errorHandlers");
 
-//  routes
+// routes
 router.get("/", catchErrors(postController.getTopPosts));
-
-router.get("/userPosts", catchErrors(postController.getPostsByTag));
-router.get("/userPosts/page/:page", catchErrors(postController.getPostsByTag));
-router.get("/userPosts/:tag/page/:page", catchErrors(postController.getPostsByTag));
-
+router.get("/Kfood-recipes", catchErrors(postController.getPostsByTag));
+router.get("/Kfood-recipes/page/:page", catchErrors(postController.getPostsByTag));
+router.get("/Kfood-recipes/:tag/page/:page", catchErrors(postController.getPostsByTag));
 router.get("/register", userController.registerForm);
 
 router.post(
@@ -28,7 +26,6 @@ router.post(
   catchErrors(postController.updatePost)
 );
 
-
 router.get("/login", userController.loginForm);
 router.get("/logout", authController.logout);
 router.get("/account", authController.isLoggedIn, userController.account);
@@ -41,7 +38,6 @@ router.get("/posts/page/:page", catchErrors(postController.getPosts));
 router.get("/posts/:slug", catchErrors(postController.getPostBySlug));
 router.get("/posts/:id/edit", catchErrors(postController.editPost));
 router.get("/add-post", authController.isLoggedIn, postController.addPost);
-
 
 router.post(
   "/register",

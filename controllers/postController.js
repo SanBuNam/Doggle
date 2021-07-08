@@ -141,8 +141,8 @@ exports.searchPosts = async (req, res) => {
     }
   ).sort({
     score: { $meta: "textScore" },
-  });
-  // .limit(5);
+  })
+  .limit(5);
   res.json(posts);
 };
 
@@ -166,5 +166,5 @@ exports.getHearts = async (req, res) => {
 
 exports.getTopPosts = async (req, res) => {
   const posts = await Post.getTopPosts();
-  res.render("home", { posts, title: `무료 온라인 코딩 강좌` });
+  res.render("home", { posts, title: `Digital K-Town` });
 };
